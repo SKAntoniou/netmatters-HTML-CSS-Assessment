@@ -2,3 +2,18 @@
 // Buttons
 // ==========================================================================
 
+.btn-social-media {
+  background-color: $background-accent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 70px;
+  max-width: 120px;
+  flex: 1 50%;
+  height: 56px;
+  padding-top: 5px;
+  margin: 0 10px 10px 0;
+  @media (min-width: 480px) {
+    flex: 25%;
+  }
+}
