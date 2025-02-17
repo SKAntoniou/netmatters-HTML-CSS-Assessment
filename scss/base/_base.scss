@@ -2,9 +2,30 @@
 // Base Styles
 // ==========================================================================
 
+body {
+  margin: 0;
+  font-family: $font-family--primary;
+}
+
+* {
+box-sizing: border-box;
+}
 
 // Lists
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
+// Links
+a {
+  @include text-color;
+  text-decoration-line: none;
+  &:active {
+    text-decoration-line: underline;
+  }
+}
 
 // Images
 

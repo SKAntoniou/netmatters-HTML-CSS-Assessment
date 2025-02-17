@@ -2,8 +2,14 @@
 // Functions
 // ==========================================================================
 
-// Import if Google Fonts URL is defined
-
+// Import Google Fonts
+@mixin font-import($font-name) {
+  @if variable-exists($name: $font-name) {
+    @import url($font-name);
+  }
+}
+@include font-import($font-url--poppin);
+@include font-import($font-url--lato);
 
 // Calculate em values
 

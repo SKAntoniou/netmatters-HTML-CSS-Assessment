@@ -2,6 +2,14 @@
 // Mixins
 // ==========================================================================
 
+// Text Color
+@mixin text-color {
+  @if not (background-color == $white) {
+    color: $white;
+  }
+}
+
+
 // BEM selectors
 
 
