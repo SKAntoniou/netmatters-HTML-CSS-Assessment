@@ -17,3 +17,13 @@
     flex: 25%;
   }
 }
+
+.btn-base {
+  @extend %btn;
+  @extend %btn-hover;
+  @extend %btn-active;
+}
+
+.btn-readmore {
+  @extend %btn;
+}

@@ -14,9 +14,13 @@ footer {
     }
 
     .footer-menu {   
-      flex: 100%;   
+      flex: 100%;
       margin-bottom: 30px;
       
+      ul {
+        padding: 0 15px;
+      }
+
       @media (min-width: 768px) {
         flex: 50%;
       }

@@ -9,6 +9,26 @@
 
 
 // Buttons
+%btn {
+  border: 0;
+  padding: 10px 30px;
+  margin: 6px 0;
+  border-radius: $br--default;
+  color: $white;
+  text-transform: uppercase;
+  display: inline-block;
+}
 
+%btn-hover {
+  &:hover {
+    opacity: .75%;
+  }
+}
+
+%btn-active {
+  &:active {
+    opacity: .75%;
+  }
+}
 
 // Icons

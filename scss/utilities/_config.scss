@@ -2,20 +2,32 @@
 // Global Config
 // ==========================================================================
 
-// Font Stacks
+// Icon Fonts
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ky9gej');
+  src:  url('../fonts/icomoon.eot?ky9gej#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ky9gej') format('truetype'),
+    url('../fonts/icomoon.woff?ky9gej') format('woff'),
+    url('../fonts/icomoon.svg?ky9gej#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 
+// Font Stacks
 $font-url--poppin       : 'http://fonts.googleapis.com/css?family=Poppin:100,300,400,700,900';
 $font-url--lato        : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
 $font-family--primary    : 'Poppin', sans-serif;
 $font-family--secondary  : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-// Imported in _functions.scss
-
 
 // Font Weights
 
 
 // Descriptive Colors
 $white: #fff;
+$google: #4387f6;
+$trustpilot: #00b67b;
 
 // Color Usage
 
@@ -32,7 +44,7 @@ $background-accent: #212330;
 
 
 // Border radius
-
+$br--default: 6px;
 
 // Transitions
 

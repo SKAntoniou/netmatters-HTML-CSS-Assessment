@@ -1,0 +1,43 @@
+.module-welcome {
+  background-color: $background-secondary;
+  padding: 50px 0;
+  position: relative;
+  // 15px padding 
+}
+
+.module-welcome-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.module-welcome-tile {
+  flex: 100%;
+  @media (min-width: 992px) {
+    flex-basis: 50%;
+    padding: 0 15px;
+  }
+}
+
+.module-welcome-buttons {
+  padding: 0;
+}
+
+[class^="module-welcome-button"] {
+  @extend %btn;
+  @extend %btn-hover;
+  @extend %btn-active;
+  font-size: 20px;
+}
+
+.module-welcome-button {
+  &-base {
+    background-color: $background-accent;
+  }
+  &-google {
+    background-color: $google;
+  }
+  &-trustpilot {
+    background-color: $trustpilot;
+  }
+}
+
