@@ -2,7 +2,12 @@
 // Base Styles
 // ==========================================================================
 
+:root {
+  font-size: 1rem;
+}
+
 body {
+  @include text-color;
   margin: 0;
   font-family: $font-family--primary;
 }

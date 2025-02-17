@@ -303,7 +303,11 @@ template {
 [hidden] {
   display: none; }
 
+:root {
+  font-size: 1rem; }
+
 body {
+  color: #fff;
   margin: 0;
   font-family: "Poppin", sans-serif; }
 
@@ -338,7 +342,6 @@ a {
 
 footer {
   background-color: #323544;
-  color: #fff;
   padding: 30px 0 0;
   position: relative; }
   footer .footer-row {
@@ -360,5 +363,27 @@ footer {
         text-transform: uppercase;
         font-size: 1rem;
         margin-bottom: 26px; }
+
+.footer-end {
+  font-size: 0.8125rem;
+  padding: 0.5em 0 0.5em;
+  background-color: #212330; }
+  .footer-end .footer-end-flex {
+    display: flex;
+    flex-wrap: wrap; }
+    .footer-end .footer-end-flex .footer-item {
+      flex: 100%; }
+      @media (min-width: 768px) {
+        .footer-end .footer-end-flex .footer-item {
+          flex-basis: auto;
+          flex-grow: 0; } }
+    @media (min-width: 768px) {
+      .footer-end .footer-end-flex {
+        margin-right: auto; } }
+    .footer-end .footer-end-flex .footer-item-seperator {
+      display: none; }
+      @media (min-width: 768px) {
+        .footer-end .footer-end-flex .footer-item-seperator {
+          display: inline; } }
 
 /*# sourceMappingURL=style.css.map */

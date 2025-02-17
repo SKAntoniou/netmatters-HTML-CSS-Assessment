@@ -1,34 +1,64 @@
 footer {
   background-color: $background-secondary;
-  color: $white;
   padding: 30px 0 0;
   position: relative;
 
   .footer-row {
-      display: flex;
-      flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-      .footer-menu {   
-          flex: 100%;   
-          margin-bottom: 30px;
-         
-          @media (min-width: 768px) {
-             flex: 50%;
-          }
+    .footer-menu {   
+      flex: 100%;   
+      margin-bottom: 30px;
+      
+      @media (min-width: 768px) {
+        flex: 50%;
+      }
 
-          @media (min-width: 992px) {
-             flex: 25%;
-          }
+      @media (min-width: 992px) {
+        flex: 25%;
+      }
 
-          @media (min-width: 1260px) {
-             margin-bottom: 40px;
-          }
+      @media (min-width: 1260px) {
+        margin-bottom: 40px;
+      }
 
-          h4 {
-              text-transform: uppercase;
-              font-size: 1rem;
-              margin-bottom: 26px;	
-          }
+      h4 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-bottom: 26px;	
+      }
      }	  
+  }
+}
+
+.footer-end {
+  font-size: 0.8125rem;
+  padding: 0.5em 0 0.5em;
+  background-color: $background-accent;
+
+  .footer-end-flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    .footer-item {
+      flex: 100%;
+      @media (min-width: 768px) {
+        flex-basis: auto;
+        flex-grow: 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin-right: auto;
+    }
+
+    .footer-item-seperator {
+      display: none;
+      @media (min-width: 768px) {
+        display: inline;
+      }
+    }
+
   }
 }
