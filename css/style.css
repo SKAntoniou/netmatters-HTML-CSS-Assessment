@@ -336,6 +336,7 @@ blockquote, figcaption {
   margin: 16px 0; }
 
 .container {
+  display: grid;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -349,6 +350,82 @@ blockquote, figcaption {
   @media (min-width: 1260px) {
     .container {
       width: 1200px; } }
+
+@media (min-width: 768px) {
+  .grid-col--1 {
+    width: 4.6666666667%; }
+  .grid-col--2 {
+    width: 13.3333333333%; }
+  .grid-col--3 {
+    width: 22%; }
+  .grid-col--4 {
+    width: 30.6666666667%; }
+  .grid-col--5 {
+    width: 39.3333333333%; }
+  .grid-col--6 {
+    width: 48%; }
+  .grid-col--7 {
+    width: 56.6666666667%; }
+  .grid-col--8 {
+    width: 65.3333333333%; }
+  .grid-col--9 {
+    width: 74%; }
+  .grid-col--10 {
+    width: 82.6666666667%; }
+  .grid-col--11 {
+    width: 91.3333333333%; }
+  .grid-col--12 {
+    width: 100%; } }
+@media (min-width: 992px) {
+  .grid-col--1 {
+    width: 5.4982817869%; }
+  .grid-col--2 {
+    width: 14.089347079%; }
+  .grid-col--3 {
+    width: 22.6804123711%; }
+  .grid-col--4 {
+    width: 31.2714776632%; }
+  .grid-col--5 {
+    width: 39.8625429553%; }
+  .grid-col--6 {
+    width: 48.4536082474%; }
+  .grid-col--7 {
+    width: 57.0446735395%; }
+  .grid-col--8 {
+    width: 65.6357388316%; }
+  .grid-col--9 {
+    width: 74.2268041237%; }
+  .grid-col--10 {
+    width: 82.8178694158%; }
+  .grid-col--11 {
+    width: 91.4089347079%; }
+  .grid-col--12 {
+    width: 100%; } }
+@media (min-width: 1260px) {
+  .grid-col--1 {
+    width: 6.0416666667%; }
+  .grid-col--2 {
+    width: 14.5833333333%; }
+  .grid-col--3 {
+    width: 23.125%; }
+  .grid-col--4 {
+    width: 31.6666666667%; }
+  .grid-col--5 {
+    width: 40.2083333333%; }
+  .grid-col--6 {
+    width: 48.75%; }
+  .grid-col--7 {
+    width: 57.2916666667%; }
+  .grid-col--8 {
+    width: 65.8333333333%; }
+  .grid-col--9 {
+    width: 74.375%; }
+  .grid-col--10 {
+    width: 82.9166666667%; }
+  .grid-col--11 {
+    width: 91.4583333333%; }
+  .grid-col--12 {
+    width: 100%; } }
 
 .btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"] {
   border: 0;

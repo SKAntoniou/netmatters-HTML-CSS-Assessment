@@ -36,7 +36,7 @@
     }
   }
   @else {
-    @error "Break-point #{$break} does not exist, check spelling and remember format is like: 's' or 'xl'."
+    @error "Break-point #{$break} does not exist, check spelling and remember format is like: 's' or 'xl'.";
   }
 }
 
@@ -53,5 +53,17 @@
 
 
 // Grid Columns
-     
-       
+@mixin g-columns($max-width) {
+  @for $i from 1 through $g-col-count {
+    // Calulate all gutters combined
+    $gutters: ($g-gutter-width * ($g-col-count - 1));
+    // 
+    $col-width: (($max-width - $gutters)/ $g-col-count);
+    $cur-width: (($col-width * $i) + ($g-gutter-width * ($i - 1)));
+    // Generate column modifier classes
+    &--#{($i)} {
+      width: percentage($cur-width/$max-width);
+    }
+  }
+}        
+        

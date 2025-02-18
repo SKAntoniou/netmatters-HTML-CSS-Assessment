@@ -3,6 +3,16 @@
 // ==========================================================================
 
 // Calculate grid columns
-
+.grid-col {
+  @include mq(m) {
+    @include g-columns($cont-max-width-m)
+  }
+  @include mq(l) {
+    @include g-columns($cont-max-width-l)
+  }
+  @include mq(xl) {
+    @include g-columns($cont-max-width)
+  }
+}
 
 // Column styles
