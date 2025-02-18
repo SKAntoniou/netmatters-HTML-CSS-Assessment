@@ -8,16 +8,15 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  @media (min-width: 768px) {
-       width: 750px;
+  @include mq(m) {
+    width: $cont-max-width-m;
   }
 
-  @media (min-width: 992px) {
-      width: 970px;
+  @include mq(l) {
+    width: $cont-max-width-l;
   }
 
-  @media (min-width: 1260px) {
-      width: 1200px;
+  @include mq(xl) {
+    width: $cont-max-width;
   }
-
 }

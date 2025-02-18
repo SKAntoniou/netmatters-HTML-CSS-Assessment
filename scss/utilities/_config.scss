@@ -2,14 +2,18 @@
 // Global Config
 // ==========================================================================
 
+// Path to Assets
+$path-img: '../img/';
+$path-font: '../fonts/';
+
 // Icon Fonts
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?ky9gej');
-  src:  url('../fonts/icomoon.eot?ky9gej#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?ky9gej') format('truetype'),
-    url('../fonts/icomoon.woff?ky9gej') format('woff'),
-    url('../fonts/icomoon.svg?ky9gej#icomoon') format('svg');
+  src:  url('#{$path-font}icomoon.eot?ky9gej');
+  src:  url('#{$path-font}icomoon.eot?ky9gej#iefix') format('embedded-opentype'),
+    url('#{$path-font}icomoon.ttf?ky9gej') format('truetype'),
+    url('#{$path-font}icomoon.woff?ky9gej') format('woff'),
+    url('#{$path-font}icomoon.svg?ky9gej#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -64,10 +68,17 @@ $br--default: 6px;
 // Transitions
 
 
-// Path to Assets
-
-
 // Grid
 
 
 // Breakpoints
+$break-small: 480px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-extra-large: 1260px;
+
+// Content max in relation to breakpoints
+$cont-max-width-s: 450px;
+$cont-max-width-m: 750px;
+$cont-max-width-l: 970px;
+$cont-max-width: 1200px;
