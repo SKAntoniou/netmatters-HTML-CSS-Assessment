@@ -1,9 +1,23 @@
 .banner{
+  @include text-color;
+  background-image: url(../img/home-YLei.webp);
+  background-color: rgba(0,0,0,0.6);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  height: 550px;
+}
+
+.banner-flex {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 500px;
 }
 
 .banner-element {
+  flex: 1 100%;
   padding: 0 10px;
   text-align: center;
   display: none;
@@ -11,4 +25,16 @@
 
 #banner-element-1 {
   display: block;
+}
+
+.banner-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    background-color: rgba(255,255,255,0.5);
+    padding: 5.5px;
+    margin: 0 10px; 
+    border-radius: 50%;
+  }
 }

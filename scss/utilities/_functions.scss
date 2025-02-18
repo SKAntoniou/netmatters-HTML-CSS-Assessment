@@ -11,9 +11,6 @@
 @include font-import($font-url--poppin);
 @include font-import($font-url--lato);
 
-// Calculate em values
-
-
 // Call the color palette
 @function palette($palette, $shade) {
 	@return map-get(map-get($color-palettes, $palette), $shade);
