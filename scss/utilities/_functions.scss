@@ -14,8 +14,10 @@
 // Calculate em values
 
 
-// Call the color palette modifiers in color values
-
+// Call the color palette
+@function palette($palette, $shade) {
+	@return map-get(map-get($color-palettes, $palette), $shade);
+};
     
 // Set the "context" width for the grid
     

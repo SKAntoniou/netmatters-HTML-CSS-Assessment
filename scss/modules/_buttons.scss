@@ -27,3 +27,53 @@
 .btn-readmore {
   @extend %btn;
 }
+
+[class^="module-welcome-button"], [class^="button-banner"] {
+  @extend %btn;
+  @extend %btn-hover;
+  @extend %btn-active;
+  font-size: 20px;
+}
+// Buttons for the welcome module
+
+.module-welcome-button {
+  &-base {
+    background-color: $background-accent;
+  }
+  &-google {
+    background-color: $google;
+  }
+  &-trustpilot {
+    background-color: $trustpilot;
+  }
+}
+
+// Buttons for the banner
+
+.banner-element {
+  &:nth-of-type(5n+1) {
+    .button-banner {
+      background-color: palette(netmatters, purple);
+    }
+  }
+  &:nth-of-type(5n+2) {
+    .button-banner {
+      background-color: palette(netmatters, orange);
+    }
+  }
+  &:nth-of-type(5n+3) {
+    .button-banner {
+      background-color: palette(netmatters, lightblue);
+    }
+  }
+  &:nth-of-type(5n+4) {
+    .button-banner {
+      background-color: palette(netmatters, green);
+    }
+  }
+  &:nth-of-type(5n) {
+    .button-banner {
+      background-color: palette(netmatters, red);
+    }
+  }
+}

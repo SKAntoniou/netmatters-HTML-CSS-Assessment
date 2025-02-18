@@ -29,8 +29,20 @@ $white: #fff;
 $google: #4387f6;
 $trustpilot: #00b67b;
 
-// Color Usage
 
+// Color Usage
+$color-palettes: (
+	netmatters: (
+    purple: #926fb1,
+    orange: #e8a008,
+    lightblue: #2a6ec6,
+    green: #2ecc71,
+    red: #c42e2a,
+    brown-red:#ce4125,
+    pink: #f62459,
+    grey: #67809f,
+  )
+);
 
 // Color Palette Modifiers
 
