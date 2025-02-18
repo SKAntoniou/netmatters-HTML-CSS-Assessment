@@ -4,6 +4,12 @@
 
 // Calculate grid columns
 .grid-col {
+  @include mq(s) {
+    @include g-columns($cont-max-width-s)
+  }
+  @include mq(s) {
+    @include g-columns($cont-max-width-s)
+  }
   @include mq(m) {
     @include g-columns($cont-max-width-m)
   }

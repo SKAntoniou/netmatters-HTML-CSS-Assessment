@@ -337,8 +337,7 @@ blockquote, figcaption {
 
 .container {
   display: grid;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px; }
   @media (min-width: 768px) {
@@ -351,6 +350,56 @@ blockquote, figcaption {
     .container {
       width: 1200px; } }
 
+@media (min-width: 480px) {
+  .grid-col--1 {
+    width: 2.2222222222%; }
+  .grid-col--2 {
+    width: 11.1111111111%; }
+  .grid-col--3 {
+    width: 20%; }
+  .grid-col--4 {
+    width: 28.8888888889%; }
+  .grid-col--5 {
+    width: 37.7777777778%; }
+  .grid-col--6 {
+    width: 46.6666666667%; }
+  .grid-col--7 {
+    width: 55.5555555556%; }
+  .grid-col--8 {
+    width: 64.4444444444%; }
+  .grid-col--9 {
+    width: 73.3333333333%; }
+  .grid-col--10 {
+    width: 82.2222222222%; }
+  .grid-col--11 {
+    width: 91.1111111111%; }
+  .grid-col--12 {
+    width: 100%; } }
+@media (min-width: 480px) {
+  .grid-col--1 {
+    width: 2.2222222222%; }
+  .grid-col--2 {
+    width: 11.1111111111%; }
+  .grid-col--3 {
+    width: 20%; }
+  .grid-col--4 {
+    width: 28.8888888889%; }
+  .grid-col--5 {
+    width: 37.7777777778%; }
+  .grid-col--6 {
+    width: 46.6666666667%; }
+  .grid-col--7 {
+    width: 55.5555555556%; }
+  .grid-col--8 {
+    width: 64.4444444444%; }
+  .grid-col--9 {
+    width: 73.3333333333%; }
+  .grid-col--10 {
+    width: 82.2222222222%; }
+  .grid-col--11 {
+    width: 91.1111111111%; }
+  .grid-col--12 {
+    width: 100%; } }
 @media (min-width: 768px) {
   .grid-col--1 {
     width: 4.6666666667%; }
@@ -741,7 +790,7 @@ footer {
 
 .banner {
   color: #fff;
-  background-image: url(../img/home-YLei.webp);
+  background-image: url(../img/banner/home-YLei.webp);
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: multiply;
   background-repeat: no-repeat;

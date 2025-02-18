@@ -1,6 +1,6 @@
 .banner{
   @include text-color;
-  background-image: url(#{$path-img}home-YLei.webp);
+  background-image: url(#{$path-img}banner/home-YLei.webp);
   background-color: rgba(0,0,0,0.6);
   background-blend-mode: multiply;
   background-repeat: no-repeat;

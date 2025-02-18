@@ -57,11 +57,13 @@
   @for $i from 1 through $g-col-count {
     // Calulate all gutters combined
     $gutters: ($g-gutter-width * ($g-col-count - 1));
-    // 
+    // calculate a standard column width based on max width defined in config and column count.
     $col-width: (($max-width - $gutters)/ $g-col-count);
+    // calculate target size for each column value.
     $cur-width: (($col-width * $i) + ($g-gutter-width * ($i - 1)));
     // Generate column modifier classes
     &--#{($i)} {
+      // take the target size and make it a percentage based on full width.
       width: percentage($cur-width/$max-width);
     }
   }

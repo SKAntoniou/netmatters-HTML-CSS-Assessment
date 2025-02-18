@@ -4,22 +4,15 @@
 
 .container {
   display: grid;
-
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-
   @include mq(m) {
     width: $cont-max-width-m;
-
   }
-
   @include mq(l) {
     width: $cont-max-width-l;
-
   }
-
   @include mq(xl) {
     width: $cont-max-width;
   }
