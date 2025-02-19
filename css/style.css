@@ -477,7 +477,7 @@ blockquote, figcaption {
   .grid-col--12 {
     width: 100%; } }
 
-.module-news-item-case-studies .module-news-image .module-news-tag, .btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"] {
+.module-news-tag, .btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"] {
   border: 0;
   color: #fff;
   text-transform: uppercase;
@@ -492,7 +492,7 @@ blockquote, figcaption {
 .btn-base:active, [class^="module-welcome-button"]:active, [class^="button-banner"]:active {
   opacity: 75%; }
 
-.module-news-item-case-studies .module-news-image .module-news-tag {
+.module-news-tag {
   position: absolute;
   right: 0;
   top: 2%;
@@ -536,9 +536,7 @@ blockquote, figcaption {
 .banner-element:nth-of-type(5n) .button-banner {
   background-color: #c42e2a; }
 
-.module-news-item-case-studies .module-news-image .module-news-tag {
-  background-color: #926fb1; }
-.module-news-item-case-studies .module-news-item-content .btn-readmore {
+.module-news-item-case-studies .module-news-image .module-news-tag, .module-news-item-case-studies .module-news-item-content .btn-readmore {
   background-color: #926fb1; }
 
 [class^="icon-"], [class*=" icon-"] {

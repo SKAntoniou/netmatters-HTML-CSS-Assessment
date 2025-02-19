@@ -78,18 +78,13 @@
   }
 }
 
+
+.module-news-tag {
+  @extend %news-tag;
+}
 // Buttons for news 
 .module-news-item-case-studies {
-  .module-news-image {
-    .module-news-tag {
-      @extend %news-tag;
-      background-color: $news-case-studies;
-    }
-  }
-  .module-news-item-content {
-    .btn-readmore {
-      background-color: $news-case-studies;
-    }
+  .module-news-image .module-news-tag, .module-news-item-content .btn-readmore {
+    background-color: $news-case-studies;
   }
 }
-
