@@ -8,13 +8,25 @@
     display: block;
   }
 }
-
 .module-news-item-content {
-  border: 1px solid black;
-}
+  border: 1px solid $br--color;
+  padding: 30px;
 
+  h4 {
+    margin-top: 0;
+  }
+}
 .module-news-item-author {
   img {
     display: inline-block;
+  }
+}
+
+// Type of section specific
+.module-news-item-case-studies {
+  .module-news-item-content {
+    .btn-readmore {
+      background-color: $news-case-studies;
+    }
   }
 }

@@ -51,6 +51,9 @@ $color-palettes: (
   )
 );
 
+// Section colours
+$news-case-studies: #926fb1;
+
 // Color Palette Modifiers
 
 
@@ -62,8 +65,9 @@ $background-accent: #212330;
 // Text
 
 
-// Border radius
-$br--default: 6px;
+// Border
+$br--color: #ccc;
+$br--radius: 6px;
 
 // Transitions
 

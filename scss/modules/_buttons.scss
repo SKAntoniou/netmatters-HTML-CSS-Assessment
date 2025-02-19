@@ -78,18 +78,18 @@
   }
 }
 
-// Buttons for news
-[class^="module-news-tag"] {
-  @extend %btn;
-  font-size: 12px;
-  padding: 5px 10px;
-  position: absolute;
-  right: 0;
-  top: 2%;
-  line-height: 80%;
-}
-.module-news-tag {
-  &-case-studies {
-    background-color: palette(netmatters,purple);
+// Buttons for news 
+.module-news-item-case-studies {
+  .module-news-image {
+    .module-news-tag {
+      @extend %news-tag;
+      background-color: $news-case-studies;
+    }
+  }
+  .module-news-item-content {
+    .btn-readmore {
+      background-color: $news-case-studies;
+    }
   }
 }
+

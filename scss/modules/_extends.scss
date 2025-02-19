@@ -11,11 +11,12 @@
 // Buttons
 %btn {
   border: 0;
-  padding: 10px 30px;
-  margin: 6px 0;
-  border-radius: $br--default;
   color: $white;
+  // The padding 0.2em to counteract the extra space for lower-part of lower case letters. This will fully center the text with any text size.
   text-transform: uppercase;
+  padding: calc(10px + 0.2em) 30px 10px;
+  margin: 6px 0;
+  border-radius: $br--radius;
   display: inline-block;
 }
 
@@ -31,4 +32,13 @@
   }
 }
 
+%news-tag {
+  @extend %btn;
+  position: absolute;
+  right: 0;
+  top: 2%;
+  padding: 0.2em 10px 0;
+  font-size: .75rem;
+  z-index: 1;
+}
 // Icons
