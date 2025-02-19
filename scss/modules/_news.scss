@@ -1,3 +1,19 @@
+// overlaying link to read more 
+[class^="module-news-article-"] {
+  display: flex;
+  position: relative;
+}
+[class^="module-news-item-link"] {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+[class^="module-news-item-content"] {
+  z-index: 0;
+}
+
 .module-news-image {
   width: 100%;
   position: relative;
@@ -8,7 +24,7 @@
     display: block;
   }
 }
-.module-news-item-content {
+.module-news-item-text {
   border: 1px solid $br--color;
   padding: 30px;
 
@@ -22,11 +38,3 @@
   }
 }
 
-// Type of section specific
-.module-news-item-case-studies {
-  .module-news-item-content {
-    .btn-readmore {
-      background-color: $news-case-studies;
-    }
-  }
-}

@@ -498,7 +498,7 @@ blockquote, figcaption {
   top: 2%;
   padding: 0.2em 10px 0;
   font-size: .75rem;
-  z-index: 1; }
+  z-index: 2; }
 
 .btn-social-media {
   background-color: #212330;
@@ -536,7 +536,11 @@ blockquote, figcaption {
 .banner-element:nth-of-type(5n) .button-banner {
   background-color: #c42e2a; }
 
-.module-news-item-case-studies .module-news-image .module-news-tag, .module-news-item-case-studies .module-news-item-content .btn-readmore {
+[class^="module-news-item-link"] {
+  width: 100%;
+  height: 100%; }
+
+.module-news-item-content-case-studies .module-news-tag, .module-news-item-content-case-studies .btn-readmore {
   background-color: #926fb1; }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -849,6 +853,20 @@ footer {
     height: 70px;
     width: auto; }
 
+[class^="module-news-article-"] {
+  display: flex;
+  position: relative; }
+
+[class^="module-news-item-link"] {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+[class^="module-news-item-content"] {
+  z-index: 0; }
+
 .module-news-image {
   width: 100%;
   position: relative;
@@ -857,16 +875,13 @@ footer {
     width: 100%;
     display: block; }
 
-.module-news-item-content {
+.module-news-item-text {
   border: 1px solid #ccc;
   padding: 30px; }
-  .module-news-item-content h4 {
+  .module-news-item-text h4 {
     margin-top: 0; }
 
 .module-news-item-author img {
   display: inline-block; }
-
-.module-news-item-case-studies .module-news-item-content .btn-readmore {
-  background-color: #926fb1; }
 
 /*# sourceMappingURL=style.css.map */

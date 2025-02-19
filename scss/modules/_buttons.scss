@@ -78,13 +78,19 @@
   }
 }
 
-
+// Buttons for news 
+// Universal for news
 .module-news-tag {
   @extend %news-tag;
 }
-// Buttons for news 
-.module-news-item-case-studies {
-  .module-news-image .module-news-tag, .module-news-item-content .btn-readmore {
+[class^="module-news-item-link"] {
+  width: 100%;
+  height: 100%;
+}
+
+// Case Studies
+.module-news-item-content-case-studies {
+  .module-news-tag, .btn-readmore {
     background-color: $news-case-studies;
   }
 }
