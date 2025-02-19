@@ -477,7 +477,7 @@ blockquote, figcaption {
   .grid-col--12 {
     width: 100%; } }
 
-.btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"] {
+.btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"], [class^="module-news-tag"] {
   border: 0;
   padding: 10px 30px;
   margin: 6px 0;
@@ -527,6 +527,17 @@ blockquote, figcaption {
   background-color: #2ecc71; }
 .banner-element:nth-of-type(5n) .button-banner {
   background-color: #c42e2a; }
+
+[class^="module-news-tag"] {
+  font-size: 12px;
+  padding: 5px 10px;
+  position: absolute;
+  right: 0;
+  top: 2%;
+  line-height: 80%; }
+
+.module-news-tag-case-studies {
+  background-color: #926fb1; }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -826,7 +837,7 @@ footer {
 
 .module-partners-flex, .module-awards-flex {
   display: flex;
-  margin: 30px 0;
+  margin: 50px 0;
   overflow-x: hidden;
   justify-content: center; }
 
@@ -834,6 +845,22 @@ footer {
   margin: 0 30px;
   align-self: center; }
   .module-partners-item img, .module-awards-item img {
-    filter: grayscale(100%); }
+    filter: grayscale(100%);
+    height: 70px;
+    width: auto; }
+
+.module-news-image {
+  width: 100%;
+  position: relative;
+  margin-bottom: 0; }
+  .module-news-image img {
+    width: 100%;
+    display: block; }
+
+.module-news-item-content {
+  border: 1px solid black; }
+
+.module-news-item-author img {
+  display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */

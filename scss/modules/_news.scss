@@ -1,0 +1,20 @@
+.module-news-image {
+  width: 100%;
+  position: relative;
+  margin-bottom: 0;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.module-news-item-content {
+  border: 1px solid black;
+}
+
+.module-news-item-author {
+  img {
+    display: inline-block;
+  }
+}

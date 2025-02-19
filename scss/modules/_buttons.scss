@@ -77,3 +77,19 @@
     }
   }
 }
+
+// Buttons for news
+[class^="module-news-tag"] {
+  @extend %btn;
+  font-size: 12px;
+  padding: 5px 10px;
+  position: absolute;
+  right: 0;
+  top: 2%;
+  line-height: 80%;
+}
+.module-news-tag {
+  &-case-studies {
+    background-color: palette(netmatters,purple);
+  }
+}
