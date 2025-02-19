@@ -338,6 +338,7 @@ blockquote, figcaption {
 .container {
   display: grid;
   width: 100%;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px; }
   @media (min-width: 768px) {
@@ -822,5 +823,17 @@ footer {
     padding: 5.5px;
     margin: 0 10px;
     border-radius: 50%; }
+
+.module-partners-flex, .module-awards-flex {
+  display: flex;
+  margin: 30px 0;
+  overflow-x: hidden;
+  justify-content: center; }
+
+.module-partners-item, .module-awards-item {
+  margin: 0 30px;
+  align-self: center; }
+  .module-partners-item img, .module-awards-item img {
+    filter: grayscale(100%); }
 
 /*# sourceMappingURL=style.css.map */
