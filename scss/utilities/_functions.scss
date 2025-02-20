@@ -4,12 +4,13 @@
 
 // Import Google Fonts
 @mixin font-import($font-name) {
-  @if variable-exists($name: $font-name) {
+  @if variable-exists(font-name) {
     @import url($font-name);
+  } 
+  @else {
+    @warn "Font #{$font-name} variable was not found so it was not imported";
   }
 }
-@include font-import($font-url--poppin);
-@include font-import($font-url--lato);
 
 // Call the color palette
 @function palette($palette, $shade) {

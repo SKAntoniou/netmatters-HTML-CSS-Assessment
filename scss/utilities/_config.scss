@@ -20,16 +20,24 @@ $path-font: '../fonts/';
 }
 
 // Font Stacks
-$font-url--poppin       : 'http://fonts.googleapis.com/css?family=Poppin:100,300,400,700,900';
-$font-url--lato        : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
-$font-family--primary    : 'Poppin', sans-serif;
+$font-url--poppins : 'http://fonts.googleapis.com/css?family=Poppins:100,300,400,700,900';
+$font-url--lato : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary    : 'Poppins', sans-serif;
 $font-family--secondary  : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Import Fonts
+@include font-import($font-url--poppins);
+@include font-import($font-url--lato);
 
 // Font Size
 
 
 // Font Weights
-
+$font-w-xlight: 100;
+$font-w-light: 300;
+$font-w-normal: 400;
+$font-w-bold: 700;
+$font-w-xbold: 900;
 
 // Descriptive Colors
 $white: #fff;
@@ -48,11 +56,14 @@ $color-palettes: (
     brown-red:#ce4125,
     pink: #f62459,
     grey: #67809f,
+    blue: #4183d7,
   )
 );
 
 // Section colours
 $news-case-studies: #926fb1;
+$news-careers: #4183d7;
+$news-news: #4183d7;
 
 // Color Palette Modifiers
 

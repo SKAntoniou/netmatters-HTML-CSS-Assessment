@@ -79,18 +79,37 @@
 }
 
 // Buttons for news 
-// Universal for news
 .module-news-tag {
-  @extend %news-tag;
+  @extend %btn;
+  border-radius: 0;
+  position: absolute;
+  right: 0;
+  top: 2%;
+  padding: 0.2em 10px 0;
+  font-size: .75rem;
+  font-weight: $font-w-bold;
+  line-height: 1.438rem;
+  z-index: 2;
 }
 [class^="module-news-item-link"] {
   width: 100%;
   height: 100%;
 }
 
-// Case Studies
-.module-news-item-content-case-studies {
-  .module-news-tag, .btn-readmore {
-    background-color: $news-case-studies;
+.module-news-article {
+  &-case-studies {
+    .module-news-tag, .btn-readmore {
+      background-color: $news-case-studies;
+    }
+  }
+  &-careers {
+    .module-news-tag, .btn-readmore {
+      background-color: $news-careers;
+    }
+  }
+  &-careers {
+    .module-news-tag, .btn-readmore {
+      background-color: $news-news;
+    }
   }
 }

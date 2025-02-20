@@ -3,14 +3,14 @@
   display: flex;
   position: relative;
 }
-[class^="module-news-item-link"] {
+.module-news-item-link {
   display: block;
   z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
 }
-[class^="module-news-item-content"] {
+.module-news-item-content {
   z-index: 0;
 }
 
@@ -38,3 +38,21 @@
   }
 }
 
+// article type colouring
+.module-news-article {
+  &-case-studies {
+    h4 {
+      color: $news-case-studies;
+    }
+  }
+  &-careers {
+    h4 {
+      color: $news-careers;
+    }
+  }
+  &-careers {
+    h4 {
+      color: $news-news;
+    }
+  }
+}

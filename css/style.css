@@ -1,3 +1,5 @@
+@import url("http://fonts.googleapis.com/css?family=Poppins:100,300,400,700,900");
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?ky9gej");
@@ -315,7 +317,9 @@ template {
 
 body {
   margin: 0;
-  font-family: "Poppin", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
   width: 100%; }
 
 * {
@@ -477,7 +481,7 @@ blockquote, figcaption {
   .grid-col--12 {
     width: 100%; } }
 
-.module-news-tag, .btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"] {
+.btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"], .module-news-tag {
   border: 0;
   color: #fff;
   text-transform: uppercase;
@@ -491,14 +495,6 @@ blockquote, figcaption {
 
 .btn-base:active, [class^="module-welcome-button"]:active, [class^="button-banner"]:active {
   opacity: 75%; }
-
-.module-news-tag {
-  position: absolute;
-  right: 0;
-  top: 2%;
-  padding: 0.2em 10px 0;
-  font-size: .75rem;
-  z-index: 2; }
 
 .btn-social-media {
   background-color: #212330;
@@ -536,12 +532,27 @@ blockquote, figcaption {
 .banner-element:nth-of-type(5n) .button-banner {
   background-color: #c42e2a; }
 
+.module-news-tag {
+  border-radius: 0;
+  position: absolute;
+  right: 0;
+  top: 2%;
+  padding: 0.2em 10px 0;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1.438rem;
+  z-index: 2; }
+
 [class^="module-news-item-link"] {
   width: 100%;
   height: 100%; }
 
-.module-news-item-content-case-studies .module-news-tag, .module-news-item-content-case-studies .btn-readmore {
+.module-news-article-case-studies .module-news-tag, .module-news-article-case-studies .btn-readmore {
   background-color: #926fb1; }
+.module-news-article-careers .module-news-tag, .module-news-article-careers .btn-readmore {
+  background-color: #4183d7; }
+.module-news-article-careers .module-news-tag, .module-news-article-careers .btn-readmore {
+  background-color: #4183d7; }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -857,14 +868,14 @@ footer {
   display: flex;
   position: relative; }
 
-[class^="module-news-item-link"] {
+.module-news-item-link {
   display: block;
   z-index: 1;
   position: absolute;
   top: 0;
   left: 0; }
 
-[class^="module-news-item-content"] {
+.module-news-item-content {
   z-index: 0; }
 
 .module-news-image {
@@ -883,5 +894,12 @@ footer {
 
 .module-news-item-author img {
   display: inline-block; }
+
+.module-news-article-case-studies h4 {
+  color: #926fb1; }
+.module-news-article-careers h4 {
+  color: #4183d7; }
+.module-news-article-careers h4 {
+  color: #4183d7; }
 
 /*# sourceMappingURL=style.css.map */

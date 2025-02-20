@@ -31,14 +31,4 @@
     opacity: 75%;
   }
 }
-
-%news-tag {
-  @extend %btn;
-  position: absolute;
-  right: 0;
-  top: 2%;
-  padding: 0.2em 10px 0;
-  font-size: .75rem;
-  z-index: 2;
-}
 // Icons
