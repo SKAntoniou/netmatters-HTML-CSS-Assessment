@@ -2,7 +2,7 @@
 // Grid Columns
 // ==========================================================================
 
-// Calculate grid columns
+// Calculate grid columns - e.g. .grid-col--1 
 .grid-col {
   @include mq(s) {
     @include g-columns($cont-max-width-s)
