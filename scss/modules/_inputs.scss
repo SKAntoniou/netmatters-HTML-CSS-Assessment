@@ -1,0 +1,60 @@
+// extends for search
+%input-search {
+  font-size: 0.875rem;
+  outline: none;
+
+  input {
+    background-color: transparent;
+    border: none;
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  button {
+    border: none;
+  }
+}
+
+// At the moment it is the mobile only search bar for the header.
+.input-search-1{
+  @extend %input-search;
+  background-color: rgba(0, 0, 0, .1);
+  border: 1px solid rgba(0, 0, 0, .2);
+  width: 100%;
+  position: relative;
+  input {
+    width: 100%;
+    padding: 15px 40px 15px 15px;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    font-size: 2rem;
+    padding-right: 5px;
+    height: 100%;
+  }
+}
+
+// The other type of search area
+.input-search-2 {
+  @extend %input-search;
+  background-color: transparent;
+  border: 1px solid palette(netmatters,very-dark-grey);
+  border-radius: calc(#{$br--radius-small} * 2);
+  display: flex;
+  align-items: center;
+  input {
+    flex: 1;
+    padding: 0 10px;
+  }
+  button {
+    @extend %btn;
+    font-size: 40px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 0 $br--radius-small $br--radius-small 0;
+    background-color: palette(netmatters, very-dark-grey);
+    margin: 0;
+  }
+}

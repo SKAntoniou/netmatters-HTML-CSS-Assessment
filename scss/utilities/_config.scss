@@ -58,6 +58,7 @@ $color-palettes: (
     pink: #f62459,
     grey: #67809f,
     dark-grey: #333654,
+    very-dark-grey: #999AA2,
     blue: #4183d7,
     light-orange: #f7b322,
     tomato: #d64541
@@ -82,11 +83,15 @@ $background-accent: #212330;
 
 // Border
 $br--color: #ccc;
+$br--radius-small: 3px;
 $br--radius: 6px;
 $br--radius-large: 15px;
 
 // Transitions
 
+
+// Site Container
+$global-padding: 15px;
 
 // Grid
 $g-col-count: 12;

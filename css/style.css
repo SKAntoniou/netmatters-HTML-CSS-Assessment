@@ -313,7 +313,8 @@ template {
   display: none; }
 
 :root {
-  font-size: 1rem; }
+  font-size: 1rem;
+  overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -321,7 +322,8 @@ body {
   font-style: normal;
   font-weight: normal;
   width: 100%;
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  overflow-x: hidden; }
 
 * {
   box-sizing: border-box; }
@@ -482,7 +484,7 @@ blockquote, figcaption {
   .grid-col--12 {
     width: 100%; } }
 
-.btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"], .module-news-tag {
+.btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"], .module-news-tag, .btn-sidenav-toggle, .input-search-2 button {
   border: 0;
   color: #fff;
   text-transform: uppercase;
@@ -554,6 +556,63 @@ blockquote, figcaption {
   background-color: #4183d7; }
 .module-news-article-news .module-news-tag, .module-news-article-news .btn-readmore {
   background-color: #4183d7; }
+
+.btn-sidenav-toggle, .btn-call-netmatters {
+  font-size: 40px; }
+
+.btn-sidenav-toggle {
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: #333654;
+  border-radius: 3px; }
+
+.btn-call-netmatters {
+  display: inline-block;
+  color: #333654; }
+
+.input-search-1, .input-search-2 {
+  font-size: 0.875rem;
+  outline: none; }
+  .input-search-1 input, .input-search-2 input {
+    background-color: transparent;
+    border: none; }
+    .input-search-1 input:focus-visible, .input-search-2 input:focus-visible {
+      outline: none; }
+  .input-search-1 button, .input-search-2 button {
+    border: none; }
+
+.input-search-1 {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  position: relative; }
+  .input-search-1 input {
+    width: 100%;
+    padding: 15px 40px 15px 15px; }
+  .input-search-1 button {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    font-size: 2rem;
+    padding-right: 5px;
+    height: 100%; }
+
+.input-search-2 {
+  background-color: transparent;
+  border: 1px solid #999AA2;
+  border-radius: calc(3px * 2);
+  display: flex;
+  align-items: center; }
+  .input-search-2 input {
+    flex: 1;
+    padding: 0 10px; }
+  .input-search-2 button {
+    font-size: 40px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 0 3px 3px 0;
+    background-color: #999AA2;
+    margin: 0; }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -988,5 +1047,45 @@ footer {
 .module-services-description {
   font-size: 0.8125rem;
   margin-bottom: 1rem; }
+
+header {
+  background-color: #fff;
+  width: 100%; }
+  header .container {
+    padding: 15px; }
+  @media (min-width: 768px) {
+    header .input-search-1, header .btn-call-netmatters {
+      display: none; } }
+  header .input-search-2 {
+    display: none; }
+    @media (min-width: 768px) {
+      header .input-search-2 {
+        display: flex; } }
+    @media (min-width: 992px) {
+      header .input-search-2 input {
+        display: none; } }
+
+.header-top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; }
+  .header-top-content img {
+    display: block;
+    max-width: 100%;
+    max-height: 66px;
+    flex: 1 1;
+    min-width: 0;
+    object-fit: contain;
+    object-position: left; }
+
+.header-top-buttons {
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  flex: 0 0;
+  white-space: nowrap; }
+  .header-top-buttons a, .header-top-buttons div {
+    margin-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -113,3 +113,20 @@
     }
   }
 }
+
+// Header
+// Hamburger (sidenav toggle)
+.btn-sidenav-toggle, .btn-call-netmatters {
+  font-size: 40px;
+}
+.btn-sidenav-toggle {
+  @extend %btn;
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: palette(netmatters,dark-grey);
+  border-radius: $br--radius-small;
+}
+.btn-call-netmatters {
+  display: inline-block;
+  color:palette(netmatters,dark-grey);
+}

@@ -1,0 +1,52 @@
+header {
+  background-color: $white;
+  width: 100%;
+
+  .container{
+    padding: $global-padding;
+  }
+
+  .input-search-1, .btn-call-netmatters {
+    @include mq(m) {
+      display: none;
+    }
+  }
+  .input-search-2 {
+    display: none;
+    @include mq(m) {
+      display: flex;
+    }
+    @include mq(l) {
+      input {
+        display: none;
+      }
+    }
+  }
+}
+
+.header-top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 66px;
+    flex: 1 1;
+    min-width: 0;
+    object-fit: contain;
+    object-position: left;
+  }
+}
+
+.header-top-buttons {
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  flex: 0 0;
+  white-space: nowrap;
+  a, div {
+    margin-left: 10px;
+  }
+}
