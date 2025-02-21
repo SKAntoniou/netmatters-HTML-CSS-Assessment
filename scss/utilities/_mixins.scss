@@ -68,4 +68,48 @@
     }
   }
 }        
-        
+
+// Header & services mixin.
+@mixin services{
+  &bespoke-software {
+    .module-services-icon {
+      background-color: palette(netmatters,grey);
+    }
+    .btn-readmore {
+      background-color: palette(netmatters,light-orange);
+    }
+  }
+  &it-support {
+    .module-services-icon, .btn-readmore {
+      background-color: palette(netmatters,blue);
+    }
+  }
+  &digital-marketing {
+    .module-services-icon, .btn-readmore {
+      background-color: palette(netmatters,green);
+    }
+  }
+  &telecoms-services {
+    .module-services-icon, .btn-readmore {
+      background-color: palette(netmatters,tomato);
+    }
+  }
+  &web-design {
+    .module-services-icon, .btn-readmore {
+      background-color: palette(netmatters,purple);
+    }
+    .module-services-icon {
+      font-size: 2rem;
+    }
+  }
+  &cyber-security {
+    .module-services-icon, .btn-readmore {
+      background-color: palette(netmatters,pink);
+    }
+  }
+  &developer-training {
+    .module-services-icon, .btn-readmore {
+      background-color: palette(netmatters,brown-red);
+    }
+  }
+}
