@@ -3,19 +3,14 @@
   background-color: $background-secondary;
   padding: 50px 0;
   position: relative;
-  // 15px padding 
 }
 
 .module-welcome-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.module-welcome-tile {
-  flex: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   @include mq(l) {
-    flex-basis: 50%;
-    padding: 0 15px;
+    column-gap: $g-gutter-width;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
