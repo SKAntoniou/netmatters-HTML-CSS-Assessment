@@ -116,8 +116,13 @@
 
 // Header
 // Hamburger (sidenav toggle)
-.btn-sidenav-toggle, .btn-call-netmatters {
-  font-size: 40px;
+.btn-sidenav-toggle, .btn-call-netmatters, .btn-support, .btn-contact {
+  span {
+    font-size: 40px;
+  }
+  display: flex;
+  text-align: center;
+  align-content: center;
 }
 .btn-sidenav-toggle {
   @extend %btn;
@@ -129,4 +134,12 @@
 .btn-call-netmatters {
   display: inline-block;
   color:palette(netmatters,dark-grey);
+}
+.btn-support {
+  @extend %btn;
+  background-color: palette(netmatters,blue);
+}
+.btn-contact {
+  @extend %btn;
+  background-color: palette(netmatters,very-dark-grey);
 }

@@ -1,3 +1,68 @@
 // ==========================================================================
 // Nav
 // ==========================================================================
+
+nav {
+  background-color: palette(netmatters,dark-grey);
+}
+
+// Layout - media queries handled in header partial.
+.nav-items {
+  display: flex;
+  text-align: center;
+  > [class^="nav-item"] {
+    flex: 1;
+  }
+  padding: 0 15px;
+}
+[class^="nav-item-section-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+// Catagory specific colouring
+.nav-item-section- {
+  @include services;
+}
+.nav-item-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+// Text formatting
+[class^="nav-item-text-"] {
+  color: $white;
+  text-transform: uppercase;
+}
+.nav-item-text- {
+  &small {
+    font-size: 0.625rem;
+  }
+  &large {
+    font-size: 1.125rem;
+  }
+}
+
+// Large Hover element
+.nav-item-section-bespoke-software {
+  &:hover {
+    .nav-item-expand {
+      display: block;
+    }
+  }
+}
+.nav-item-expand {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  color: $white;
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  background-color: pink;
+}

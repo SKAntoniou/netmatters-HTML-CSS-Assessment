@@ -1,25 +1,37 @@
 header {
   background-color: $white;
   width: 100%;
-
-  .container{
+  position: relative; // This is for nav contianers.
+  > .container{
     padding: $global-padding;
   }
 
-  .input-search-1, .btn-call-netmatters {
-    @include mq(m) {
+  // Media Queries
+  .input-search-2, .btn-support, .btn-contact, nav {
+    display: none;
+  }
+  @include mq(m) {
+    .input-search-1, .btn-call-netmatters {
       display: none;
     }
-  }
-  .input-search-2 {
-    display: none;
-    @include mq(m) {
+    .input-search-2 {
       display: flex;
     }
-    @include mq(l) {
-      input {
-        display: none;
-      }
+  }
+  @include mq(l) {
+    .input-search-2 input {
+      display: none;
+    }
+    .btn-support, .btn-contact {
+      display: flex;
+    }
+    nav {
+      display: block;
+    }
+  }
+  @include mq(xl) {
+    .input-search-2 input {
+      display: block;
     }
   }
 }

@@ -484,7 +484,7 @@ blockquote, figcaption {
   .grid-col--12 {
     width: 100%; } }
 
-.btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"], .module-news-tag, .btn-sidenav-toggle, .input-search-2 button {
+.btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"], .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .input-search-2 button {
   border: 0;
   color: #fff;
   text-transform: uppercase;
@@ -557,8 +557,12 @@ blockquote, figcaption {
 .module-news-article-news .module-news-tag, .module-news-article-news .btn-readmore {
   background-color: #4183d7; }
 
-.btn-sidenav-toggle, .btn-call-netmatters {
-  font-size: 40px; }
+.btn-sidenav-toggle, .btn-call-netmatters, .btn-support, .btn-contact {
+  display: flex;
+  text-align: center;
+  align-content: center; }
+  .btn-sidenav-toggle span, .btn-call-netmatters span, .btn-support span, .btn-contact span {
+    font-size: 40px; }
 
 .btn-sidenav-toggle {
   padding-left: 13px;
@@ -569,6 +573,12 @@ blockquote, figcaption {
 .btn-call-netmatters {
   display: inline-block;
   color: #333654; }
+
+.btn-support {
+  background-color: #4183d7; }
+
+.btn-contact {
+  background-color: #999AA2; }
 
 .input-search-1, .input-search-2 {
   font-size: 0.875rem;
@@ -613,6 +623,82 @@ blockquote, figcaption {
     border-radius: 0 3px 3px 0;
     background-color: #999AA2;
     margin: 0; }
+
+nav {
+  background-color: #333654; }
+
+.nav-items {
+  display: flex;
+  text-align: center;
+  padding: 0 15px; }
+  .nav-items > [class^="nav-item"] {
+    flex: 1; }
+
+[class^="nav-item-section-"] {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.nav-item-section-bespoke-software .module-services-icon {
+  background-color: #67809f; }
+.nav-item-section-bespoke-software .btn-readmore {
+  background-color: #f7b322; }
+.nav-item-section-bespoke-software .nav-item-icon {
+  color: #67809f; }
+.nav-item-section-it-support .module-services-icon, .nav-item-section-it-support .btn-readmore {
+  background-color: #4183d7; }
+.nav-item-section-it-support .nav-item-icon {
+  color: #4183d7; }
+.nav-item-section-digital-marketing .module-services-icon, .nav-item-section-digital-marketing .btn-readmore {
+  background-color: #2ecc71; }
+.nav-item-section-digital-marketing .nav-item-icon {
+  color: #2ecc71; }
+.nav-item-section-telecoms-services .module-services-icon, .nav-item-section-telecoms-services .btn-readmore {
+  background-color: #d64541; }
+.nav-item-section-telecoms-services .nav-item-icon {
+  color: #d64541; }
+.nav-item-section-web-design .module-services-icon, .nav-item-section-web-design .btn-readmore {
+  background-color: #926fb1; }
+.nav-item-section-web-design .module-services-icon {
+  font-size: 2rem; }
+.nav-item-section-web-design .nav-item-icon {
+  color: #926fb1; }
+.nav-item-section-cyber-security .module-services-icon, .nav-item-section-cyber-security .btn-readmore {
+  background-color: #f62459; }
+.nav-item-section-cyber-security .nav-item-icon {
+  color: #f62459; }
+.nav-item-section-developer-training .module-services-icon, .nav-item-section-developer-training .btn-readmore {
+  background-color: #ce4125; }
+.nav-item-section-developer-training .nav-item-icon {
+  color: #ce4125; }
+
+.nav-item-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem; }
+
+[class^="nav-item-text-"] {
+  color: #fff;
+  text-transform: uppercase; }
+
+.nav-item-text-small {
+  font-size: 0.625rem; }
+.nav-item-text-large {
+  font-size: 1.125rem; }
+
+.nav-item-section-bespoke-software:hover .nav-item-expand {
+  display: block; }
+
+.nav-item-expand {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  background-color: pink; }
+  .nav-item-expand-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -1018,20 +1104,34 @@ footer {
   background-color: #67809f; }
 .module-services-item-content-bespoke-software .btn-readmore {
   background-color: #f7b322; }
+.module-services-item-content-bespoke-software .nav-item-icon {
+  color: #67809f; }
 .module-services-item-content-it-support .module-services-icon, .module-services-item-content-it-support .btn-readmore {
   background-color: #4183d7; }
+.module-services-item-content-it-support .nav-item-icon {
+  color: #4183d7; }
 .module-services-item-content-digital-marketing .module-services-icon, .module-services-item-content-digital-marketing .btn-readmore {
   background-color: #2ecc71; }
+.module-services-item-content-digital-marketing .nav-item-icon {
+  color: #2ecc71; }
 .module-services-item-content-telecoms-services .module-services-icon, .module-services-item-content-telecoms-services .btn-readmore {
   background-color: #d64541; }
+.module-services-item-content-telecoms-services .nav-item-icon {
+  color: #d64541; }
 .module-services-item-content-web-design .module-services-icon, .module-services-item-content-web-design .btn-readmore {
   background-color: #926fb1; }
 .module-services-item-content-web-design .module-services-icon {
   font-size: 2rem; }
+.module-services-item-content-web-design .nav-item-icon {
+  color: #926fb1; }
 .module-services-item-content-cyber-security .module-services-icon, .module-services-item-content-cyber-security .btn-readmore {
   background-color: #f62459; }
+.module-services-item-content-cyber-security .nav-item-icon {
+  color: #f62459; }
 .module-services-item-content-developer-training .module-services-icon, .module-services-item-content-developer-training .btn-readmore {
   background-color: #ce4125; }
+.module-services-item-content-developer-training .nav-item-icon {
+  color: #ce4125; }
 
 .module-services-icon {
   font-size: 3rem;
@@ -1050,20 +1150,27 @@ footer {
 
 header {
   background-color: #fff;
-  width: 100%; }
-  header .container {
+  width: 100%;
+  position: relative; }
+  header > .container {
     padding: 15px; }
+  header .input-search-2, header .btn-support, header .btn-contact, header nav {
+    display: none; }
   @media (min-width: 768px) {
     header .input-search-1, header .btn-call-netmatters {
-      display: none; } }
-  header .input-search-2 {
-    display: none; }
-    @media (min-width: 768px) {
-      header .input-search-2 {
-        display: flex; } }
-    @media (min-width: 992px) {
-      header .input-search-2 input {
-        display: none; } }
+      display: none; }
+    header .input-search-2 {
+      display: flex; } }
+  @media (min-width: 992px) {
+    header .input-search-2 input {
+      display: none; }
+    header .btn-support, header .btn-contact {
+      display: flex; }
+    header nav {
+      display: block; } }
+  @media (min-width: 1260px) {
+    header .input-search-2 input {
+      display: block; } }
 
 .header-top-content {
   display: flex;
