@@ -2,31 +2,40 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: $g-gutter-width;
+  padding-top: 15px; // for hover effect while keeping overflow hidden
   @include mq(m) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-auto-rows: 0;
-    overflow: hidden;
+    overflow-y: hidden;
   }
   @include mq(xl) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
+
+.module-news-header {
+  @extend %section-heading;
+}
+
+
 [class^="module-news-article-"] {
   display: flex;
   position: relative;
+  z-index: 1;
+  @include hover-lift;
 }
 
 .module-news-item-link {
   display: block;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
 }
 .module-news-item-content {
-  z-index: 0;
+  z-index: 1;
 }
 
 .module-news-image {

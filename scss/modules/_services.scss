@@ -19,7 +19,11 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
+}
 
+// Section Header Styling
+.module-services-header {
+  @extend %section-heading;
 }
 
 // Container styling
@@ -27,13 +31,7 @@
   border: 1px solid $br--color;
   border-radius: $br--radius-large;
   padding: 30px;
-  position: relative;
-  top: 0;
-  transition: .5s ease;
-  &:hover {
-    top: -10px;
-    transition: .5s ease;
-  }
+  @include hover-lift;
 }
 .module-services-item-content {
   display: block;

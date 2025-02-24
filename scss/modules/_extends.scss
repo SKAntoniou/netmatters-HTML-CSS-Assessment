@@ -6,7 +6,24 @@
 
 
 // Headlines
-
+%section-heading {
+  $header-text-color: palette(netmatters, dark-grey);
+  margin: 50px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    display: inline-block;
+    color: $header-text-color;
+    margin: 0;
+    font-size: 2.25rem;
+  }
+  a {
+    color: $header-text-color;
+    font-size: 1.625rem;
+    font-weight: $font-w-bold;
+  }
+}
 
 // Buttons
 %btn {
