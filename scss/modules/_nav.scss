@@ -44,10 +44,13 @@ nav {
 }
 
 // Large Hover element
-.nav-item-section-bespoke-software {
+[class^="nav-item-section-"] {
   &:hover {
     .nav-item-expand {
       display: block;
+    }
+    .nav-item-icon {
+      color: $white;
     }
   }
 }
@@ -63,6 +66,27 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  a {
+    font-size: 1.2rem;
+    line-height: 3rem;
+  }
+  .container {
+    padding-bottom: 1.5rem;
+  }
+}
 
-  background-color: pink;
+// This is the little arrow that continues from the initial hover element. 
+.nav-item-expand-accent {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.nav-item-expand-accent-arrow {
+  $border-arrow-sides-l: calc((#{$cont-max-width-l} - (#{$global-padding} * 2)) / 14);
+  border-left: $border-arrow-sides-l solid transparent;
+	border-right: $border-arrow-sides-l solid transparent;
+  @include mq(xl) {
+    $border-arrow-sides-xl: calc((#{$cont-max-width} - (#{$global-padding} * 2)) / 14);
+    border-left: $border-arrow-sides-xl solid transparent;
+    border-right: $border-arrow-sides-xl solid transparent;
+  }
 }

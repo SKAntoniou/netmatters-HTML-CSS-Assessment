@@ -72,65 +72,146 @@
 // Header & services mixin.
 @mixin services{
   &bespoke-software {
-    .module-services-icon {
-      background-color: palette(netmatters,grey);
+    // Colours for Bespoke Software
+    $color-primary: palette(netmatters,grey);
+    $color-secondary: palette(netmatters,light-grey);
+    $color-accent: palette(netmatters,light-orange);
+
+    // Rules
+    .module-services-icon, &:hover{
+      background-color: $color-primary;
     }
     .btn-readmore {
-      background-color: palette(netmatters,light-orange);
+      background-color: $color-accent;
     }
     .nav-item-icon {
-      color: palette(netmatters,grey);
+      color: $color-primary;
+    }
+    .nav-item-expand {
+      background-color: $color-secondary;
+    }
+    .nav-item-expand-accent-arrow {
+      grid-column: 1 / span 1;
+      border-top: 30px solid $color-primary;
     }
   }
+
   &it-support {
-    .module-services-icon, .btn-readmore {
-      background-color: palette(netmatters,blue);
+    // Colours
+    $color-primary: palette(netmatters,blue);
+    $color-secondary: palette(netmatters,other-blue);
+
+    // Rules
+    .module-services-icon, .btn-readmore, &:hover {
+      background-color: $color-primary;
     }
     .nav-item-icon {
-      color: palette(netmatters,blue);
+      color: $color-primary;
+    }
+    .nav-item-expand {
+      background-color: $color-secondary;
+    }
+    .nav-item-expand-accent-arrow {
+      grid-column: 2 / span 1;
+      border-top: 30px solid $color-primary;
     }
   }
+
   &digital-marketing {
-    .module-services-icon, .btn-readmore {
-      background-color: palette(netmatters,green);
+    $color-primary: palette(netmatters,green);
+    $color-secondary: palette(netmatters,light-green);
+
+    .module-services-icon, .btn-readmore, &:hover {
+      background-color: $color-primary;
     }
     .nav-item-icon {
-      color: palette(netmatters,green);
+      color: $color-primary;
+    }
+    .nav-item-expand {
+      background-color: $color-secondary;
+    }
+    .nav-item-expand-accent-arrow {
+      grid-column: 3 / span 1;
+      border-top: 30px solid $color-primary;
     }
   }
+
   &telecoms-services {
-    .module-services-icon, .btn-readmore {
-      background-color: palette(netmatters,tomato);
+    $color-primary: palette(netmatters,tomato);
+    $color-secondary: palette(netmatters,light-red);
+
+    .module-services-icon, .btn-readmore, &:hover {
+      background-color: $color-primary;
     }
     .nav-item-icon {
-      color: palette(netmatters,tomato);
+      color: $color-primary;
+    }
+    .nav-item-expand {
+      background-color: $color-secondary;
+    }
+    .nav-item-expand-accent-arrow {
+      grid-column: 4 / span 1;
+      border-top: 30px solid $color-primary;
     }
   }
+
   &web-design {
-    .module-services-icon, .btn-readmore {
-      background-color: palette(netmatters,purple);
+    $color-primary: palette(netmatters,purple);
+    $color-secondary: #79539A;
+
+    .module-services-icon, .btn-readmore, &:hover {
+      background-color: $color-primary;
     }
     .module-services-icon{
       font-size: 2rem;
     }
     .nav-item-icon {
-      color: palette(netmatters,purple);
+      color: $color-primary;
+    }
+    .nav-item-expand {
+      background-color: $color-secondary;
+    }
+    .nav-item-expand-accent-arrow {
+      grid-column: 5 / span 1;
+      border-top: 30px solid $color-primary;
     }
   }
+
   &cyber-security {
-    .module-services-icon, .btn-readmore{
-      background-color: palette(netmatters,pink);
+    $color-primary: palette(netmatters,pink);
+    $color-secondary: #DE0A3F;
+
+    .module-services-icon, .btn-readmore, &:hover {
+      background-color: $color-primary;
     }
     .nav-item-icon {
-      color: palette(netmatters,pink);
+      color: $color-primary;
+    }
+    .nav-item-expand {
+      background-color: $color-secondary;
+    }
+    .nav-item-expand-accent-arrow {
+      grid-column: 6 / span 1;
+      border-top: 30px solid $color-primary;
     }
   }
+
   &developer-training {
-    .module-services-icon, .btn-readmore {
-      background-color: palette(netmatters,brown-red);
+    $color-primary: palette(netmatters,brown-red);
+    $color-secondary: #A3331D;
+
+    .module-services-icon, .btn-readmore, &:hover {
+      background-color: $color-primary;
     }
     .nav-item-icon {
-      color: palette(netmatters,brown-red);
+      color: $color-primary;
+    }
+    .nav-item-expand {
+      background-color: $color-secondary;
+    }
+    .nav-item-expand-accent-arrow {
+      grid-column: 7 / span 1;
+      border-top: 30px solid $color-primary;
     }
   }
 }
