@@ -27,6 +27,13 @@
   border: 1px solid $br--color;
   border-radius: $br--radius-large;
   padding: 30px;
+  position: relative;
+  top: 0;
+  transition: .5s ease;
+  &:hover {
+    top: -10px;
+    transition: .5s ease;
+  }
 }
 .module-services-item-content {
   display: block;
