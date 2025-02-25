@@ -5,7 +5,7 @@
 // Text Color
 @mixin text-color {
   @if not (background-color == $white) {
-    color: $white;
+    color: palette(general, text, light);
   }
 }
 
@@ -100,10 +100,10 @@
   &:hover {
     background-color: $color-primary;
     .module-services-title, .module-services-description {
-      color: $white;
+      color: palette(general, text, light);
     }
     .btn-readmore, .module-services-icon {
-      background-color: $white;
+      background-color: palette(general, text, light);
       color: $color-primary;
     }
   }
@@ -112,9 +112,9 @@
 @mixin services{
   &bespoke-software {
     // Colours for Bespoke Software
-    $color-primary: palette(netmatters,grey);
-    $color-secondary: palette(netmatters,light-grey);
-    $color-accent: palette(netmatters,light-orange);
+    $color-primary: palette(services, software);
+    $color-secondary: palette(services, software, base, dark);
+    $color-accent: palette(services, software, alt);
     @include services-modifiers($color-primary, $color-secondary, $color-accent);
     .nav-item-expand-accent-arrow {
       grid-column: 1 / span 1;
@@ -123,8 +123,8 @@
 
   &it-support {
     // Colours
-    $color-primary: palette(netmatters,blue);
-    $color-secondary: palette(netmatters,other-blue);
+    $color-primary: palette(services, it-support);
+    $color-secondary: palette(services, it-support, base, dark);
     @include services-modifiers($color-primary, $color-secondary, $color-primary);
     .nav-item-expand-accent-arrow {
       grid-column: 2 / span 1;
@@ -132,8 +132,8 @@
   }
 
   &digital-marketing {
-    $color-primary: palette(netmatters,green);
-    $color-secondary: palette(netmatters,light-green);
+    $color-primary: palette(services, marketing);
+    $color-secondary: palette(services, marketing, base, dark);
     @include services-modifiers($color-primary, $color-secondary, $color-primary);
     .nav-item-expand-accent-arrow {
       grid-column: 3 / span 1;
@@ -141,8 +141,8 @@
   }
 
   &telecoms-services {
-    $color-primary: palette(netmatters,tomato);
-    $color-secondary: palette(netmatters,light-red);
+    $color-primary: palette(services, telecoms);
+    $color-secondary: palette(services, telecoms, base, dark);
     @include services-modifiers($color-primary, $color-secondary, $color-primary);
     .nav-item-expand-accent-arrow {
       grid-column: 4 / span 1;
@@ -150,8 +150,8 @@
   }
 
   &web-design {
-    $color-primary: palette(netmatters,purple);
-    $color-secondary: #79539A;
+    $color-primary: palette(services, web-design);
+    $color-secondary: palette(services, web-design, base, dark);
     @include services-modifiers($color-primary, $color-secondary, $color-primary);
     .nav-item-expand-accent-arrow {
       grid-column: 5 / span 1;
@@ -159,8 +159,8 @@
   }
 
   &cyber-security {
-    $color-primary: palette(netmatters,pink);
-    $color-secondary: #DE0A3F;
+    $color-primary: palette(services, security);
+    $color-secondary: palette(services, security, base, dark);
     @include services-modifiers($color-primary, $color-secondary, $color-primary);
     .nav-item-expand-accent-arrow {
       grid-column: 6 / span 1;
@@ -168,8 +168,8 @@
   }
 
   &developer-training {
-    $color-primary: palette(netmatters,brown-red);
-    $color-secondary: #A3331D;
+    $color-primary: palette(services, training);
+    $color-secondary: palette(services, training, base, dark);
     @include services-modifiers($color-primary, $color-secondary, $color-primary);
     .nav-item-expand-accent-arrow {
       grid-column: 7 / span 1;

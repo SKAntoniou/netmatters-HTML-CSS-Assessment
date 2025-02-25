@@ -86,17 +86,17 @@
 .module-news-article {
   &-case-studies {
     h4 {
-      color: $news-case-studies;
+      color: palette(news, case-studies);
     }
   }
   &-careers {
     h4 {
-      color: $news-careers;
+      color: palette(news, careers);
     }
   }
   &-news {
     h4 {
-      color: $news-news;
+      color: palette(news, news);
     }
   }
 }

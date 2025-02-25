@@ -7,7 +7,7 @@
 
 // Headlines
 %section-heading {
-  $header-text-color: palette(netmatters, dark-grey);
+  $header-text-color: palette(general, section-headings);
   margin: 50px 0 15px 0;
   display: flex;
   justify-content: space-between;
@@ -31,25 +31,21 @@
 
 // Buttons
 %btn {
+  // layout
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px; // for between icon and button
+  // external layout
+  margin: 6px 0;
+  // button decoration
   border: 0;
+  padding: 10px 30px;
+  border-radius: $br--radius;
+  // text decoration
   color: $white;
   text-transform: uppercase;
-  padding: 10px 30px;
-  margin: 6px 0;
-  border-radius: $br--radius;
-  display: inline-block;
-}
-
-%btn-hover {
-  &:hover {
-    opacity: 75%;
-  }
-}
-
-%btn-active {
-  &:active {
-    opacity: 75%;
-  }
+  text-wrap: nowrap;
 }
 
 // Icons

@@ -23,9 +23,6 @@ footer {
   }
 }
 
-.footer-row {
-  display: flex;
-}
 .footer-logo {
   img {
     width: 250px;
@@ -35,7 +32,7 @@ footer {
   }
 }
 .footer-socials {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(2, 1fr);
   margin-right: auto;
   font-size: 26px;

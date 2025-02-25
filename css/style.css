@@ -323,7 +323,8 @@ body {
   font-weight: normal;
   width: 100%;
   background-color: #f5f5f5;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: relative; }
 
 * {
   box-sizing: border-box; }
@@ -491,11 +492,11 @@ blockquote, figcaption {
   align-items: center; }
   [class^="module-news-header"] h2, [class^="module-services-header"] h2 {
     display: inline-block;
-    color: #333654;
+    color: #333645;
     margin: 0;
     font-size: 2.25rem; }
   [class^="module-news-header"] a, [class^="module-services-header"] a {
-    color: #333654;
+    color: #333645;
     font-size: 1.625rem;
     font-weight: 700;
     display: none; }
@@ -504,19 +505,17 @@ blockquote, figcaption {
         display: block; } }
 
 .btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"], .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .input-search-2 button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 6px 0;
   border: 0;
+  padding: 10px 30px;
+  border-radius: 6px;
   color: #fff;
   text-transform: uppercase;
-  padding: 10px 30px;
-  margin: 6px 0;
-  border-radius: 6px;
-  display: inline-block; }
-
-.btn-base:hover, [class^="module-welcome-button"]:hover, [class^="button-banner"]:hover {
-  opacity: 75%; }
-
-.btn-base:active, [class^="module-welcome-button"]:active, [class^="button-banner"]:active {
-  opacity: 75%; }
+  text-wrap: nowrap; }
 
 .btn-social-media {
   background-color: #212330;
@@ -543,16 +542,8 @@ blockquote, figcaption {
 .module-welcome-button-trustpilot {
   background-color: #00b67b; }
 
-.banner-element:nth-of-type(5n+1) .button-banner {
+.banner-element .button-banner {
   background-color: #926fb1; }
-.banner-element:nth-of-type(5n+2) .button-banner {
-  background-color: #e8a008; }
-.banner-element:nth-of-type(5n+3) .button-banner {
-  background-color: #2a6ec6; }
-.banner-element:nth-of-type(5n+4) .button-banner {
-  background-color: #2ecc71; }
-.banner-element:nth-of-type(5n) .button-banner {
-  background-color: #c42e2a; }
 
 .module-news-tag {
   border-radius: 0;
@@ -586,18 +577,44 @@ blockquote, figcaption {
 .btn-sidenav-toggle {
   padding-left: 13px;
   padding-right: 13px;
-  background-color: #333654;
+  background-color: #333645;
   border-radius: 3px; }
 
 .btn-call-netmatters {
   display: inline-block;
-  color: #333654; }
+  color: #333645; }
 
 .btn-support {
   background-color: #4183d7; }
 
 .btn-contact {
-  background-color: #999AA2; }
+  background-color: #999aa2; }
+
+.btn-manage-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #7e808a;
+  border-radius: 0 3px 0 0;
+  padding: 3px 10px;
+  color: #fff;
+  font-size: 0.8rem; }
+  .btn-manage-consent:hover {
+    background-color: #999aa2; }
+
+.btn-live-chat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 5;
+  background-color: #2F3240;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 25px; }
 
 .input-search-1, .input-search-2 {
   font-size: 0.875rem;
@@ -644,7 +661,7 @@ blockquote, figcaption {
     margin: 0; }
 
 nav {
-  background-color: #333654; }
+  background-color: #333645; }
 
 .nav-items {
   display: flex;
@@ -679,7 +696,7 @@ nav {
 .nav-item-section-it-support .module-services-icon {
   background-color: #4183d7; }
 .nav-item-section-it-support .nav-item-expand {
-  background-color: #286ABD; }
+  background-color: #286abd; }
 .nav-item-section-it-support .btn-readmore {
   background-color: #4183d7; }
 .nav-item-section-it-support .nav-item-icon {
@@ -698,7 +715,7 @@ nav {
 .nav-item-section-digital-marketing .module-services-icon {
   background-color: #2ecc71; }
 .nav-item-section-digital-marketing .nav-item-expand {
-  background-color: #25A25A; }
+  background-color: #25a25a; }
 .nav-item-section-digital-marketing .btn-readmore {
   background-color: #2ecc71; }
 .nav-item-section-digital-marketing .nav-item-icon {
@@ -717,7 +734,7 @@ nav {
 .nav-item-section-telecoms-services .module-services-icon {
   background-color: #d64541; }
 .nav-item-section-telecoms-services .nav-item-expand {
-  background-color: #BC2C28; }
+  background-color: #bc2c28; }
 .nav-item-section-telecoms-services .btn-readmore {
   background-color: #d64541; }
 .nav-item-section-telecoms-services .nav-item-icon {
@@ -736,7 +753,7 @@ nav {
 .nav-item-section-web-design .module-services-icon {
   background-color: #926fb1; }
 .nav-item-section-web-design .nav-item-expand {
-  background-color: #79539A; }
+  background-color: #79539a; }
 .nav-item-section-web-design .btn-readmore {
   background-color: #926fb1; }
 .nav-item-section-web-design .nav-item-icon {
@@ -755,7 +772,7 @@ nav {
 .nav-item-section-cyber-security .module-services-icon {
   background-color: #f62459; }
 .nav-item-section-cyber-security .nav-item-expand {
-  background-color: #DE0A3F; }
+  background-color: #de093f; }
 .nav-item-section-cyber-security .btn-readmore {
   background-color: #f62459; }
 .nav-item-section-cyber-security .nav-item-icon {
@@ -774,7 +791,7 @@ nav {
 .nav-item-section-developer-training .module-services-icon {
   background-color: #ce4125; }
 .nav-item-section-developer-training .nav-item-expand {
-  background-color: #A3331D; }
+  background-color: #a3331d; }
 .nav-item-section-developer-training .btn-readmore {
   background-color: #ce4125; }
 .nav-item-section-developer-training .nav-item-icon {
@@ -1038,9 +1055,6 @@ footer {
     .footer-link-grid {
       grid-template-columns: repeat(4, 1fr); } }
 
-.footer-row {
-  display: flex; }
-
 .footer-logo img {
   width: 250px; }
   @media (min-width: 480px) {
@@ -1048,7 +1062,7 @@ footer {
       width: 320px; } }
 
 .footer-socials {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(2, 1fr);
   margin-right: auto;
   font-size: 26px; }
@@ -1144,6 +1158,8 @@ footer {
     filter: grayscale(100%);
     height: 70px;
     width: auto; }
+    .module-partners-item img:hover, .module-awards-item img:hover {
+      filter: none; }
 
 .module-news-articles {
   display: grid;
@@ -1260,7 +1276,7 @@ footer {
 .module-services-item-content {
   display: block;
   text-align: center;
-  color: #333654; }
+  color: #333645; }
   .module-services-item-content h3 {
     font-weight: 400;
     color: black; }
@@ -1287,7 +1303,7 @@ footer {
 .module-services-item-container-it-support .module-services-icon {
   background-color: #4183d7; }
 .module-services-item-container-it-support .nav-item-expand {
-  background-color: #286ABD; }
+  background-color: #286abd; }
 .module-services-item-container-it-support .btn-readmore {
   background-color: #4183d7; }
 .module-services-item-container-it-support .nav-item-icon {
@@ -1306,7 +1322,7 @@ footer {
 .module-services-item-container-digital-marketing .module-services-icon {
   background-color: #2ecc71; }
 .module-services-item-container-digital-marketing .nav-item-expand {
-  background-color: #25A25A; }
+  background-color: #25a25a; }
 .module-services-item-container-digital-marketing .btn-readmore {
   background-color: #2ecc71; }
 .module-services-item-container-digital-marketing .nav-item-icon {
@@ -1325,7 +1341,7 @@ footer {
 .module-services-item-container-telecoms-services .module-services-icon {
   background-color: #d64541; }
 .module-services-item-container-telecoms-services .nav-item-expand {
-  background-color: #BC2C28; }
+  background-color: #bc2c28; }
 .module-services-item-container-telecoms-services .btn-readmore {
   background-color: #d64541; }
 .module-services-item-container-telecoms-services .nav-item-icon {
@@ -1344,7 +1360,7 @@ footer {
 .module-services-item-container-web-design .module-services-icon {
   background-color: #926fb1; }
 .module-services-item-container-web-design .nav-item-expand {
-  background-color: #79539A; }
+  background-color: #79539a; }
 .module-services-item-container-web-design .btn-readmore {
   background-color: #926fb1; }
 .module-services-item-container-web-design .nav-item-icon {
@@ -1363,7 +1379,7 @@ footer {
 .module-services-item-container-cyber-security .module-services-icon {
   background-color: #f62459; }
 .module-services-item-container-cyber-security .nav-item-expand {
-  background-color: #DE0A3F; }
+  background-color: #de093f; }
 .module-services-item-container-cyber-security .btn-readmore {
   background-color: #f62459; }
 .module-services-item-container-cyber-security .nav-item-icon {
@@ -1382,7 +1398,7 @@ footer {
 .module-services-item-container-developer-training .module-services-icon {
   background-color: #ce4125; }
 .module-services-item-container-developer-training .nav-item-expand {
-  background-color: #A3331D; }
+  background-color: #a3331d; }
 .module-services-item-container-developer-training .btn-readmore {
   background-color: #ce4125; }
 .module-services-item-container-developer-training .nav-item-icon {

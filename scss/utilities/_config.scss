@@ -42,57 +42,72 @@ $font-w-xbold: 900;
 // Descriptive Colors
 $white: #fff;
 $light-grey: #f5f5f5;
-$google: #4387f6;
-$trustpilot: #00b67b;
-
+$dark-grey: #333645;
 
 // Color Usage
 $color-palettes: (
-	netmatters: (
-    purple: #926fb1,
-    orange: #e8a008,
-    lightblue: #2a6ec6,
-    green: #2ecc71,
-    light-green: #25A25A,
-    red: #c42e2a,
-    light-red: #BC2C28,
-    brown-red:#ce4125,
-    pink: #f62459,
-    grey: #67809f,
-    light-grey: #526781,
-    dark-grey: #333654,
-    very-dark-grey: #999AA2,
-    blue: #4183d7,
-    other-blue: #286ABD,
-    light-orange: #f7b322,
-    tomato: #d64541
+  general: (
+    netmatters: ( base: #926fb1, ),
+    section-headings: (base : #333645, ),
+    text: ( 
+      base: #333645, 
+      light: $white,
+    ),
+  ),
+  inputs: (
+    search1: (
+      base: rgba(0, 0, 0, .1),
+      border: rgba(0, 0, 0, .2),
+    ),
+    search2: ( base: #999AA2, ), 
+  ),
+  header: ( 
+    button: (
+      base: #333645,
+      light: #999aa2,
+      support: #4183d7,
+      dark: #2F3240,
+    ), 
+    logo: ( base: #333645, ),
+    nav: ( base: #333645, ),
+  ),
+  services: (
+    software: (
+      base: #67809f,
+      alt: #f7b322,
+    ),
+    it-support: ( base: #4183d7, ),
+    marketing: ( base: #2ecc71, ),
+    telecoms: ( base: #d64541, ),
+    web-design: ( base: #926fb1, ),
+    security: ( base: #f62459, ),
+    training: ( base: #ce4125, ),
+  ),
+  news: (
+    case-studies: ( base: #926fb1, ),
+    careers: ( base: #4183d7, ),
+    news: ( base: #4183d7, ),
+  ),
+  brands: (
+    google: ( base: #4387f6, ),
+    trustpilot: ( base: #00b67b, ),
+    facebook: ( base: #3B5998, ),
+    twitter: ( base: #00ACED, ),
+    linkedin: ( base: #0077B5, ),
+    instagram: ( base: #D93175, ),
   )
 );
-
-// Section colours
-$news-case-studies: #926fb1;
-$news-careers: #4183d7;
-$news-news: #4183d7;
-
-// Color Palette Modifiers
-
 
 // UI Colors
 $background-primary: $light-grey;
 $background-secondary: #323544;
 $background-accent: #212330;
 
-// Text
-
-
 // Border
 $br--color: #ccc;
 $br--radius-small: 3px;
 $br--radius: 6px;
 $br--radius-large: 15px;
-
-// Transitions
-
 
 // Site Container
 $global-padding: 15px;

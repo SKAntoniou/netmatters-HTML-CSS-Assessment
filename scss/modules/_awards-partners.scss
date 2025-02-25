@@ -11,5 +11,8 @@
     filter: grayscale(100%);
     height: 70px;
     width: auto;
+    &:hover {
+      filter: none;
+    }
   }
 }

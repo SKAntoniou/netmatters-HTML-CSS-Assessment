@@ -18,8 +18,8 @@
 // At the moment it is the mobile only search bar for the header.
 .input-search-1{
   @extend %input-search;
-  background-color: rgba(0, 0, 0, .1);
-  border: 1px solid rgba(0, 0, 0, .2);
+  background-color: palette(inputs, search1);
+  border: 1px solid palette(inputs, search1, border);
   width: 100%;
   position: relative;
   input {
@@ -40,7 +40,7 @@
 .input-search-2 {
   @extend %input-search;
   background-color: transparent;
-  border: 1px solid palette(netmatters,very-dark-grey);
+  border: 1px solid palette(inputs, search2);
   border-radius: calc(#{$br--radius-small} * 2);
   display: flex;
   align-items: center;
@@ -54,7 +54,7 @@
     padding-left: 13px;
     padding-right: 13px;
     border-radius: 0 $br--radius-small $br--radius-small 0;
-    background-color: palette(netmatters, very-dark-grey);
+    background-color: palette(inputs, search2);
     margin: 0;
   }
 }

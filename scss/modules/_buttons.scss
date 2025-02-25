@@ -20,8 +20,6 @@
 
 .btn-base {
   @extend %btn;
-  @extend %btn-hover;
-  @extend %btn-active;
 }
 
 .btn-readmore {
@@ -30,51 +28,26 @@
 
 [class^="module-welcome-button"], [class^="button-banner"] {
   @extend %btn;
-  @extend %btn-hover;
-  @extend %btn-active;
   font-size: 20px;
 }
-// Buttons for the welcome module
 
+// Buttons for the welcome module
 .module-welcome-button {
   &-base {
     background-color: $background-accent;
   }
   &-google {
-    background-color: $google;
+    background-color: palette(brands,google);
   }
   &-trustpilot {
-    background-color: $trustpilot;
+    background-color: palette(brands,trustpilot);
   }
 }
 
 // Buttons for the banner
-
 .banner-element {
-  &:nth-of-type(5n+1) {
-    .button-banner {
-      background-color: palette(netmatters, purple);
-    }
-  }
-  &:nth-of-type(5n+2) {
-    .button-banner {
-      background-color: palette(netmatters, orange);
-    }
-  }
-  &:nth-of-type(5n+3) {
-    .button-banner {
-      background-color: palette(netmatters, lightblue);
-    }
-  }
-  &:nth-of-type(5n+4) {
-    .button-banner {
-      background-color: palette(netmatters, green);
-    }
-  }
-  &:nth-of-type(5n) {
-    .button-banner {
-      background-color: palette(netmatters, red);
-    }
+  .button-banner {
+    background-color: palette(general, netmatters);
   }
 }
 
@@ -99,17 +72,17 @@
 .module-news-article {
   &-case-studies {
     .module-news-tag, .btn-readmore {
-      background-color: $news-case-studies;
+      background-color: palette(news, case-studies);
     }
   }
   &-careers {
     .module-news-tag, .btn-readmore {
-      background-color: $news-careers;
+      background-color: palette(news, careers);
     }
   }
   &-news {
     .module-news-tag, .btn-readmore {
-      background-color: $news-news;
+      background-color: palette(news, news);
     }
   }
 }
@@ -128,18 +101,57 @@
   @extend %btn;
   padding-left: 13px;
   padding-right: 13px;
-  background-color: palette(netmatters,dark-grey);
+  background-color: palette(header, button);
   border-radius: $br--radius-small;
 }
 .btn-call-netmatters {
   display: inline-block;
-  color:palette(netmatters,dark-grey);
+  color:palette(header, button);
 }
 .btn-support {
   @extend %btn;
-  background-color: palette(netmatters,blue);
+  background-color: palette(header, button, support);
 }
 .btn-contact {
   @extend %btn;
-  background-color: palette(netmatters,very-dark-grey);
+  background-color: palette(header, button, light);
+}
+
+// Privacy Policy Button
+.btn-manage-consent {
+  // Layout
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  // Formatting
+  background-color: palette(header, button, light, dark);
+  &:hover {
+    background-color: palette(header, button, light);
+  }
+  border-radius: 0 $br--radius-small 0 0;
+  padding: 3px 10px;
+  // Text
+  color: palette(general, text, light);
+  font-size: 0.8rem;
+}
+
+// Live Chat icon
+.btn-live-chat {
+  // Local Placeholders
+  $position-spacing: 25px;
+  // Layout
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: $position-spacing;
+  right: $position-spacing;
+  z-index: 5;
+  // Formatting
+  background-color: palette(header, button, dark);
+  border-radius: 50%;
+  padding: 20px;
+  // Icon
+  font-size: 25px;
 }
