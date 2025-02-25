@@ -22,6 +22,10 @@
     color: $header-text-color;
     font-size: 1.625rem;
     font-weight: $font-w-bold;
+    display: none;
+    @include mq(m) {
+      display: block;
+    }
   }
 }
 

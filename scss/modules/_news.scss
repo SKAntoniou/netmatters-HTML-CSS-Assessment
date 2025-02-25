@@ -14,9 +14,18 @@
   }
 }
 
-
-.module-news-header {
+// Section Headings
+[class^="module-news-header"] {
   @extend %section-heading;
+}
+.module-services-header-bottom {
+  margin: 30px auto 15px;
+  a {
+    display: block;
+  }
+  @include mq(m) {
+    display: none;
+  }
 }
 
 
