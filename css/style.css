@@ -504,7 +504,7 @@ blockquote, figcaption {
       [class^="module-news-header"] a, [class^="module-services-header"] a {
         display: block; } }
 
-.btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"], .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .input-search-2 button {
+.btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"], .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -615,6 +615,17 @@ blockquote, figcaption {
   border-radius: 50%;
   padding: 20px;
   font-size: 25px; }
+
+.module-partners-flex a {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0; }
+.module-partners-flex .module-partners-item:nth-child(3n) a {
+  background-color: #f7b322; }
+.module-partners-flex .module-partners-item:nth-child(3n+1) a {
+  background-color: #2ecc71; }
+.module-partners-flex .module-partners-item:nth-child(3n+2) a {
+  background-color: #926fb1; }
 
 .input-search-1, .input-search-2 {
   font-size: 0.875rem;
@@ -1148,7 +1159,6 @@ footer {
 .module-partners-flex, .module-awards-flex {
   display: flex;
   margin: 50px 0;
-  overflow-x: hidden;
   justify-content: center; }
 
 .module-partners-item, .module-awards-item {
@@ -1160,6 +1170,38 @@ footer {
     width: auto; }
     .module-partners-item img:hover, .module-awards-item img:hover {
       filter: none; }
+
+.module-partners-item {
+  position: relative; }
+  .module-partners-item .module-partner-short-info {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 50px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    width: 280px;
+    background-color: #333645;
+    color: #fff;
+    padding: 15px;
+    text-align: center; }
+    .module-partners-item .module-partner-short-info h4 {
+      margin: 0;
+      font-weight: 400;
+      font-size: 1.125rem; }
+    .module-partners-item .module-partner-short-info p {
+      font-size: 0.8125rem; }
+    .module-partners-item .module-partner-short-info .module-partner-short-info-arrow {
+      position: absolute;
+      bottom: calc(0% - calc(50px - 15px));
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 35px solid transparent;
+      border-right: 35px solid transparent;
+      border-top: calc(50px - 15px) solid #333645; }
+  .module-partners-item:hover .module-partner-short-info {
+    display: flex;
+    flex-direction: column; }
 
 .module-news-articles {
   display: grid;

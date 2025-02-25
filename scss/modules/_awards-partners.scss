@@ -1,7 +1,6 @@
 .module-partners-flex, .module-awards-flex {
   display: flex;
   margin: 50px 0;
-  overflow-x: hidden;
   justify-content: center;
 }
 .module-partners-item, .module-awards-item {
@@ -13,6 +12,57 @@
     width: auto;
     &:hover {
       filter: none;
+    }
+  }
+}
+
+.module-partners-item {
+  position: relative;
+  .module-partner-short-info {
+    // Placeholder values
+    $arrow-gap: 50px;
+    $arrow-margin: 15px;
+    // Layout
+    display: none;
+    position: absolute;
+    bottom: calc(100% + #{$arrow-gap});
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    width: 280px;
+    // Formatting
+    background-color: palette(general, text);
+    color: palette(general, text, light);
+    padding: 15px;
+    // Text
+    text-align: center;
+    h4 {
+      margin: 0;
+      font-weight: $font-w-normal;
+      font-size: 1.125rem;
+    }
+    p {
+      font-size: 0.8125rem;
+    }
+    .module-partner-short-info-arrow {
+      // Placeholders
+      $border-arrow-sides: 35px; // To change width of downward arrow
+      $border-arrow-top: calc(#{$arrow-gap} - #{$arrow-margin}); // To change height of downward arrow
+      // Layout
+      position: absolute;
+      bottom: calc(0% - #{$border-arrow-top});
+      left: 50%;
+      transform: translateX(-50%);
+      // Arrow Formatting
+      border-left: $border-arrow-sides solid transparent;
+      border-right: $border-arrow-sides solid transparent;
+      border-top: $border-arrow-top solid palette(general, text);
+    }
+  }
+  &:hover {
+    .module-partner-short-info {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

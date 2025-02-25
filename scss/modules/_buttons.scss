@@ -155,3 +155,24 @@
   // Icon
   font-size: 25px;
 }
+
+// Partners hover element
+.module-partners-flex {
+  a {
+    @extend %btn;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+  }
+  .module-partners-item {
+    &:nth-child(3n) a {
+      background-color: palette(partners,btn1);
+    }
+    &:nth-child(3n+1) a {
+      background-color: palette(partners,btn2);
+    }
+    &:nth-child(3n+2) a {
+      background-color: palette(partners,btn3);
+    }
+  }
+}
