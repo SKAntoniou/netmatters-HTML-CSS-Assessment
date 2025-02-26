@@ -21,6 +21,21 @@
   padding: 0 10px;
   text-align: center;
   display: none;
+  h1 {
+    font-size: 2.5em;
+  }
+  @include mq(l) {
+    text-align: left;
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+    p {
+      font-size: 1.625rem;
+      font-weight: $font-w-bold;
+      line-height: 2.5rem;
+    }
+  }
 }
 
 #banner-element-1 {
