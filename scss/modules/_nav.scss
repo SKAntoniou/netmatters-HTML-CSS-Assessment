@@ -66,10 +66,6 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  a {
-    font-size: 1.2rem;
-    line-height: 3rem;
-  }
   .container {
     padding-bottom: 1.5rem;
   }
@@ -89,4 +85,17 @@ nav {
     border-left: $border-arrow-sides-xl solid transparent;
     border-right: $border-arrow-sides-xl solid transparent;
   }
+}
+
+// Nav expand text formatting
+.nav-item-expand-content-link {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  span {
+    font-size: 1.2rem;
+  }
+}
+.nav-item-expand-text {
+  margin-left: 0.5rem;
 }
