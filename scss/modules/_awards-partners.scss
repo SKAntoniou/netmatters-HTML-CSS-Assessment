@@ -50,9 +50,10 @@
       $border-arrow-top: calc(#{$arrow-gap} - #{$arrow-margin}); // To change height of downward arrow
       // Layout
       position: absolute;
-      bottom: calc(0% - #{$border-arrow-top});
+      bottom: calc(0% - #{$arrow-gap});
       left: 50%;
       transform: translateX(-50%);
+      padding-bottom: $arrow-margin;
       // Arrow Formatting
       border-left: $border-arrow-sides solid transparent;
       border-right: $border-arrow-sides solid transparent;

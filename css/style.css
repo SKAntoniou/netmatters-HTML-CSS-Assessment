@@ -1281,9 +1281,10 @@ footer {
       font-size: 0.8125rem; }
     .module-partners-item .module-partner-short-info .module-partner-short-info-arrow {
       position: absolute;
-      bottom: calc(0% - calc(50px - 15px));
+      bottom: calc(0% - 50px);
       left: 50%;
       transform: translateX(-50%);
+      padding-bottom: 15px;
       border-left: 35px solid transparent;
       border-right: 35px solid transparent;
       border-top: calc(50px - 15px) solid #333645; }
