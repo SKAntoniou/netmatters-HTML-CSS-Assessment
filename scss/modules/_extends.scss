@@ -2,8 +2,11 @@
 // Placeholders
 // ==========================================================================
 
-// Nav Items
-
+// Text
+%text-bold {
+  font-weight: $font-w-bold;
+  letter-spacing: 0.02rem;
+}
 
 // Headlines
 %section-heading {
@@ -21,31 +24,12 @@
   a {
     color: $header-text-color;
     font-size: 1.625rem;
-    font-weight: $font-w-bold;
+    @extend %text-bold;
     display: none;
     @include mq(m) {
       display: block;
     }
   }
-}
-
-// Buttons
-%btn {
-  // layout
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px; // for between icon and button
-  // external layout
-  margin: 6px 0;
-  // button decoration
-  border: 0;
-  padding: 10px 30px;
-  border-radius: $br--radius;
-  // text decoration
-  color: $white;
-  text-transform: uppercase;
-  text-wrap: nowrap;
 }
 
 // Icons

@@ -14,7 +14,34 @@
   }
 }
 
+.module-welcome-tile {
+  h2 {
+    font-size: 2.25rem;
+  }
+  strong, p, blockquote {
+    line-height: 1.875rem;
+  }
+  figure {
+    margin: 0;
+    margin-bottom: 3rem;
+    @extend %text-bold;
+  }
+  blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+  figcaption {
+    color: palette(general, text, grey);
+  }
+  cite {
+    font-style: normal;
+  }
+}
 .module-welcome-buttons {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $global-padding;
 }
+
 

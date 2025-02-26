@@ -2,56 +2,72 @@
 // Buttons
 // ==========================================================================
 
-.btn-social-media {
-  background-color: $background-accent;
-  display: flex;
-  justify-content: center;
+
+// Extends
+%btn-flex {
+  display: inline-flex;
   align-items: center;
-  min-width: 70px;
-  max-width: 120px;
-  flex: 1 50%;
-  height: 56px;
-  padding-top: 5px;
-  margin: 0 10px 10px 0;
-  @media (min-width: 480px) {
-    flex: 25%;
-  }
+  justify-content: center;
+  gap: 10px; // for between icon and button
 }
 
-.btn-base {
-  @extend %btn;
+%btn-text {
+  color: $white;
+  text-transform: uppercase;
+  text-wrap: nowrap;
 }
+
+%btn-size-std {
+  margin: 6px 0;
+  border: 0;
+  padding: 10px 30px;
+  border-radius: $br--radius;
+}
+
+%btn-size-large {
+  margin: 6px 0;
+  border: 0;
+  padding: 15px 30px;
+  border-radius: $br--radius;
+  font-size: 1.25rem;
+}
+
+%btn {
+  // layout
+  @extend %btn-flex;
+  @extend %btn-size-std;
+  // text decoration
+  @extend %btn-text;
+}
+
+// Universal Buttons ========================================================
 
 .btn-readmore {
   @extend %btn;
 }
 
-[class^="module-welcome-button"], [class^="button-banner"] {
-  @extend %btn;
-  font-size: 20px;
+// Button Type Specific =====================================================
+
+// Used in the Footer
+.btn-social-media {
+  @extend %btn-flex;
+  // Formatting
+  min-width: 70px;
+  height: 56px;
+  padding-top: 5px;
+  margin: 0 10px 10px 0;
+  // Colour
+  background-color: $background-accent;
 }
 
-// Buttons for the welcome module
-.module-welcome-button {
-  &-base {
-    background-color: $background-accent;
-  }
-  &-google {
-    background-color: palette(brands,google);
-  }
-  &-trustpilot {
-    background-color: palette(brands,trustpilot);
-  }
+// Used in the Welcome and Banner sections
+[class^="module-welcome-button-"], [class^="button-banner"] {
+  @extend %btn-flex;
+  @extend %btn-size-large;
+  @extend %btn-text;
 }
 
-// Buttons for the banner
-.banner-element {
-  .button-banner {
-    background-color: palette(general, netmatters);
-  }
-}
-
-// Buttons for news 
+// Used in the News Section
 .module-news-tag {
   @extend %btn;
   border-radius: 0;
@@ -60,61 +76,13 @@
   top: 2%;
   padding: 0 10px 0;
   font-size: .75rem;
-  font-weight: $font-w-bold;
+  @extend %text-bold;
   line-height: 1.438rem;
   z-index: 3;
 }
 [class^="module-news-item-link"] {
   width: 100%;
   height: 100%;
-}
-
-.module-news-article {
-  &-case-studies {
-    .module-news-tag, .btn-readmore {
-      background-color: palette(news, case-studies);
-    }
-  }
-  &-careers {
-    .module-news-tag, .btn-readmore {
-      background-color: palette(news, careers);
-    }
-  }
-  &-news {
-    .module-news-tag, .btn-readmore {
-      background-color: palette(news, news);
-    }
-  }
-}
-
-// Header
-// Hamburger (sidenav toggle)
-.btn-sidenav-toggle, .btn-call-netmatters, .btn-support, .btn-contact {
-  span {
-    font-size: 40px;
-  }
-  display: flex;
-  text-align: center;
-  align-content: center;
-}
-.btn-sidenav-toggle {
-  @extend %btn;
-  padding-left: 13px;
-  padding-right: 13px;
-  background-color: palette(header, button);
-  border-radius: $br--radius-small;
-}
-.btn-call-netmatters {
-  display: inline-block;
-  color:palette(header, button);
-}
-.btn-support {
-  @extend %btn;
-  background-color: palette(header, button, support);
-}
-.btn-contact {
-  @extend %btn;
-  background-color: palette(header, button, light);
 }
 
 // Privacy Policy Button
@@ -141,9 +109,7 @@
   // Local Placeholders
   $position-spacing: 25px;
   // Layout
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @extend %btn-flex;
   position: fixed;
   bottom: $position-spacing;
   right: $position-spacing;
@@ -154,6 +120,33 @@
   padding: 20px;
   // Icon
   font-size: 25px;
+}
+
+// Header
+.btn-sidenav-toggle, .btn-call-netmatters, .btn-support, .btn-contact {
+  @extend %btn-flex;
+  span {
+    font-size: 40px;
+  }
+}
+.btn-sidenav-toggle {
+  @extend %btn;
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: palette(header, button);
+  border-radius: $br--radius-small;
+}
+.btn-call-netmatters {
+  display: inline-block;
+  color: palette(header, button);
+}
+.btn-support {
+  @extend %btn;
+  background-color: palette(header, button, support);
+}
+.btn-contact {
+  @extend %btn;
+  background-color: palette(header, button, light);
 }
 
 // Partners hover element
@@ -174,5 +167,45 @@
     &:nth-child(3n+2) a {
       background-color: palette(partners,btn3);
     }
+  }
+}
+
+// Button Colouring =========================================================
+
+// Buttons for the welcome module
+.module-welcome-button {
+  &-base {
+    background-color: $background-accent;
+  }
+  &-google {
+    background-color: palette(brands,google);
+  }
+  &-trustpilot {
+    background-color: palette(brands,trustpilot);
+  }
+}
+
+.module-news-article {
+  &-case-studies {
+    .module-news-tag, .btn-readmore {
+      background-color: palette(news, case-studies);
+    }
+  }
+  &-careers {
+    .module-news-tag, .btn-readmore {
+      background-color: palette(news, careers);
+    }
+  }
+  &-news {
+    .module-news-tag, .btn-readmore {
+      background-color: palette(news, news);
+    }
+  }
+}
+
+// Buttons for the banner
+.banner-element {
+  .button-banner {
+    background-color: palette(general, netmatters);
   }
 }

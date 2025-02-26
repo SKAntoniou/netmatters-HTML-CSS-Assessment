@@ -485,6 +485,10 @@ blockquote, figcaption {
   .grid-col--12 {
     width: 100%; } }
 
+[class^="module-news-header"] a, [class^="module-services-header"] a, .module-news-tag, .module-welcome-tile figure {
+  font-weight: 700;
+  letter-spacing: 0.02rem; }
+
 [class^="module-news-header"], [class^="module-services-header"] {
   margin: 50px 0 15px 0;
   display: flex;
@@ -498,52 +502,41 @@ blockquote, figcaption {
   [class^="module-news-header"] a, [class^="module-services-header"] a {
     color: #333645;
     font-size: 1.625rem;
-    font-weight: 700;
     display: none; }
     @media (min-width: 768px) {
       [class^="module-news-header"] a, [class^="module-services-header"] a {
         display: block; } }
 
-.btn-base, .btn-readmore, [class^="module-welcome-button"], [class^="button-banner"], .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button {
+.btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button, .btn-social-media, [class^="module-welcome-button-"], [class^="button-banner"], .btn-live-chat, .btn-call-netmatters {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  margin: 6px 0;
-  border: 0;
-  padding: 10px 30px;
-  border-radius: 6px;
+  gap: 10px; }
+
+.btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button, [class^="module-welcome-button-"], [class^="button-banner"] {
   color: #fff;
   text-transform: uppercase;
   text-wrap: nowrap; }
 
+.btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button {
+  margin: 6px 0;
+  border: 0;
+  padding: 10px 30px;
+  border-radius: 6px; }
+
+[class^="module-welcome-button-"], [class^="button-banner"] {
+  margin: 6px 0;
+  border: 0;
+  padding: 15px 30px;
+  border-radius: 6px;
+  font-size: 1.25rem; }
+
 .btn-social-media {
-  background-color: #212330;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-width: 70px;
-  max-width: 120px;
-  flex: 1 50%;
   height: 56px;
   padding-top: 5px;
-  margin: 0 10px 10px 0; }
-  @media (min-width: 480px) {
-    .btn-social-media {
-      flex: 25%; } }
-
-[class^="module-welcome-button"], [class^="button-banner"] {
-  font-size: 20px; }
-
-.module-welcome-button-base {
+  margin: 0 10px 10px 0;
   background-color: #212330; }
-.module-welcome-button-google {
-  background-color: #4387f6; }
-.module-welcome-button-trustpilot {
-  background-color: #00b67b; }
-
-.banner-element .button-banner {
-  background-color: #926fb1; }
 
 .module-news-tag {
   border-radius: 0;
@@ -552,7 +545,6 @@ blockquote, figcaption {
   top: 2%;
   padding: 0 10px 0;
   font-size: .75rem;
-  font-weight: 700;
   line-height: 1.438rem;
   z-index: 3; }
 
@@ -560,19 +552,31 @@ blockquote, figcaption {
   width: 100%;
   height: 100%; }
 
-.module-news-article-case-studies .module-news-tag, .module-news-article-case-studies .btn-readmore {
-  background-color: #926fb1; }
-.module-news-article-careers .module-news-tag, .module-news-article-careers .btn-readmore {
-  background-color: #4183d7; }
-.module-news-article-news .module-news-tag, .module-news-article-news .btn-readmore {
-  background-color: #4183d7; }
+.btn-manage-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #7e808a;
+  border-radius: 0 3px 0 0;
+  padding: 3px 10px;
+  color: #fff;
+  font-size: 0.8rem; }
+  .btn-manage-consent:hover {
+    background-color: #999aa2; }
 
-.btn-sidenav-toggle, .btn-call-netmatters, .btn-support, .btn-contact {
-  display: flex;
-  text-align: center;
-  align-content: center; }
-  .btn-sidenav-toggle span, .btn-call-netmatters span, .btn-support span, .btn-contact span {
-    font-size: 40px; }
+.btn-live-chat {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 5;
+  background-color: #2F3240;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 25px; }
+
+.btn-sidenav-toggle span, .btn-call-netmatters span, .btn-support span, .btn-contact span {
+  font-size: 40px; }
 
 .btn-sidenav-toggle {
   padding-left: 13px;
@@ -590,32 +594,6 @@ blockquote, figcaption {
 .btn-contact {
   background-color: #999aa2; }
 
-.btn-manage-consent {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  background-color: #7e808a;
-  border-radius: 0 3px 0 0;
-  padding: 3px 10px;
-  color: #fff;
-  font-size: 0.8rem; }
-  .btn-manage-consent:hover {
-    background-color: #999aa2; }
-
-.btn-live-chat {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 5;
-  background-color: #2F3240;
-  border-radius: 50%;
-  padding: 20px;
-  font-size: 25px; }
-
 .module-partners-flex a {
   width: 100%;
   margin: 0;
@@ -625,6 +603,23 @@ blockquote, figcaption {
 .module-partners-flex .module-partners-item:nth-child(3n+1) a {
   background-color: #2ecc71; }
 .module-partners-flex .module-partners-item:nth-child(3n+2) a {
+  background-color: #926fb1; }
+
+.module-welcome-button-base {
+  background-color: #212330; }
+.module-welcome-button-google {
+  background-color: #4387f6; }
+.module-welcome-button-trustpilot {
+  background-color: #00b67b; }
+
+.module-news-article-case-studies .module-news-tag, .module-news-article-case-studies .btn-readmore {
+  background-color: #926fb1; }
+.module-news-article-careers .module-news-tag, .module-news-article-careers .btn-readmore {
+  background-color: #4183d7; }
+.module-news-article-news .module-news-tag, .module-news-article-news .btn-readmore {
+  background-color: #4183d7; }
+
+.banner-element .button-banner {
   background-color: #926fb1; }
 
 .input-search-1, .input-search-2 {
@@ -865,6 +860,12 @@ nav {
     .nav-item-expand-accent-arrow {
       border-left: calc((1200px - (15px * 2)) / 14) solid transparent;
       border-right: calc((1200px - (15px * 2)) / 14) solid transparent; } }
+
+.icon-5stars:after {
+  content: "\e9d9 \e9d9 \e9d9 \e9d9 \e9d9";
+  color: orange;
+  font-size: 50px;
+  letter-spacing: 0.1em; }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -1118,8 +1119,26 @@ footer {
       column-gap: 30px;
       grid-template-columns: repeat(2, 1fr); } }
 
+.module-welcome-tile h2 {
+  font-size: 2.25rem; }
+.module-welcome-tile strong, .module-welcome-tile p, .module-welcome-tile blockquote {
+  line-height: 1.875rem; }
+.module-welcome-tile figure {
+  margin: 0;
+  margin-bottom: 3rem; }
+.module-welcome-tile blockquote {
+  font-size: 1.3rem;
+  font-style: italic; }
+.module-welcome-tile figcaption {
+  color: #a3a8ac; }
+.module-welcome-tile cite {
+  font-style: normal; }
+
 .module-welcome-buttons {
-  padding: 0; }
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; }
 
 .banner {
   color: #fff;
