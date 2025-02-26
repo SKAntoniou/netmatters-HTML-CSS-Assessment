@@ -10,6 +10,14 @@
 }
 
 
+// Colours & make dark
+@mixin dark-colour($property, $palette, $catagory, $shade: base) {
+  #{$property}: palette($palette, $catagory, $shade, base);
+  &:hover, &:active {
+    #{$property}: palette($palette, $catagory, $shade, dark);
+  }
+}
+
 // BEM selectors
 
 

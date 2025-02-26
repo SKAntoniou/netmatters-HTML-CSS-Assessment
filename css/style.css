@@ -337,7 +337,7 @@ ul {
 a {
   color: #fff;
   text-decoration-line: none; }
-  a:active {
+  a:active, a:hover {
     text-decoration-line: underline; }
 
 blockquote, figcaption {
@@ -489,6 +489,13 @@ blockquote, figcaption {
   font-weight: 700;
   letter-spacing: 0.02rem; }
 
+[class^="module-services-item-container-"] {
+  text-decoration: none; }
+  [class^="module-services-item-container-"]:active, [class^="module-services-item-container-"]:hover {
+    text-decoration: none; }
+    [class^="module-services-item-container-"]:active *, [class^="module-services-item-container-"]:hover * {
+      text-decoration: none; }
+
 [class^="module-news-header"], [class^="module-services-header"] {
   margin: 50px 0 15px 0;
   display: flex;
@@ -507,16 +514,20 @@ blockquote, figcaption {
       [class^="module-news-header"] a, [class^="module-services-header"] a {
         display: block; } }
 
-.btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button, .btn-social-media, [class^="module-welcome-button-"], [class^="button-banner"], .btn-live-chat, .btn-call-netmatters {
+.btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button, [class^="btn-social-media"], [class^="module-welcome-button-"], [class^="button-banner"], .btn-live-chat, .btn-call-netmatters {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px; }
 
-.btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button, [class^="module-welcome-button-"], [class^="button-banner"] {
+.btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button, [class^="btn-social-media"], [class^="module-welcome-button-"], [class^="button-banner"], .btn-manage-consent, .btn-live-chat, .btn-call-netmatters, .module-welcome-button, .banner-element .button-banner, .btn-social-media {
   color: #fff;
   text-transform: uppercase;
   text-wrap: nowrap; }
+  .btn-readmore:active, .module-news-tag:active, .btn-sidenav-toggle:active, .btn-support:active, .btn-contact:active, .module-partners-flex a:active, .input-search-2 button:active, [class^="btn-social-media"]:active, [class^="module-welcome-button-"]:active, [class^="button-banner"]:active, .btn-manage-consent:active, .btn-live-chat:active, .btn-call-netmatters:active, .module-welcome-button:active, .banner-element .button-banner:active, .btn-social-media:active, .btn-readmore:hover, .module-news-tag:hover, .btn-sidenav-toggle:hover, .btn-support:hover, .btn-contact:hover, .module-partners-flex a:hover, .input-search-2 button:hover, [class^="btn-social-media"]:hover, [class^="module-welcome-button-"]:hover, [class^="button-banner"]:hover, .btn-manage-consent:hover, .btn-live-chat:hover, .btn-call-netmatters:hover, .module-welcome-button:hover, .banner-element .button-banner:hover, .btn-social-media:hover {
+    text-decoration: none; }
+    .btn-readmore:active *, .module-news-tag:active *, .btn-sidenav-toggle:active *, .btn-support:active *, .btn-contact:active *, .module-partners-flex a:active *, .input-search-2 button:active *, [class^="btn-social-media"]:active *, [class^="module-welcome-button-"]:active *, [class^="button-banner"]:active *, .btn-manage-consent:active *, .btn-live-chat:active *, .btn-call-netmatters:active *, .module-welcome-button:active *, .banner-element .button-banner:active *, .btn-social-media:active *, .btn-readmore:hover *, .module-news-tag:hover *, .btn-sidenav-toggle:hover *, .btn-support:hover *, .btn-contact:hover *, .module-partners-flex a:hover *, .input-search-2 button:hover *, [class^="btn-social-media"]:hover *, [class^="module-welcome-button-"]:hover *, [class^="button-banner"]:hover *, .btn-manage-consent:hover *, .btn-live-chat:hover *, .btn-call-netmatters:hover *, .module-welcome-button:hover *, .banner-element .button-banner:hover *, .btn-social-media:hover * {
+      text-decoration: none; }
 
 .btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button {
   margin: 6px 0;
@@ -531,7 +542,7 @@ blockquote, figcaption {
   border-radius: 6px;
   font-size: 1.25rem; }
 
-.btn-social-media {
+[class^="btn-social-media"] {
   min-width: 70px;
   height: 56px;
   padding-top: 5px;
@@ -542,11 +553,13 @@ blockquote, figcaption {
   border-radius: 0;
   position: absolute;
   right: 0;
-  top: 2%;
+  top: 1%;
   padding: 0 10px 0;
   font-size: .75rem;
   line-height: 1.438rem;
   z-index: 3; }
+  .module-news-tag:hover, .module-news-tag:active {
+    text-decoration: underline; }
 
 [class^="module-news-item-link"] {
   width: 100%;
@@ -583,16 +596,24 @@ blockquote, figcaption {
   padding-right: 13px;
   background-color: #333645;
   border-radius: 3px; }
+  .btn-sidenav-toggle:hover, .btn-sidenav-toggle:active {
+    background-color: #1d1f28; }
 
 .btn-call-netmatters {
   display: inline-block;
   color: #333645; }
+  .btn-call-netmatters:hover, .btn-call-netmatters:active {
+    color: #1d1f28; }
 
 .btn-support {
   background-color: #4183d7; }
+  .btn-support:hover, .btn-support:active {
+    background-color: #286abd; }
 
 .btn-contact {
   background-color: #999aa2; }
+  .btn-contact:hover, .btn-contact:active {
+    background-color: #7e808a; }
 
 .module-partners-flex a {
   width: 100%;
@@ -600,17 +621,29 @@ blockquote, figcaption {
   padding: 10px 0; }
 .module-partners-flex .module-partners-item:nth-child(3n) a {
   background-color: #f7b322; }
+  .module-partners-flex .module-partners-item:nth-child(3n) a:hover, .module-partners-flex .module-partners-item:nth-child(3n) a:active {
+    background-color: #de9a08; }
 .module-partners-flex .module-partners-item:nth-child(3n+1) a {
   background-color: #2ecc71; }
+  .module-partners-flex .module-partners-item:nth-child(3n+1) a:hover, .module-partners-flex .module-partners-item:nth-child(3n+1) a:active {
+    background-color: #25a25a; }
 .module-partners-flex .module-partners-item:nth-child(3n+2) a {
   background-color: #926fb1; }
+  .module-partners-flex .module-partners-item:nth-child(3n+2) a:hover, .module-partners-flex .module-partners-item:nth-child(3n+2) a:active {
+    background-color: #79539a; }
 
 .module-welcome-button-base {
-  background-color: #212330; }
+  background-color: #272936; }
+  .module-welcome-button-base:hover, .module-welcome-button-base:active {
+    background-color: #121318; }
 .module-welcome-button-google {
   background-color: #4387f6; }
+  .module-welcome-button-google:hover, .module-welcome-button-google:active {
+    background-color: #1268f4; }
 .module-welcome-button-trustpilot {
   background-color: #00b67b; }
+  .module-welcome-button-trustpilot:hover, .module-welcome-button-trustpilot:active {
+    background-color: #008359; }
 
 .module-news-article-case-studies .module-news-tag, .module-news-article-case-studies .btn-readmore {
   background-color: #926fb1; }
@@ -621,6 +654,17 @@ blockquote, figcaption {
 
 .banner-element .button-banner {
   background-color: #926fb1; }
+  .banner-element .button-banner:hover, .banner-element .button-banner:active {
+    background-color: #79539a; }
+
+.btn-social-media-facebook:hover, .btn-social-media-facebook:active {
+  background-color: #3B5998; }
+.btn-social-media-linkedin:hover, .btn-social-media-linkedin:active {
+  background-color: #0077B5; }
+.btn-social-media-twitter:hover, .btn-social-media-twitter:active {
+  background-color: #00ACED; }
+.btn-social-media-instagram:hover, .btn-social-media-instagram:active {
+  background-color: #D93175; }
 
 .input-search-1, .input-search-2 {
   font-size: 0.875rem;
@@ -665,6 +709,8 @@ blockquote, figcaption {
     border-radius: 0 3px 3px 0;
     background-color: #999AA2;
     margin: 0; }
+    .input-search-2 button:hover, .input-search-2 button:active {
+      background-color: #7e808a; }
 
 nav {
   background-color: #333645; }
@@ -870,7 +916,6 @@ nav {
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1260,8 +1305,7 @@ footer {
   display: block;
   z-index: 2;
   position: absolute;
-  top: 0;
-  left: 0; }
+  inset: 0; }
 
 .module-news-item-content {
   z-index: 1; }
@@ -1339,8 +1383,7 @@ footer {
   text-align: center;
   color: #333645; }
   .module-services-item-content h3 {
-    font-weight: 400;
-    color: black; }
+    font-weight: 400; }
 
 .module-services-item-container-bespoke-software .module-services-icon {
   background-color: #67809f; }

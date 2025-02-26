@@ -33,7 +33,7 @@ ul {
 a {
   @include text-color;
   text-decoration-line: none;
-  &:active {
+  &:active, &:hover {
     text-decoration-line: underline;
   }
 }

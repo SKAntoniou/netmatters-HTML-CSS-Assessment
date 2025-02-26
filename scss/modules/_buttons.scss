@@ -15,6 +15,12 @@
   color: $white;
   text-transform: uppercase;
   text-wrap: nowrap;
+  &:active, &:hover {
+    text-decoration: none;
+    * {
+      text-decoration: none;
+    }
+  }
 }
 
 %btn-size-std {
@@ -49,8 +55,9 @@
 // Button Type Specific =====================================================
 
 // Used in the Footer
-.btn-social-media {
+[class^="btn-social-media"] {
   @extend %btn-flex;
+  @extend %btn-text;
   // Formatting
   min-width: 70px;
   height: 56px;
@@ -73,10 +80,13 @@
   border-radius: 0;
   position: absolute;
   right: 0;
-  top: 2%;
+  top: 1%;
   padding: 0 10px 0;
   font-size: .75rem;
   @extend %text-bold;
+  &:hover, &:active {
+    text-decoration: underline;
+  }
   line-height: 1.438rem;
   z-index: 3;
 }
@@ -87,12 +97,14 @@
 
 // Privacy Policy Button
 .btn-manage-consent {
+  @extend %btn-text;
   // Layout
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 5;
   // Formatting
+  // Can't use mixin here as it lightens instead of darkens, As this is the only, I wont make a mixing for it.
   background-color: palette(header, button, light, dark);
   &:hover {
     background-color: palette(header, button, light);
@@ -119,12 +131,14 @@
   border-radius: 50%;
   padding: 20px;
   // Icon
+  @extend %btn-text;
   font-size: 25px;
 }
 
 // Header
 .btn-sidenav-toggle, .btn-call-netmatters, .btn-support, .btn-contact {
   @extend %btn-flex;
+  @extend %btn-text;
   span {
     font-size: 40px;
   }
@@ -133,20 +147,21 @@
   @extend %btn;
   padding-left: 13px;
   padding-right: 13px;
-  background-color: palette(header, button);
+  @include dark-colour(background-color, header, button);
   border-radius: $br--radius-small;
 }
 .btn-call-netmatters {
+  @extend %btn-text;
   display: inline-block;
-  color: palette(header, button);
+  @include dark-colour(color, header, button);
 }
 .btn-support {
   @extend %btn;
-  background-color: palette(header, button, support);
+  @include dark-colour(background-color, header, button, support);
 }
 .btn-contact {
   @extend %btn;
-  background-color: palette(header, button, light);
+  @include dark-colour(background-color, header, button, light);
 }
 
 // Partners hover element
@@ -159,13 +174,13 @@
   }
   .module-partners-item {
     &:nth-child(3n) a {
-      background-color: palette(partners,btn1);
+      @include dark-colour(background-color, partners, btn1);
     }
     &:nth-child(3n+1) a {
-      background-color: palette(partners,btn2);
+      @include dark-colour(background-color, partners, btn2);
     }
     &:nth-child(3n+2) a {
-      background-color: palette(partners,btn3);
+      @include dark-colour(background-color, partners, btn3);
     }
   }
 }
@@ -174,14 +189,15 @@
 
 // Buttons for the welcome module
 .module-welcome-button {
+  @extend %btn-text;
   &-base {
-    background-color: $background-accent;
+    @include dark-colour(background-color, welcome, button);
   }
   &-google {
-    background-color: palette(brands,google);
+    @include dark-colour(background-color, brands, google);
   }
   &-trustpilot {
-    background-color: palette(brands,trustpilot);
+    @include dark-colour(background-color, brands, trustpilot);
   }
 }
 
@@ -206,6 +222,31 @@
 // Buttons for the banner
 .banner-element {
   .button-banner {
-    background-color: palette(general, netmatters);
+    @extend %btn-text;
+    @include dark-colour(background-color, general, netmatters);
+  }
+}
+
+.btn-social-media {
+  @extend %btn-text;
+  &-facebook {
+    &:hover, &:active {
+      background-color: palette(brands,facebook);
+    }
+  }
+  &-linkedin{
+    &:hover, &:active {
+      background-color: palette(brands,linkedin);
+    }
+  }
+  &-twitter {
+    &:hover, &:active {
+      background-color: palette(brands,twitter);
+    }
+  }
+  &-instagram {
+    &:hover, &:active {
+      background-color: palette(brands,instagram);
+    }
   }
 }

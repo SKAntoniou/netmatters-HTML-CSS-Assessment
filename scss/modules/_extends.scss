@@ -7,6 +7,15 @@
   font-weight: $font-w-bold;
   letter-spacing: 0.02rem;
 }
+%text-remove-decoration {
+  text-decoration: none;
+  &:active, &:hover {
+    text-decoration: none;
+    * {
+      text-decoration: none;
+    }
+  }
+}
 
 // Headlines
 %section-heading {
@@ -35,7 +44,6 @@
 // Icons
 %icomoon {
   font-family: 'icomoon' !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

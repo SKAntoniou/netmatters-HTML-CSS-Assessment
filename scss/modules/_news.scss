@@ -40,8 +40,7 @@
   display: block;
   z-index: 2;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
 }
 .module-news-item-content {
   z-index: 1;

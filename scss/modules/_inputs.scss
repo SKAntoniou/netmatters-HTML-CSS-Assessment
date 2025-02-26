@@ -59,7 +59,7 @@
     padding-left: 13px;
     padding-right: 13px;
     border-radius: 0 $br--radius-small $br--radius-small 0;
-    background-color: palette(inputs, search2);
+    @include dark-colour(background-color, inputs, search2);
     margin: 0;
   }
 }
