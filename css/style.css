@@ -532,13 +532,13 @@ blockquote, figcaption {
 .btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button {
   margin: 6px 0;
   border: 0;
-  padding: 10px 30px;
+  padding: 10px 25px;
   border-radius: 6px; }
 
 [class^="module-welcome-button-"], [class^="button-banner"] {
   margin: 6px 0;
   border: 0;
-  padding: 15px 30px;
+  padding: 15px 25px;
   border-radius: 6px;
   font-size: 1.25rem; }
 
@@ -1164,20 +1164,24 @@ footer {
       column-gap: 30px;
       grid-template-columns: repeat(2, 1fr); } }
 
-.module-welcome-tile h2 {
-  font-size: 2.25rem; }
-.module-welcome-tile strong, .module-welcome-tile p, .module-welcome-tile blockquote {
-  line-height: 1.875rem; }
-.module-welcome-tile figure {
-  margin: 0;
-  margin-bottom: 3rem; }
-.module-welcome-tile blockquote {
-  font-size: 1.3rem;
-  font-style: italic; }
-.module-welcome-tile figcaption {
-  color: #a3a8ac; }
-.module-welcome-tile cite {
-  font-style: normal; }
+.module-welcome-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .module-welcome-tile h2 {
+    font-size: 2.25rem; }
+  .module-welcome-tile strong, .module-welcome-tile p, .module-welcome-tile blockquote {
+    line-height: 1.875rem; }
+  .module-welcome-tile figure {
+    margin: 0;
+    margin-bottom: 3rem; }
+  .module-welcome-tile blockquote {
+    font-size: 1.3rem;
+    font-style: italic; }
+  .module-welcome-tile figcaption {
+    color: #a3a8ac; }
+  .module-welcome-tile cite {
+    font-style: normal; }
 
 .module-welcome-buttons {
   padding: 0;
