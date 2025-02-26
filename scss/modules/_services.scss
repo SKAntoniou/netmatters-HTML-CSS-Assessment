@@ -57,16 +57,16 @@
 
 // Element Styling
 .module-services-icon {
-  font-size: 3rem;
+  // Layout
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // Styling
   border-radius: 50%;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 1rem;
-  width: 5.3rem;
-  height: 5.3rem;
-  span {
-    vertical-align: middle;
-  }
+  width: 5.75rem;
+  height: 5.75rem;
+  // Text/Icon Size
+  font-size: 3rem;
 }
 .module-services-description {
   font-size: 0.8125rem;

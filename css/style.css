@@ -1544,15 +1544,13 @@ footer {
   grid-column: 7 / span 1; }
 
 .module-services-icon {
-  font-size: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 1rem;
-  width: 5.3rem;
-  height: 5.3rem; }
-  .module-services-icon span {
-    vertical-align: middle; }
+  width: 5.75rem;
+  height: 5.75rem;
+  font-size: 3rem; }
 
 .module-services-description {
   font-size: 0.8125rem;
