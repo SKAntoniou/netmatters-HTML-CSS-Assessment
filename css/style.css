@@ -518,7 +518,7 @@ blockquote, figcaption {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; }
+  gap: 8px; }
 
 .btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button, [class^="btn-social-media"], [class^="module-welcome-button-"], [class^="button-banner"], .btn-manage-consent, .btn-live-chat, .btn-call-netmatters, .module-welcome-button, .banner-element .button-banner, .btn-social-media {
   color: #fff;
@@ -532,13 +532,13 @@ blockquote, figcaption {
 .btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button {
   margin: 6px 0;
   border: 0;
-  padding: 10px 25px;
+  padding: 10px 20px;
   border-radius: 6px; }
 
 [class^="module-welcome-button-"], [class^="button-banner"] {
   margin: 6px 0;
   border: 0;
-  padding: 15px 25px;
+  padding: 15px 20px;
   border-radius: 6px;
   font-size: 1.25rem; }
 
