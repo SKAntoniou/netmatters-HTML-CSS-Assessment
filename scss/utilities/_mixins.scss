@@ -18,8 +18,10 @@
   }
 }
 
-// BEM selectors
-
+// Section Box-Shadows
+@mixin box-shadow {
+  box-shadow: 0 0 5px 3px palette(general, box-shadow);
+}
 
 // Media queries
 @mixin mq($break) {
