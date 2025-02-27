@@ -14,6 +14,38 @@
   letter-spacing: 0.1em;
 }
 
+@mixin hamburger-button($icon-size, $icon-thickness) {
+  width: $icon-size;
+  height: $icon-thickness;
+  background-color: palette(general,text,light);
+}
+.hamburger-button {
+  // Local Variables & Calculations
+  $icon-size: 40px;
+  $icon-thickness: 6px;
+  $icon-top-bottom-padding: 2px;
+  $icon-inner-gap: calc(-1 * (((#{$icon-size} - (#{$icon-top-bottom-padding} * 2)) - (3 * #{$icon-thickness})) / 2));
+  $icon-positioning: calc(#{$icon-inner-gap} - #{$icon-thickness});
+  // Layout
+  position: relative;
+  // Styling
+  &, &::before, &::after {
+    @include hamburger-button($icon-size, $icon-thickness);
+  }
+  &::before, &::after { 
+    content: "";
+    position: absolute;
+  }
+  &::before { 
+    // This is the top element of the hamburger
+    top: $icon-positioning;
+  }
+  &::after {
+    // This is the bottom element of the hamburger
+    bottom: $icon-positioning;
+  }
+} 
+
 // Icons from Icomoon
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */

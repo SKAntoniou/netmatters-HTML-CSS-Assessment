@@ -602,6 +602,7 @@ blockquote, figcaption {
 .btn-sidenav-toggle {
   padding-left: 13px;
   padding-right: 13px;
+  height: 60px;
   background-color: #333645;
   border-radius: 3px; }
   .btn-sidenav-toggle:hover, .btn-sidenav-toggle:active {
@@ -938,6 +939,20 @@ nav {
   color: orange;
   font-size: 50px;
   letter-spacing: 0.1em; }
+
+.hamburger-button {
+  position: relative; }
+  .hamburger-button, .hamburger-button::before, .hamburger-button::after {
+    width: 40px;
+    height: 6px;
+    background-color: #fff; }
+  .hamburger-button::before, .hamburger-button::after {
+    content: "";
+    position: absolute; }
+  .hamburger-button::before {
+    top: calc(calc(-1 * (((40px - (2px * 2)) - (3 * 6px)) / 2)) - 6px); }
+  .hamburger-button::after {
+    bottom: calc(calc(-1 * (((40px - (2px * 2)) - (3 * 6px)) / 2)) - 6px); }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */

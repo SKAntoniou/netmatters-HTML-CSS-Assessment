@@ -147,6 +147,8 @@
   @extend %btn;
   padding-left: 13px;
   padding-right: 13px;
+  // Need to get a better method, the better method is probable making the whole container height and make buttons/ icons fit in it.
+  height: 60px;
   @include dark-colour(background-color, header, button);
   border-radius: $br--radius-small;
 }
