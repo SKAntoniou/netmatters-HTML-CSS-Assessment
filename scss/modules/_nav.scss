@@ -66,6 +66,11 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  h2 {
+    font-size: 2rem;
+    font-weight: $font-w-normal;
+    margin: 0.5rem 0;
+  }
   .container {
     padding-bottom: 1.5rem;
   }

@@ -343,6 +343,11 @@ a {
 blockquote, figcaption {
   margin: 16px 0; }
 
+[class^="module-news-article-"], .module-news-item-content, .module-news-item-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1; }
+
 .container {
   display: grid;
   width: 100%;
@@ -513,6 +518,9 @@ blockquote, figcaption {
     @media (min-width: 768px) {
       [class^="module-news-header"] a, [class^="module-services-header"] a {
         display: block; } }
+
+[class^="module-news-article-"], [class^="module-services-item-container-"] {
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1); }
 
 .btn-readmore, .module-news-tag, .btn-sidenav-toggle, .btn-support, .btn-contact, .module-partners-flex a, .input-search-2 button, [class^="btn-social-media"], [class^="module-welcome-button-"], [class^="button-banner"], .btn-live-chat, .btn-call-netmatters {
   display: inline-flex;
@@ -692,16 +700,23 @@ blockquote, figcaption {
     font-size: 2rem;
     padding-right: 5px;
     height: 100%; }
+    .input-search-1 button span {
+      display: block;
+      margin: auto 0; }
 
 .input-search-2 {
   background-color: transparent;
-  border: 1px solid #999AA2;
-  border-radius: calc(3px * 2);
   display: flex;
   align-items: center; }
   .input-search-2 input {
     flex: 1;
-    padding: 0 10px; }
+    padding: 0 10px;
+    border: 1px solid #999AA2;
+    display: flex;
+    height: 3.75rem; }
+    .input-search-2 input:focus {
+      border-color: #5bc0de;
+      box-shadow: 0 0 8px rgba(91, 192, 222, 0.6); }
   .input-search-2 button {
     font-size: 40px;
     padding-left: 13px;
@@ -889,6 +904,10 @@ nav {
   .nav-item-expand-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr); }
+  .nav-item-expand h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0.5rem 0; }
   .nav-item-expand .container {
     padding-bottom: 1.5rem; }
 
@@ -1218,12 +1237,12 @@ footer {
   padding: 0 10px;
   text-align: center;
   display: none; }
-  .banner-element h1 {
+  .banner-element h1, .banner-element h2 {
     font-size: 2.5em; }
   @media (min-width: 992px) {
     .banner-element {
       text-align: left; }
-      .banner-element h1 {
+      .banner-element h1, .banner-element h2 {
         font-size: 4rem;
         margin: 0; }
       .banner-element p {
@@ -1292,11 +1311,20 @@ footer {
     display: flex;
     flex-direction: column; }
 
+.module-services-header-bottom {
+  margin: 30px auto 15px; }
+  .module-services-header-bottom a {
+    display: block; }
+  @media (min-width: 768px) {
+    .module-services-header-bottom {
+      display: none; } }
+
 .module-news-articles {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
-  padding-top: 15px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
   @media (min-width: 768px) {
     .module-news-articles {
       grid-template-columns: repeat(2, 1fr);
@@ -1307,16 +1335,7 @@ footer {
     .module-news-articles {
       grid-template-columns: repeat(3, 1fr); } }
 
-.module-services-header-bottom {
-  margin: 30px auto 15px; }
-  .module-services-header-bottom a {
-    display: block; }
-  @media (min-width: 768px) {
-    .module-services-header-bottom {
-      display: none; } }
-
 [class^="module-news-article-"] {
-  display: flex;
   position: relative;
   z-index: 1;
   position: relative;
@@ -1345,10 +1364,12 @@ footer {
     aspect-ratio: 16 / 9; }
 
 .module-news-item-text {
+  justify-content: space-between;
   border: 1px solid #ccc;
   padding: 30px; }
   .module-news-item-text h4 {
-    margin-top: 0; }
+    margin-top: 0;
+    min-height: 3rem; }
   .module-news-item-text hr {
     margin: 1.5rem 0; }
 
@@ -1571,6 +1592,8 @@ header {
     header .input-search-2 {
       display: flex; } }
   @media (min-width: 992px) {
+    header .input-search-2 button {
+      border-radius: 3px; }
     header .input-search-2 input {
       display: none; }
     header .btn-support, header .btn-contact {
@@ -1578,6 +1601,8 @@ header {
     header nav {
       display: block; } }
   @media (min-width: 1260px) {
+    header .input-search-2 button {
+      border-radius: 0 3px 3px 0; }
     header .input-search-2 input {
       display: block; } }
 

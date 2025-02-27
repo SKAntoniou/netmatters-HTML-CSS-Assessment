@@ -19,8 +19,14 @@ header {
     }
   }
   @include mq(l) {
-    .input-search-2 input {
-      display: none;
+    .input-search-2 {
+      button {
+        border-radius: $br--radius-small;
+        
+      }
+      input {
+        display: none;
+      }
     }
     .btn-support, .btn-contact {
       display: flex;
@@ -30,8 +36,13 @@ header {
     }
   }
   @include mq(xl) {
-    .input-search-2 input {
-      display: block;
+    .input-search-2 {
+      button {
+        border-radius: 0 $br--radius-small $br--radius-small 0;
+      }
+      input {
+        display: block;
+      }
     }
   }
 }

@@ -1,10 +1,5 @@
 // extends for search
 %input-search {
-  // display: inline-flex;
-  // align-items: center;
-  // justify-content: center;
-  // gap: 4px; // for between icon and button
-
   font-size: 0.875rem;
   outline: none;
 
@@ -38,6 +33,10 @@
     font-size: 2rem;
     padding-right: 5px;
     height: 100%;
+    span {
+      display: block;
+      margin: auto 0;
+    }
   }
 }
 
@@ -45,13 +44,21 @@
 .input-search-2 {
   @extend %input-search;
   background-color: transparent;
-  border: 1px solid palette(inputs, search2);
-  border-radius: calc(#{$br--radius-small} * 2);
   display: flex;
   align-items: center;
   input {
     flex: 1;
     padding: 0 10px;
+    border: 1px solid palette(inputs, search2);
+    display: flex;
+    // I don't like how this is setup with defined height, it would be annoying to change with other elements. Maybe change this later. Other options: 
+    // - add border too all header elements making them level and add border on search container instead of input - would break how this focus element works (wouldn't match the netmatters website). 
+    // - set height for buttons container and then use flexboxes or something to make buttons conform to that - but that is almost as bad as this. 
+    height: 3.75rem;
+    &:focus {
+      border-color: palette(inputs, search2, focus);
+      box-shadow: 0 0 8px rgba(91, 192, 222, .6);
+    }
   }
   button {
     @extend %btn;

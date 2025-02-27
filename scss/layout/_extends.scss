@@ -2,5 +2,9 @@
 // Placeholders
 // ==========================================================================
 
-// Panel
-
+// Flex Box Column
+%flex-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

@@ -54,3 +54,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+// Section Box-Shadows
+%box-shadow {
+  box-shadow: 0 0 5px 3px palette(general, box-shadow);
+}
