@@ -230,13 +230,12 @@
 }
 
 .btn-social-media {
-  @extend %btn-text;
   &-facebook {
     &:hover, &:active {
       background-color: palette(brands,facebook);
     }
   }
-  &-linkedin{
+  &-linkedin {
     &:hover, &:active {
       background-color: palette(brands,linkedin);
     }

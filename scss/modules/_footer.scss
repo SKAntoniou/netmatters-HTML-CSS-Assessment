@@ -21,6 +21,16 @@ footer {
   @include mq(l) {
     grid-template-columns: repeat(4 , 1fr);
   }
+  @include mq(xl) {
+    grid-template-columns: 2fr repeat(4 , 1fr);
+  }
+}
+
+.footer-description {
+  grid-column: 1 / -1;
+  @include mq(xl) {
+    grid-column: 1 / 2;
+  }
 }
 
 .footer-logo {
@@ -32,14 +42,17 @@ footer {
   }
 }
 .footer-socials {
-  display: inline-grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  max-width: 312.34px;
+  grid-template-columns: repeat(2 , minmax(87.5px, 35%));
   margin-right: auto;
   font-size: 26px;
   @include mq(s) {
+    display: inline-grid;
     grid-template-columns: repeat(4 , 1fr);
   }
 }
+
 
 
 // Seperate part of the footer
