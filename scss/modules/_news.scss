@@ -79,6 +79,16 @@
   h4 {
     margin-top: 0;
     min-height: 3rem;
+    @extend %text-bold;
+    line-height: 1.5rem;
+  }
+  &-top {
+    p {
+      margin-top: 0;
+      font-size: 13px;
+      color: palette(news, text);
+      line-height: 1.375rem;
+    }
   }
   hr {
     margin: 1.5rem 0;
@@ -92,9 +102,14 @@
 }
 .module-news-item-author-text {
   display: inline-block;
-  margin-left: 1.5rem;
+  margin-left: 20px;
+  font-size: 14px;
+  strong {
+    @extend %text-bold;
+  }
   p {
     margin: 0.5rem 0 0;
+    color: palette(news, text);
   }
 }
 

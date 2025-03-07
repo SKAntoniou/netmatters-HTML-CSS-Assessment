@@ -8,7 +8,9 @@
   align-self: center;
   img {
     filter: grayscale(100%);
-    height: 70px;
+    max-height: 70px;
+    max-width: 200px;
+    padding: 0 20px;
     width: auto;
     &:hover {
       filter: none;
@@ -40,9 +42,12 @@
       margin: 0;
       font-weight: $font-w-normal;
       font-size: 1.125rem;
+      padding: 0 5px;
     }
     p {
       font-size: 0.8125rem;
+      line-height: 1.375rem;
+      padding: 0 5px;
     }
     .module-partner-short-info-arrow {
       // Placeholders
