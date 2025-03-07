@@ -22,17 +22,8 @@
 }
 
 // Section Header Styling
-[class^="module-services-header"] {
-  @extend %section-heading;
-}
-.module-services-header-bottom {
-  margin: 30px auto 15px;
-  a {
-    display: block;
-  }
-  @include mq(m) {
-    display: none;
-  }
+.module-services-header {
+  @include section-heading;
 }
 
 // Container styling
@@ -63,15 +54,18 @@
   align-items: center;
   justify-content: center;
   // Styling
+  $width-height: 65px;
   border-radius: 50%;
-  width: 5.75rem;
-  height: 5.75rem;
+  width: $width-height;
+  height: $width-height;
   // Text/Icon Size
-  font-size: 3rem;
+  font-size: 2rem;
+  color: white;
 }
 .module-services-description {
   font-size: 0.8125rem;
   margin-bottom: 1rem;
+  line-height: 1.375rem;
 }
 
 

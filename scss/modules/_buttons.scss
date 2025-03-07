@@ -50,6 +50,9 @@
 
 .btn-readmore {
   @extend %btn;
+  border-radius: $br--radius-small;
+  padding: 15px;
+  font-size: 17px;
 }
 
 // ==========================================================================

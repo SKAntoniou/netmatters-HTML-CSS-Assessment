@@ -61,6 +61,43 @@
   }
 }
 
+// Headlines
+@mixin section-heading {
+  &-top, &-bottom {
+    $header-text-color: palette(general, section-headings);
+    margin: 50px 0 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      display: inline-block;
+      color: $header-text-color;
+      font-weight: $font-w-normal;
+      margin: 0;
+      font-size: 2.7rem;
+    }
+    a {
+      color: $header-text-color;
+      font-size: 2.25rem;
+      @extend %text-bold;
+      display: none;
+      @include mq(m) {
+        display: block;
+      }
+    }
+  }
+  &-bottom {
+    margin: 30px auto 15px;
+    a {
+      font-size: 1.625rem;
+      display: block;
+    }
+    @include mq(m) {
+      display: none;
+    }
+  }
+}
+
 // Generate modifier color classes
 
 

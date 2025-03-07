@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-family: $font-family--primary;
   font-style: normal;
-  font-weight: normal;
+  font-weight: $font-w-normal;
   width: 100%;
   background-color: $background-primary;
   overflow-x: hidden;
