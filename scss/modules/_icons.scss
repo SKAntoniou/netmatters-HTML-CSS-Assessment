@@ -21,11 +21,17 @@
 }
 .hamburger-button {
   // Local Variables & Calculations
-  $icon-size: 40px;
-  $icon-thickness: 6px;
-  $icon-top-bottom-padding: 2px;
-  $icon-inner-gap: calc(-1 * (((#{$icon-size} - (#{$icon-top-bottom-padding} * 2)) - (3 * #{$icon-thickness})) / 2));
-  $icon-positioning: calc(#{$icon-inner-gap} - #{$icon-thickness});
+  $icon-size: 33px;
+  $icon-thickness: 4px;
+
+  // Old calculations - I should be able to pass $icon-positioning to top & bottom but there is bug that makes $icon-positioning two different sizes? 
+  // $icon-top-bottom-padding: 8px;
+  // $icon-inner-gap: calc(-1 * (((#{$icon-size} - (#{$icon-top-bottom-padding} * 2)) - (3 * #{$icon-thickness})) / 2));
+  // $icon-positioning: calc(#{$icon-inner-gap} - #{$icon-thickness});
+
+  // Replacement value
+  $icon-positioning: -10px;
+
   // Layout
   position: relative;
   // Styling

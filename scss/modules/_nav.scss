@@ -24,10 +24,15 @@ nav {
 .nav-item-section- {
   @include services;
 }
+
 .nav-item-icon {
   font-size: 1.5rem;
   margin-bottom: 0.25rem;
 }
+
+// .nav-item-expand-content-link > [class^="icon-"], .nav-item-icon, .nav-item-text-small, .nav-item-text-large {
+//   text-decoration: none;
+// }
 
 // Text formatting
 [class^="nav-item-text-"] {

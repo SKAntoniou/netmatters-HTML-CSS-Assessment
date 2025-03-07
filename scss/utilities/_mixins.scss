@@ -117,6 +117,14 @@
       color: $color-primary;
     }
   }
+  *:hover {
+    text-decoration: none;
+  }
+  .nav-item-expand-content-link:hover {
+    .nav-item-expand-text {
+      text-decoration: underline;
+    }
+  }
 }
 // Uses Mixin above and sets the custom colours to the mixin.
 @mixin services{
