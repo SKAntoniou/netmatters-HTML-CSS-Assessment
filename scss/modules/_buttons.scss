@@ -61,8 +61,7 @@
   // Formatting
   min-width: 70px;
   height: 56px;
-  padding-top: 5px;
-  margin: 0 10px 10px 0;
+  margin-right: 10px;
   // Colour
   background-color: $background-accent;
 }
@@ -135,27 +134,32 @@
   font-size: 25px;
 }
 
-// Header
-.btn-sidenav-toggle, .btn-call-netmatters, .btn-support, .btn-contact {
+// Header ===============================================================
+.btn-sidenav-toggle, .btn-support, .btn-contact {
   @extend %btn-flex;
   @extend %btn-text;
   span {
     font-size: 23px;
   }
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 56px;
+  margin-left: 20px;
+  border-radius: $br--radius-small;
 }
 .btn-sidenav-toggle {
   @extend %btn;
-  padding-left: 13px;
-  padding-right: 13px;
-  // Need to get a better method, the better method is probable making the whole container height and make buttons/ icons fit in it.
-  height: 60px;
   @include dark-colour(background-color, header, button);
   border-radius: $br--radius-small;
 }
 .btn-call-netmatters {
   @extend %btn-text;
   display: inline-block;
+
   @include dark-colour(color, header, button);
+  span {
+    font-size: 32px;
+  }
 }
 .btn-support {
   @extend %btn;

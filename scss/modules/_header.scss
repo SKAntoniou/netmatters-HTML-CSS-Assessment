@@ -64,12 +64,8 @@ header {
 }
 
 .header-top-buttons {
-  padding-top: 5px;
   display: flex;
   align-items: center;
   flex: 0 0;
   white-space: nowrap;
-  a, div {
-    margin-left: 10px;
-  }
 }

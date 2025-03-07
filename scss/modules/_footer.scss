@@ -6,7 +6,17 @@ footer {
   h4 {
     text-transform: uppercase;
     font-size: 1rem;
+    font-weight: normal;
     margin-bottom: 26px;	
+  }
+  li {
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+  }
+  .footer-menu {
+    h4 {
+      margin-top: 0;
+    }
   }
 }
 
@@ -28,6 +38,7 @@ footer {
 
 .footer-description {
   grid-column: 1 / -1;
+  margin-bottom: 10px;
   @include mq(xl) {
     grid-column: 1 / 2;
   }
@@ -59,7 +70,7 @@ footer {
 .footer-end {
   @include text-color;
   font-size: 0.8125rem;
-  padding: 0.5em 0 0.5em;
+  padding: 10px 0 15px;
   background-color: $background-accent;
 
   .footer-end-flex {
@@ -67,6 +78,7 @@ footer {
     flex-wrap: wrap;
 
     .footer-item {
+      padding-top: 5px;
       flex: 100%;
       @include mq(m) {
         flex-basis: auto;
@@ -79,6 +91,7 @@ footer {
     }
     .footer-item-seperator {
       display: none;
+      padding-top: 5px;
       @include mq(m) {
         display: inline;
       }
