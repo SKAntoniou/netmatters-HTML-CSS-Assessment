@@ -67,6 +67,7 @@
   min-width: 70px;
   height: 56px;
   margin-right: 10px;
+  margin-bottom: 10px;
   // Colour
   background-color: $background-accent;
 }
@@ -166,7 +167,7 @@
 .btn-call-netmatters {
   @extend %btn-text;
   display: inline-block;
-
+  margin-left: 20px;
   @include dark-colour(color, header, button);
   span {
     font-size: 32px;

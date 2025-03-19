@@ -3,7 +3,7 @@
   background-image: url(#{$path-img}banner/home-YLei.webp);
   background-color: rgba(0,0,0,0.6);
   @include mq(l) {
-    background-image: url(#{$path-img}banner/home-YLei.webp), linear-gradient(to right, black, rgba(0,0,0,0.6));
+    background-image: url(#{$path-img}banner/home-YLei.webp), linear-gradient(to right, black, rgba(0,0,0,0) 70%);
     background-color: transparent;
   }
   background-blend-mode: multiply;

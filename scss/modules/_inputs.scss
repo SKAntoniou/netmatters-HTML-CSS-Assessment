@@ -34,6 +34,7 @@
     font-size: 2rem;
     padding-right: 5px;
     height: 100%;
+    cursor: pointer;
     span {
       display: block;
       margin: auto 0;
@@ -73,6 +74,7 @@
     padding-right: 15px;
     height: 56px;
     border-radius: 0 $br--radius-small $br--radius-small 0;
+    cursor: pointer;
     @include dark-colour(background-color, inputs, search2);
     margin: 0;
   }
