@@ -109,3 +109,24 @@ nav {
 .nav-item-expand-text {
   margin-left: 0.5rem;
 }
+
+
+// Sidenav
+.sidenav {
+  // Position on page
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10; // Make sure stays on top
+  // Size
+  height: 100%;
+  width: 0; // Will be extended with javascript
+  // overflow
+  overflow-y: scroll;
+  overflow-x: hidden;
+  // transition
+  transition: 0.5s;
+}
+.sidenav-expand {
+  width: 275px;
+}

@@ -18,3 +18,12 @@
     width: $cont-max-width;
   }
 }
+
+// This is for the sidebar navigations.
+.body-content{
+  transition: 0.5s;
+}
+.body-content-move {
+  transition: 0.5s;
+  translate: -275px;
+}
