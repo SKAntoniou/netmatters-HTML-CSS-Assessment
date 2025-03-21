@@ -126,7 +126,17 @@ nav {
   overflow-x: hidden;
   // transition
   transition: 0.5s;
+
+  // styling
+  background-color: palette(sidebar,background,base);
 }
 .sidenav-expand {
   width: 275px;
+}
+.sidenav-service {
+  &:hover {
+    .sidenav-service-title {
+      background-color: palette(sidebar,background,hover);
+    }
+  }
 }
