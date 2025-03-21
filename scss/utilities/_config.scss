@@ -54,6 +54,9 @@ $color-palettes: (
       light: $white,
       grey: #a3a8ac,
     ),
+    background: (
+      base: $white,
+    ),
     box-shadow: (
       base: rgba(0, 0, 0, 0.04),
     ),
@@ -118,8 +121,9 @@ $color-palettes: (
       base: #333645,
       alt: rgba(0,0,0,0.25),
       hover: rgba(255,255,255,0.05),
+      body: rgba(0,0,0,0.4),
     ),
-  )
+  ),
 );
 
 // UI Colors
@@ -135,6 +139,9 @@ $br--radius-large: 15px;
 
 // Site Container
 $global-padding: 15px;
+
+// Sidenav
+$sidenav-width: 275px;
 
 // Grid
 $g-col-count: 12;

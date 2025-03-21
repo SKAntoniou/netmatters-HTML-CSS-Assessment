@@ -16,6 +16,7 @@ body {
   background-color: $background-primary;
   overflow-x: hidden;
   position: relative;
+  z-index: -2; // To allow sidebar be at -1 and be selectable
 }
 
 * {

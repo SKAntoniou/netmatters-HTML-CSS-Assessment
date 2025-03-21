@@ -117,21 +117,19 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 10; // Make sure stays on top
+  z-index: -1;
   // Size
   height: 100%;
-  width: 0; // Will be extended with javascript
+  width: $sidenav-width; // Will be extended with javascript
   // overflow
   overflow-y: scroll;
   overflow-x: hidden;
-  // transition
-  transition: 0.5s;
 
   // styling
   background-color: palette(sidebar,background,base);
 }
-.sidenav-expand {
-  width: 275px;
+.sidenav-top {
+  padding: 21px;
 }
 .sidenav-service {
   &:hover {
