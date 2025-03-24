@@ -1,7 +1,6 @@
 // Side Navigation opened with the hamburger menu
 {
   const headerHamburger = document.getElementById('header-hamburger');
-  const sidenavContainer = document.getElementsByClassName('sidenav')[0];
   const bodyContent = document.getElementsByClassName('body-content')[0];
   const bodyContentCover = document.getElementsByClassName('body-content-cover')[0];
 
@@ -20,3 +19,5 @@
     if (expanded) { expandSideNav(); }
   });
 }
+
+// Sticky Header

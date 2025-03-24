@@ -123,6 +123,13 @@ $color-palettes: (
       hover: rgba(255,255,255,0.05),
       body: rgba(0,0,0,0.4),
     ),
+    buttons: (
+      base: transparent,
+      border: 1px solid rgba( 0, 0, 0, 0.25),
+      outline: 1px solid rgba(255, 255, 255, 0.1),
+      alt-border: 1px solid rgba( 0, 0, 0, 0.45),
+      alt-inner-border: 1px solid hsla(0,0%,100%,.05),
+    )
   ),
 );
 
@@ -142,6 +149,7 @@ $global-padding: 15px;
 
 // Sidenav
 $sidenav-width: 275px;
+$sidenav-width-large: 335px;
 
 // Grid
 $g-col-count: 12;

@@ -30,11 +30,12 @@
 [class^="module-services-item-container-"] {
   @extend %text-remove-decoration;
   @include box-shadow;
-  border: 1px solid $br--color;
-  border-radius: $br--radius-large;
-  padding: 30px;
   @include hover-lift;
+  border-radius: $br--radius-large;
+  border: 1px solid $br--color;
+  padding: 30px;
 }
+
 .module-services-item-content {
   display: block;
   text-align: center;

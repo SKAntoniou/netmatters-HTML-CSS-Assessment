@@ -270,3 +270,33 @@
     }
   }
 }
+
+// Sidebar Button
+.sidebar-button {
+  width: 100%;
+  padding: 1.25rem;
+  border: palette(sidebar,buttons,border);
+  outline: palette(sidebar, buttons, outline);
+  border-radius: $br--radius-small;
+  font-size: 1.125rem;
+  .sidenav-service-icon {
+    font-size: 23px;
+    padding-bottom: 10px;
+  }
+  .sidenav-service-title-small {
+    font-size: 0.625rem;
+    padding-bottom: 1px;
+  }
+  &:hover {
+    background-color: palette(sidebar,background,hover);
+    text-decoration: none;
+  }
+}
+[class^="sidenav-service-container-"] {
+  &:hover {
+    .sidebar-button {
+      background-color: palette(sidebar,background,hover);
+      text-decoration: none;
+    }
+  }
+}

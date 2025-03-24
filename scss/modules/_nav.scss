@@ -111,7 +111,7 @@ nav {
 }
 
 
-// Sidenav
+// Sidenav ===================================================================================
 .sidenav {
   // Position on page
   position: fixed;
@@ -120,21 +120,100 @@ nav {
   z-index: -1;
   // Size
   height: 100%;
-  width: $sidenav-width; // Will be extended with javascript
+  width: $sidenav-width;
+  @include mq(l) {
+    width: $sidenav-width-large;
+  }
   // overflow
   overflow-y: scroll;
   overflow-x: hidden;
 
   // styling
   background-color: palette(sidebar,background,base);
+
+  * {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+  }
 }
+[class^="sidenav-service-container-"] {
+  padding-top: 1.25rem;
+}
+.sidenav-service-container- {
+  @include services;
+}
+
 .sidenav-top {
-  padding: 21px;
+  padding: 1.25rem;
+  text-align: center;
+  ul {
+    $list-border-radius: $br--radius-small;
+    padding-top: 1.25rem;
+    li {
+      &:first-child {
+        border-top-left-radius: $list-border-radius;
+        border-top-right-radius: $list-border-radius;
+      }
+      &:last-child {
+        border-bottom-left-radius: $list-border-radius;
+        border-bottom-right-radius: $list-border-radius;
+      }
+      background-color: palette(sidebar, background, alt);
+      border-top: palette(sidebar,buttons,alt-border);
+      a {
+        padding: 10px;
+        border-top: palette(sidebar,buttons,alt-inner-border);
+      }
+    }
+  }
 }
-.sidenav-service {
+
+.sidenav-bottom {
+  *:hover {
+    text-decoration: none;
+  }
+  &-header {
+    border-top: palette(sidebar,buttons,border);
+    > span {
+      padding: 20px;
+      border-top: palette(sidebar, buttons, outline);
+    }
+  }
+  ul {
+    background-color: palette(sidebar, background, alt);
+    li {
+      border-top: palette(sidebar,buttons,alt-border);
+      a {
+        border-top: palette(sidebar,buttons,alt-inner-border);
+        padding: 15px 20px;
+        font-size: 0.875rem;
+        &:before {
+          // icomoon icon-double_arrow
+          @include icomoon;
+          content: "\e932";
+          font-size: 0.5rem;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
+.sidenav-bottom-container {
   &:hover {
-    .sidenav-service-title {
+    .sidenav-bottom-header {
       background-color: palette(sidebar,background,hover);
     }
+  }
+}
+.sidenav-mq-mobile-only {
+  @include mq(l) {
+    display: none;
+  }
+}
+.sidenav-mq-desktop-only {
+  display: none;
+  @include mq(l) {
+    display: block;
   }
 }

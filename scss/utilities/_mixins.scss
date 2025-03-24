@@ -144,8 +144,13 @@
   .nav-item-expand-accent-arrow {
     border-top: 30px solid $color-primary;
   }
+  &:has(> div.module-services-item-content),
+  &:has(> div.nav-item-expand) {
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
   &:hover {
-    background-color: $color-primary;
     .module-services-title, .module-services-description {
       color: palette(general, text, light);
     }
@@ -153,6 +158,7 @@
       background-color: palette(general, text, light);
       color: $color-primary;
     }
+    
   }
   *:hover {
     text-decoration: none;
@@ -161,6 +167,9 @@
     .nav-item-expand-text {
       text-decoration: underline;
     }
+  }
+  .sidenav-service-icon {
+    color: $color-primary;
   }
 }
 // Uses Mixin above and sets the custom colours to the mixin.

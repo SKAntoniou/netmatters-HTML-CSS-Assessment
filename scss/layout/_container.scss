@@ -20,13 +20,19 @@
 }
 
 // This is for the sidebar navigations.
-.body-content{
-  background-color: palette(general,background,base);
+.body-content, .body-content-cover {
   transition: ease 0.5s;
   &-move {
     transition: ease 0.5s;
     transform: translateX(calc(-1 * #{$sidenav-width}));
+    @include mq(l) {
+      transform: translateX(calc(-1 * #{$sidenav-width-large}));
+    }
   }
+}
+.body-content {
+  background-color: palette(general,background,base);
+  overflow-x: hidden;
 }
 .body-content-cover {
   position: fixed;
@@ -34,11 +40,8 @@
   width: 100%;
   z-index: 10;
   pointer-events: none;
-  transition: ease 0.5s;
   &-move {
     pointer-events: auto;
-    transition: ease 0.5s;
     background-color: palette(sidebar,background,body);
-    transform: translateX(calc(-1 * #{$sidenav-width}));
   }
 }
