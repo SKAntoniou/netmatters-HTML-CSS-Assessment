@@ -28,6 +28,9 @@
   h1, h2 {
     font-size: 2.5em;
   }
+  &.active {
+    display: block;
+  }
   @include mq(l) {
     text-align: left;
     h1, h2 {
@@ -40,10 +43,6 @@
       line-height: 2.5rem;
     }
   }
-}
-
-#banner-element-1 {
-  display: block;
 }
 
 .banner-nav {

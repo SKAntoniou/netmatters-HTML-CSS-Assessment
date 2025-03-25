@@ -69,3 +69,19 @@ header {
   flex: 0 0;
   white-space: nowrap;
 }
+
+// Sticky Header
+.sticky-header {
+  z-index: 9;
+  background-color: palette(general, background);
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    transition: transform ease-in-out 0.3s;
+    transform: translateY(-100%);
+  }
+  &.show {
+    transform: translateY(0%);
+  }
+}
