@@ -82,6 +82,12 @@ $color-palettes: (
     logo: ( base: #333645, ),
     nav: ( base: #333645, ),
   ),
+  banner: (
+    dots: (
+      base: rgba(255,255,255,0.5),
+      highlight: #fff,
+    ),
+  ),
   welcome: (
     button: ( base: #272936, ),
   ),

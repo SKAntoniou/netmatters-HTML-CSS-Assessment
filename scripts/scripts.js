@@ -71,6 +71,7 @@ $('.banner').slick({
   autoplaySpeed: 5000,
   arrows: false,
   dots: true,
+  dotsClass: 'banner-dots',
   variableWidth: true,
   centerMode: true,
 });
