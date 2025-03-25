@@ -24,7 +24,7 @@
 {
   const stickyHeader = document.getElementsByClassName('sticky-header')[0];
   const stickyHeaderContainer= document.getElementsByClassName('sticky-header-container')[0];
-  const stickyHeaderHeight = `${stickyHeader.offsetHeight}px`;
+  const stickyHeaderHeight = `${stickyHeader.offsetHeight - 2}px`;
   stickyHeaderContainer.style.height = stickyHeaderHeight;
   let lastScroll = 0;
   let isSticky = false;
