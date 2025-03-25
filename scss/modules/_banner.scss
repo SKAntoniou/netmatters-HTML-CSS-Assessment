@@ -1,16 +1,9 @@
 .banner{
   @include text-color;
-  background-image: url(#{$path-img}banner/home-YLei.webp);
-  background-color: rgba(0,0,0,0.6);
-  @include mq(l) {
-    background-image: url(#{$path-img}banner/home-YLei.webp), linear-gradient(to right, black, rgba(0,0,0,0) 70%);
-    background-color: transparent;
-  }
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
   height: 550px;
+}
+.banner-catagory- {
+  @include services;
 }
 
 .banner-flex {
@@ -26,9 +19,11 @@
 
 .banner-element {
   width: 100vw;
+  height: 550px;
   padding: 0 10px;
   text-align: center;
   display: none;
+  // Text Styling
   h1, h2 {
     font-size: 2.5em;
     font-weight: $font-w-light-bold;
@@ -39,6 +34,7 @@
     line-height: 1.75rem;
   }
   @include mq(l) {
+    // Text Styling
     text-align: left;
     h1, h2 {
       font-size: 4rem;
@@ -58,14 +54,14 @@
   $dot-base-size: 11px;
   $dot-base-margin: 4px;
   $dot-base-border: 2px;
-  $dot-list-margin: 10px;
+  $dot-list-margin: 4px;
   $dot-list-size: calc(#{$dot-base-size} + (2 * (#{$dot-base-margin} + #{$dot-base-border})));
   // Styling
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  transform: translateY(-250%);
   *:focus-visible {
   outline-width: 0;
   } 

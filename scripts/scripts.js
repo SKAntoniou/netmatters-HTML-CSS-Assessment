@@ -24,9 +24,21 @@
 // Maybe add a buffer on scrolling up to not immediately show on tiny inputs.
 {
   const stickyHeader = document.getElementsByClassName('sticky-header')[0];
-  const stickyHeaderContainer= document.getElementsByClassName('sticky-header-container')[0];
-  const stickyHeaderHeight = `${stickyHeader.offsetHeight - 2}px`;
+  const stickyHeaderContainer = document.getElementsByClassName('sticky-header-container')[0];
+
+  // There is probably a better way to do this. Will come back to this if I have time.
+  // Placeholder header height to not move the whole page.
+  let stickyHeaderHeight = `${stickyHeader.offsetHeight - 2}px`;
   stickyHeaderContainer.style.height = stickyHeaderHeight;
+  // Media Query List for placeholder header.
+  const mqs = ["480px", "768px", "992px", "1260px"];
+  for (let i = 0, j = mqs.length; i < j; i++) {
+    window.matchMedia(`(max-width: ${mqs[i]})`).addEventListener('change', () => {
+      stickyHeaderHeight = `${stickyHeader.offsetHeight - 2}px`;
+      stickyHeaderContainer.style.height = stickyHeaderHeight;
+    })
+  }
+
   let lastScroll = 0;
   let isSticky = false;
 
@@ -38,11 +50,12 @@
     // BUG TO FIX, when scrolling up add a condition for between currentscroll and stickyheaderheight. if already sticky, don't make relative until you hit the top of the page, also if you scroll down at that point, remove all the classes and transistion back.
     if (currentScroll > stickyHeader.offsetHeight) {
       stickyHeader.classList.add("sticky");
+      stickyHeaderContainer.style.height = stickyHeaderHeight;
 
       if (currentScroll > lastScroll) {
         // Scrolling down
         if (isSticky) {
-          stickyHeader.classList.add("hide"); // may need removing. but need to put it after already header has been shown sticky. probe need a variable has been sticky. also isSticky is useless now.
+          stickyHeader.classList.add("hide"); // may need removing. but need to put it after already header has been shown sticky. prob need a variable has been sticky. also isSticky is useless now.
           stickyHeader.classList.remove("show");
           isSticky = false;
         }

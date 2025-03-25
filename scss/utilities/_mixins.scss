@@ -128,7 +128,7 @@
 }        
 
 // General Mixin for all services
-@mixin services-modifiers($color-primary, $color-secondary, $color-accent) {
+@mixin services-modifiers($color-primary, $color-secondary, $color-accent, $banner-image) {
   .module-services-icon {
     background-color: $color-primary;
   }
@@ -150,6 +150,18 @@
       background-color: $color-primary;
     }
   }
+  &:has(> div.banner-flex) {
+    background-image: url($banner-image);
+    background-color: rgba(0,0,0,0.6);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    @include mq(l) {
+      background-image: url($banner-image), linear-gradient(to right, black, rgba(0,0,0,0) 70%);
+      background-color: transparent;
+    }
+  }
   &:hover {
     .module-services-title, .module-services-description {
       color: palette(general, text, light);
@@ -158,7 +170,6 @@
       background-color: palette(general, text, light);
       color: $color-primary;
     }
-    
   }
   *:hover {
     text-decoration: none;
@@ -174,12 +185,20 @@
 }
 // Uses Mixin above and sets the custom colours to the mixin.
 @mixin services{
+  &netmatters {
+    // Colours for Netmatters - Mainly for the Banner
+    $color-primary: palette(general, netmatters, base);
+    $banner-image: "#{$path-img}banner/home-YLei.webp";
+    @include services-modifiers($color-primary, $color-primary, $color-primary, $banner-image);
+  }
+
   &bespoke-software {
     // Colours for Bespoke Software
     $color-primary: palette(services, software);
     $color-secondary: palette(services, software, base, dark);
     $color-accent: palette(services, software, alt);
-    @include services-modifiers($color-primary, $color-secondary, $color-accent);
+    $banner-image: "#{$path-img}banner/home-YLei.webp" ;
+    @include services-modifiers($color-primary, $color-secondary, $color-accent, $banner-image);
     .nav-item-expand-accent-arrow {
       grid-column: 1 / span 1;
     }
@@ -189,7 +208,8 @@
     // Colours
     $color-primary: palette(services, it-support);
     $color-secondary: palette(services, it-support, base, dark);
-    @include services-modifiers($color-primary, $color-secondary, $color-primary);
+    $banner-image: "#{$path-img}banner/home-YLei.webp";
+    @include services-modifiers($color-primary, $color-secondary, $color-primary, $banner-image);
     .nav-item-expand-accent-arrow {
       grid-column: 2 / span 1;
     }
@@ -198,7 +218,8 @@
   &digital-marketing {
     $color-primary: palette(services, marketing);
     $color-secondary: palette(services, marketing, base, dark);
-    @include services-modifiers($color-primary, $color-secondary, $color-primary);
+    $banner-image: "#{$path-img}banner/home-YLei.webp";
+    @include services-modifiers($color-primary, $color-secondary, $color-primary, $banner-image);
     .nav-item-expand-accent-arrow {
       grid-column: 3 / span 1;
     }
@@ -207,7 +228,8 @@
   &telecoms-services {
     $color-primary: palette(services, telecoms);
     $color-secondary: palette(services, telecoms, base, dark);
-    @include services-modifiers($color-primary, $color-secondary, $color-primary);
+    $banner-image: "#{$path-img}banner/home-YLei.webp";
+    @include services-modifiers($color-primary, $color-secondary, $color-primary, $banner-image);
     .nav-item-expand-accent-arrow {
       grid-column: 4 / span 1;
     }
@@ -216,7 +238,8 @@
   &web-design {
     $color-primary: palette(services, web-design);
     $color-secondary: palette(services, web-design, base, dark);
-    @include services-modifiers($color-primary, $color-secondary, $color-primary);
+    $banner-image: "#{$path-img}banner/home-YLei.webp";
+    @include services-modifiers($color-primary, $color-secondary, $color-primary, $banner-image);
     .nav-item-expand-accent-arrow {
       grid-column: 5 / span 1;
     }
@@ -225,7 +248,8 @@
   &cyber-security {
     $color-primary: palette(services, security);
     $color-secondary: palette(services, security, base, dark);
-    @include services-modifiers($color-primary, $color-secondary, $color-primary);
+    $banner-image: "#{$path-img}banner/home-YLei.webp";
+    @include services-modifiers($color-primary, $color-secondary, $color-primary, $banner-image);
     .nav-item-expand-accent-arrow {
       grid-column: 6 / span 1;
     }
@@ -234,7 +258,8 @@
   &developer-training {
     $color-primary: palette(services, training);
     $color-secondary: palette(services, training, base, dark);
-    @include services-modifiers($color-primary, $color-secondary, $color-primary);
+    $banner-image: "#{$path-img}banner/home-YLei.webp";
+    @include services-modifiers($color-primary, $color-secondary, $color-primary, $banner-image);
     .nav-item-expand-accent-arrow {
       grid-column: 7 / span 1;
     }
