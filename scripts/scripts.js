@@ -33,13 +33,16 @@
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
     // Make fixed (off screen) after scroll past header height
+
+    // 2 Bugs and counting...
+    // BUG TO FIX, when scrolling up add a condition for between currentscroll and stickyheaderheight. if already sticky, don't make relative until you hit the top of the page, also if you scroll down at that point, remove all the classes and transistion back.
     if (currentScroll > stickyHeader.offsetHeight) {
       stickyHeader.classList.add("sticky");
 
       if (currentScroll > lastScroll) {
         // Scrolling down
         if (isSticky) {
-          stickyHeader.classList.add("hide");
+          stickyHeader.classList.add("hide"); // may need removing. but need to put it after already header has been shown sticky. probe need a variable has been sticky. also isSticky is useless now.
           stickyHeader.classList.remove("show");
           isSticky = false;
         }
@@ -62,14 +65,15 @@
 }
 
 // Banner Slider - jQuery Plugin - slick
-// $('.banner-flex').slick({
-//   swipeToSlide: true,
-//   autoplay: true,
-//   autoplaySpeed: 5000,
-//   arrows: false,
-//   dots: true,
-//   variableWidth: true
-// });
+$('.banner').slick({
+  swipeToSlide: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  arrows: false,
+  dots: true,
+  variableWidth: true,
+  centerMode: true,
+});
 
 
 // Notes for Banner Slider

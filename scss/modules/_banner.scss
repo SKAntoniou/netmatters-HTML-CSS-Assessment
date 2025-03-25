@@ -15,31 +15,39 @@
 
 .banner-flex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 500px;
+  @include mq(l) {
+    align-items: start;
+  }
 }
 
 .banner-element {
-  flex: 1 100%;
+  width: 100vw;
   padding: 0 10px;
   text-align: center;
   display: none;
   h1, h2 {
     font-size: 2.5em;
+    font-weight: $font-w-light-bold;
   }
-  &.active {
-    display: block;
+  p {
+    font-size: 1.25rem;
+    font-weight: $font-w-light-bold;
+    line-height: 1.75rem;
   }
   @include mq(l) {
     text-align: left;
     h1, h2 {
       font-size: 4rem;
       margin: 0;
+      font-weight: $font-w-light-bold;
     }
     p {
       font-size: 1.625rem;
-      font-weight: $font-w-bold;
+      font-weight: $font-w-light-bold;
       line-height: 2.5rem;
     }
   }
