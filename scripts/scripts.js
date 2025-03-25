@@ -21,6 +21,7 @@
 }
 
 // Sticky Header - Vanilla JS
+// Maybe add a buffer on scrolling up to not immediately show on tiny inputs.
 {
   const stickyHeader = document.getElementsByClassName('sticky-header')[0];
   const stickyHeaderContainer= document.getElementsByClassName('sticky-header-container')[0];
@@ -38,6 +39,7 @@
       if (currentScroll > lastScroll) {
         // Scrolling down
         if (isSticky) {
+          stickyHeader.classList.add("hide");
           stickyHeader.classList.remove("show");
           isSticky = false;
         }
@@ -45,6 +47,7 @@
         // Scrolling up
         if (!isSticky) {
           stickyHeader.classList.add("show");
+          stickyHeader.classList.remove("hide");
           isSticky = true;
         }
       }
@@ -52,6 +55,7 @@
       // Make relative again
       stickyHeader.classList.remove("sticky");
       stickyHeader.classList.remove("show");
+      stickyHeader.classList.remove("hide");
     }
     lastScroll = currentScroll;
   });

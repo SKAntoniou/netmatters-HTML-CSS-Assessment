@@ -78,10 +78,13 @@ header {
   &.sticky {
     position: fixed;
     top: 0;
-    transition: transform ease-in-out 0.3s;
     transform: translateY(-100%);
   }
   &.show {
     transform: translateY(0%);
+    transition: transform ease-in-out 0.3s;
+  }
+  &.hide {
+    transition: transform ease-in-out 0.3s;
   }
 }
