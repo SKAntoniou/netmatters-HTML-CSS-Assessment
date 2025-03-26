@@ -1,0 +1,68 @@
+.module-privacy-policy-popup-initial-body-shadow,
+.module-privacy-policy-popup-initial-popup {
+  position: fixed;
+}
+
+.module-privacy-policy-popup-initial-body-shadow {
+  // Position
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  // Styling
+  background-color: palette(sidebar,background,body);
+  z-index: 10;
+}
+
+
+// NEEDS mobile version and desktop version.
+.module-privacy-policy-popup-initial-popup {
+  // Position
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 30px;
+  z-index: 10;
+
+  // Background
+  background-color: palette(cookies, container, base);
+  border-radius: $br--radius;
+
+  @include mq(m) {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  // Local Variables
+  $local-padding: 20px;
+  h3, p, .module-privacy-policy-popup-initial-buttons {
+    padding: $local-padding;
+    margin: 0;
+  }
+  h3, p {
+    border-bottom: palette(cookies, container, line-break);
+  }
+  h3 {
+    color: palette(cookies, text, heading);
+    font-size: 1.625rem;
+    font-weight: $font-w-normal;
+  }
+  p {
+    color: palette(cookies, text, base);
+    line-height: 1.875rem;
+    padding-bottom: calc(#{$local-padding} + 25px)
+  }
+}
+
+.module-privacy-policy-popup-initial-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  @include mq(m) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  a {
+    width: 100%;
+    margin: 0;
+  }
+}

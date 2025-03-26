@@ -300,3 +300,25 @@
     }
   }
 }
+
+// cookies / privacy-policy
+.module-privacy-policy-popup-initial- {
+  &buttons {
+    a {
+      @extend %btn-flex;
+      @extend %btn-size-std;
+      @extend %btn-text;
+      border-radius: $br--radius-small;
+      cursor: pointer;
+      font-size: 17px;
+    }
+  }
+  &button- {
+    &change {
+      @include dark-colour(background-color, cookies, buttons, grey);
+    }
+    &accept {
+      @include dark-colour(background-color, cookies, buttons, base);
+    }
+  }
+}

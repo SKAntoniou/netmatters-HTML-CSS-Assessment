@@ -42,6 +42,8 @@
       font-weight: $font-w-light-bold;
     }
     p {
+      display: block;
+      width: 50%;
       font-size: 1.625rem;
       font-weight: $font-w-light-bold;
       line-height: 2.5rem;

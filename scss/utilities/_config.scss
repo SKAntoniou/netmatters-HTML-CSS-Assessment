@@ -137,6 +137,20 @@ $color-palettes: (
       alt-inner-border: 1px solid hsla(0,0%,100%,.05),
     )
   ),
+  cookies: (
+    container: (
+      base: #fff,
+      line-break: 1px solid #e5e5e5,
+    ),
+    text: (
+      base: #666,
+      heading: #333645,
+    ),
+    buttons: (
+      base: #926fb1,
+      grey: #999aa2,
+    ),
+  ),
 );
 
 // UI Colors

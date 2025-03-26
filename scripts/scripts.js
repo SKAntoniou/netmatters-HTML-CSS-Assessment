@@ -90,9 +90,5 @@ $('.banner').slick({
 });
 
 
-// Notes for Banner Slider
-/*
-Slides switch every 5 seconds
-If hovered over, pause slider and reset timer
-Slides left
-*/
+// Cookies Pop-up - jQuery Vanilla
+
