@@ -3,7 +3,11 @@
   position: fixed;
 }
 
+// Tiny 
 .module-privacy-policy-popup-initial-body-shadow {
+  // Display
+  display: none;
+
   // Position
   top: 0;
   left: 0;
@@ -15,9 +19,11 @@
   z-index: 10;
 }
 
-
-// NEEDS mobile version and desktop version.
+// Small pop up when click manage cookies
 .module-privacy-policy-popup-initial-popup {
+  // Display
+  display: none;
+
   // Position
   top: 50%;
   transform: translateY(-50%);
@@ -65,4 +71,15 @@
     width: 100%;
     margin: 0;
   }
+}
+
+// Big pop up when 
+.module-privacy-policy-popup-settings {
+  background-color: palette(general, background);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  z-index: 12;
 }
