@@ -91,4 +91,62 @@ $('.banner').slick({
 
 
 // Cookies Pop-up - jQuery Vanilla
+{
+  // Variables and functions to make it cleaner.
+  const cookiesSmall = $('.module-privacy-policy-popup-initial');
+  const cookiesLarge = $('.module-privacy-policy-popup-settings');
+  function htmlFormatting(mod) {
+    if (mod === 'add') {
+      $('body').addClass('module-privacy-policy-popup-settings-html-settings');
+      $(':root').addClass('module-privacy-policy-popup-settings-html-settings');
+    } else if (mod === 'remove') {
+      $('body').removeClass('module-privacy-policy-popup-settings-html-settings');
+      $(':root').removeClass('module-privacy-policy-popup-settings-html-settings');
+    } else {
+      console.log("Function to format HTML for the large cookies pop-up was called wrong.")
+    }
+  }
 
+
+  // Page Loading behaviour
+  // Normal behaviour after first load. In case popups were cached or anything.
+  cookiesSmall.hide();
+  cookiesLarge.hide();
+  htmlFormatting('remove');
+  // Initial behaviour on first page load
+  if (!localStorage.getItem('cookiesShown')) {
+    cookiesSmall.show();
+  }
+
+
+  // Buttons Logic
+  // Click Manage Consent Button to show initial cookies popup.
+  $('.btn-manage-consent').click( () => {
+    cookiesSmall.show();
+  });
+  // Click accept button to hide it.
+  $('.module-privacy-policy-popup-initial-button-accept').click( () => {
+    cookiesSmall.hide();
+    // Add cookie to remember the cookies have been accepted. True is just a placeholder, the value of 'cookiesShown' could be anything.
+    localStorage.setItem('cookiesShown', true);
+  });
+  // Click Change settings to go to next pop up
+  $('.module-privacy-policy-popup-initial-button-change').click( () => {
+    cookiesSmall.hide();
+    cookiesLarge.show();
+    htmlFormatting('add');
+  });
+  // Cancel button on big pop-up will take you back to the initial pop-up
+  $('.module-privacy-policy-popup-settings-button-cancel').click( () => {
+    cookiesSmall.show();
+    cookiesLarge.hide();
+    htmlFormatting('remove');
+  });
+  // Continue button on big pop-up will hide all popups.
+  $('.module-privacy-policy-popup-settings-button-continue').click( () => {
+    cookiesSmall.hide();
+    cookiesLarge.hide();
+    htmlFormatting('remove');
+    localStorage.setItem('cookiesShown', true);
+  });
+}

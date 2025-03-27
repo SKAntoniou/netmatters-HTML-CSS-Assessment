@@ -1,13 +1,15 @@
+.module-privacy-policy-popup-initial {
+    // Display
+    display: none;
+}
+
 .module-privacy-policy-popup-initial-body-shadow,
 .module-privacy-policy-popup-initial-popup {
   position: fixed;
 }
 
-// Tiny 
+// Shadow on body when popup shows.
 .module-privacy-policy-popup-initial-body-shadow {
-  // Display
-  display: none;
-
   // Position
   top: 0;
   left: 0;
@@ -21,9 +23,6 @@
 
 // Small pop up when click manage cookies
 .module-privacy-policy-popup-initial-popup {
-  // Display
-  display: none;
-
   // Position
   top: 50%;
   transform: translateY(-50%);
@@ -75,6 +74,8 @@
 
 // Big pop up when 
 .module-privacy-policy-popup-settings {
+  display: none;
+  
   background-color: palette(general, background);
   position: fixed;
   top: 0;
@@ -82,4 +83,45 @@
   height: 100vh;
   overflow-y: scroll;
   z-index: 12;
+}
+
+.module-privacy-policy-popup-settings-html-settings {
+  // For Popup Settings. This will remove the standard page scroll bar.
+  // Needs to be placed on a set of html tags,
+  // body and either html or :root. Ideally body and root. 
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.module-privacy-policy-popup-settings-section {
+  margin-top: 20px;
+  h2, h3, h4 {
+    color: palette(cookies, text, heading);
+    font-weight: $font-w-normal;
+    margin: 0;
+  }
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 28px;
+  }
+  h3 {
+    font-size: 1.625rem;
+    margin-bottom: 15px;
+  }
+  h4 {
+    font-weight: $font-w-bold;
+    margin-bottom: 15px;
+  }
+  p {
+    color: palette(cookies, text, base);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  ul {
+    color: palette(cookies, text, base);
+    list-style-position: outside;
+    list-style: disc;
+    padding-left: 40px;
+  }
 }

@@ -322,3 +322,28 @@
     }
   }
 }
+
+// Larger popup buttons
+[class^="module-privacy-policy-popup-settings-button-"] {
+  @extend %btn-flex;
+  @extend %btn-size-std;
+  @extend %btn-text;
+  border-radius: $br--radius-small;
+  cursor: pointer;
+  font-size: 17px;
+  float: right;
+}
+
+.module-privacy-policy-popup-settings-button- {
+  &continue {
+    @include dark-colour(background-color, cookies, buttons, base);
+  }
+  &cancel {
+    @include dark-colour(background-color, cookies, buttons, grey);
+  }
+}
+
+// need to change the buttons to radio buttons to make it simplier but need to get the JS to work first.
+.module-privacy-policy-popup-settings-button-toggle {
+
+}
