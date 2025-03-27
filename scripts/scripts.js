@@ -40,38 +40,36 @@
   }
 
   let lastScroll = 0;
-  let isSticky = false;
+  let wasSticky = false;
 
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
-    // Make fixed (off screen) after scroll past header height
 
-    // 2 Bugs and counting...
-    // BUG TO FIX, when scrolling up add a condition for between currentscroll and stickyheaderheight. if already sticky, don't make relative until you hit the top of the page, also if you scroll down at that point, remove all the classes and transistion back.
     if (currentScroll > stickyHeader.offsetHeight) {
+      // Make fixed (off screen) after scroll past header height
       stickyHeader.classList.add("sticky");
       stickyHeaderContainer.style.height = stickyHeaderHeight;
 
       if (currentScroll > lastScroll) {
         // Scrolling down
-        if (isSticky) {
-          stickyHeader.classList.add("hide"); // may need removing. but need to put it after already header has been shown sticky. prob need a variable has been sticky. also isSticky is useless now.
-          stickyHeader.classList.remove("show");
-          isSticky = false;
+        if (wasSticky) {
+          stickyHeader.classList.add("hide");
         }
+        stickyHeader.classList.remove("show");
+
       } else if (currentScroll < lastScroll) {
         // Scrolling up
-        if (!isSticky) {
-          stickyHeader.classList.add("show");
-          stickyHeader.classList.remove("hide");
-          isSticky = true;
-        }
+        stickyHeader.classList.add("show");
+        stickyHeader.classList.remove("hide");
+        wasSticky = true;
       }
-    } else {
+
+    } else if (currentScroll === 0){
       // Make relative again
       stickyHeader.classList.remove("sticky");
       stickyHeader.classList.remove("show");
       stickyHeader.classList.remove("hide");
+      wasSticky = false;
     }
     lastScroll = currentScroll;
   });

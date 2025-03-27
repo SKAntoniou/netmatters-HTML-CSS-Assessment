@@ -337,6 +337,7 @@
 .module-privacy-policy-popup-settings-button- {
   &continue {
     @include dark-colour(background-color, cookies, buttons, base);
+    margin-left: 10px;
   }
   &cancel, &detailed-toggle {
     @include dark-colour(background-color, cookies, buttons, grey);
@@ -344,7 +345,7 @@
 }
 
 .module-privacy-policy-popup-settings-button-detailed-toggle {
-  float: left;
+  float: none;
   margin: 30px 0 10px;
   .hide {
     display: none;
@@ -367,9 +368,12 @@
     font-size: 17px;
     color: palette(cookies, buttons, inactive-text);
     border: 1px solid palette(cookies, buttons, inactive-border);
+    background-color: palette(general, text, light);
   }
   .active {
     @include dark-colour(background-color, cookies, buttons, base);
+    @include dark-colour(border-color, cookies, buttons, base);
     color: palette(general, text, light);
+    
   }
 }

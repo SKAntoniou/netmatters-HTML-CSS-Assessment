@@ -95,6 +95,7 @@
 
 .module-privacy-policy-popup-settings-section {
   margin-top: 20px;
+  margin-bottom: 20px;
   h2, h3, h4 {
     color: palette(cookies, text, heading);
     font-weight: $font-w-normal;
@@ -128,4 +129,21 @@
 
 .module-privacy-policy-popup-settings-table-detailed {
   display: none;
+
+  th {
+    background-color: palette(cookies, table, bg-header);
+    color: palette(cookies, table, txt-header);
+    font-weight: $font-w-normal;
+    text-align: left;
+    padding: 15px;
+  }
+  td {
+    background-color: palette(cookies, table, bg-content);
+    color: palette(cookies, table, txt-content);
+    padding: 15px;
+  }
+  .module-privacy-policy-popup-settings-button-toggle {
+    padding: 0;
+  }
 }
+
