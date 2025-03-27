@@ -10,7 +10,7 @@
 }
 
 %btn-text {
-  color: $white;
+  color: palette(general, text, light);
   text-transform: uppercase;
   text-wrap: nowrap;
   &:active, &:hover {
@@ -338,12 +338,38 @@
   &continue {
     @include dark-colour(background-color, cookies, buttons, base);
   }
-  &cancel {
+  &cancel, &detailed-toggle {
     @include dark-colour(background-color, cookies, buttons, grey);
   }
 }
 
-// need to change the buttons to radio buttons to make it simplier but need to get the JS to work first.
-.module-privacy-policy-popup-settings-button-toggle {
+.module-privacy-policy-popup-settings-button-detailed-toggle {
+  float: left;
+  margin: 30px 0 10px;
+  .hide {
+    display: none;
+  }
+}
 
+.module-privacy-policy-popup-settings-button-toggle {
+  display: flex;
+  width: 100%;
+  a:first-child {
+    margin-left: auto;
+  }
+
+  .enable, .disable {
+    @extend %btn-flex;
+    @extend %btn-size-std;
+    @extend %btn-text;
+    border-radius: $br--radius-small;
+    cursor: pointer;
+    font-size: 17px;
+    color: palette(cookies, buttons, inactive-text);
+    border: 1px solid palette(cookies, buttons, inactive-border);
+  }
+  .active {
+    @include dark-colour(background-color, cookies, buttons, base);
+    color: palette(general, text, light);
+  }
 }

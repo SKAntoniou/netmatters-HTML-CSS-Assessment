@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Netmatters Homepage</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -1053,7 +1053,7 @@
             <span class="footer-item">&copy; Copyright Netmatters 2025.&emsp;</span>
             <span class="footer-item">All rights reserved.</span>
             <span class="footer-item-seperator">&emsp;-&emsp;</span>
-            <a href="#" class="footer-item">Sitemap</span>
+            <a href="#" class="footer-item">Sitemap</a>
           </div>
         </div>
       </div>
@@ -1107,8 +1107,8 @@
               <li>Live chat</li>
             </ul>
             <div class="module-privacy-policy-popup-settings-button-toggle">
-              <a>Enable</a>
-              <a>Disable</a>
+              <a class="disable">Disable</a>
+              <a class="enable">Enable</a>
             </div>
           </div>
 
@@ -1129,9 +1129,9 @@
                 Testing the website's design and operability
               </li>
             </ul>
-            <div class="module-privacy-policy-popup-settings-buttons-toggle">
-              <a>Disable</a>
-              <a>Enable</a>
+            <div class="module-privacy-policy-popup-settings-button-toggle">
+              <a class="disable">Disable</a>
+              <a class="enable">Enable</a>
             </div>
             <p>
               Different web browsers may use different methods for managing cookies. Please follow the instructions below, from the web browser manufacturers directly, to configure your browser settings*.
@@ -1143,8 +1143,12 @@
               <li>Firefox</li>
             </ul>
 
-            <a>Show Detailed Preferences</a>
-            <table>
+            <a class="module-privacy-policy-popup-settings-button-detailed-toggle">
+              <span class="show">Show Detailed Preferences</span>
+              <span class="hide">Hide Detailed Preferences</span>
+            </a>
+
+            <table class="module-privacy-policy-popup-settings-table-detailed">
 
               <tr>
                 <th>Company</th>
@@ -1155,45 +1159,45 @@
               <tr>
                 <td>&#43; Hotjar Ltd</td>
                 <td>hotjar.com</td>
-                <td class="module-privacy-policy-popup-settings-buttons-toggle">
-                  <a>Disable</a>
-                  <a>Enable</a>
+                <td class="module-privacy-policy-popup-settings-button-toggle">
+                  <a class="disable">Disable</a>
+                  <a class="enable">Enable</a>
                 </td>
               </tr>
 
               <tr>
                 <td>&#43; LinkedIn Corporation</td>
                 <td>licdn.com</td>
-                <td class="module-privacy-policy-popup-settings-buttons-toggle">
-                  <a>Disable</a>
-                  <a>Enable</a>
+                <td class="module-privacy-policy-popup-settings-button-toggle">
+                  <a class="disable">Disable</a>
+                  <a class="enable">Enable</a>
                 </td>
               </tr>
 
               <tr>
                 <td>&#43; Facebook Inc.</td>
                 <td>facebook.com, facebook.net</td>
-                <td class="module-privacy-policy-popup-settings-buttons-toggle">
-                  <a>Disable</a>
-                  <a>Enable</a>
+                <td class="module-privacy-policy-popup-settings-button-toggle">
+                  <a class="disable">Disable</a>
+                  <a class="enable">Enable</a>
                 </td>
               </tr>
 
               <tr>
                 <td>&#43; Google Inc.</td>
                 <td>google.com, googletagmanager.com, google-analytics.com</td>
-                <td class="module-privacy-policy-popup-settings-buttons-toggle">
-                  <a>Disable</a>
-                  <a>Enable</a>
+                <td class="module-privacy-policy-popup-settings-button-toggle">
+                  <a class="disable">Disable</a>
+                  <a class="enable">Enable</a>
                 </td>
               </tr>
 
               <tr>
                 <td>&#43; 3CX</td>
                 <td>https://netmatters.co.uk/</td>
-                <td class="module-privacy-policy-popup-settings-buttons-toggle">
-                  <a>Disable</a>
-                  <a>Enable</a>
+                <td class="module-privacy-policy-popup-settings-button-toggle">
+                  <a class="disable">Disable</a>
+                  <a class="enable">Enable</a>
                 </td>
               </tr>
 
@@ -1215,7 +1219,7 @@
       <a href="#" class="btn-live-chat"><span class="icon-chat"></span></a>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./scripts/scripts.js"></script>
   </body>
 </html>

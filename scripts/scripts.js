@@ -119,7 +119,7 @@ $('.banner').slick({
   }
 
 
-  // Buttons Logic
+  // Buttons Logic for Page Changes
   // Click Manage Consent Button to show initial cookies popup.
   $('.btn-manage-consent').click( () => {
     cookiesSmall.show();
@@ -149,4 +149,34 @@ $('.banner').slick({
     htmlFormatting('remove');
     localStorage.setItem('cookiesShown', true);
   });
+
+  // Extra Buttons Logic for Sections
+  for (let i = 0, j = $('.module-privacy-policy-popup-settings-button-toggle').children().length; i < j; i += 2) {
+    // Will be selecting them in pairs.
+    // Even numbers of i will be disable so i = disable
+    // Odd numbers of i will be enable so i + 1 = enable
+    const disableButton = $('.module-privacy-policy-popup-settings-button-toggle').children()[i];
+    const enableButton = $('.module-privacy-policy-popup-settings-button-toggle').children()[(i + 1)];
+
+    // Default Value
+    enableButton.classList.add('active');
+
+    disableButton.addEventListener('click', () => {
+      enableButton.classList.remove('active');
+      disableButton.classList.add('active');
+    })
+
+    enableButton.addEventListener('click', () => {
+      disableButton.classList.remove('active');
+      enableButton.classList.add('active');
+    })
+  }
+  
+  // Toggle More detailed information in the table below it.
+  let detailedPreferences = $('.module-privacy-policy-popup-settings-table-detailed');
+  let showDetailButton = $('.module-privacy-policy-popup-settings-button-detailed-toggle .show,.module-privacy-policy-popup-settings-button-detailed-toggle .hide') 
+  $('.module-privacy-policy-popup-settings-button-detailed-toggle').click( () => {
+    detailedPreferences.toggle();
+    showDetailButton.toggle();
+  })
 }

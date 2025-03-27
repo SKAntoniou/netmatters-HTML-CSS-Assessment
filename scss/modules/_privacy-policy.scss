@@ -75,7 +75,7 @@
 // Big pop up when 
 .module-privacy-policy-popup-settings {
   display: none;
-  
+
   background-color: palette(general, background);
   position: fixed;
   top: 0;
@@ -124,4 +124,8 @@
     list-style: disc;
     padding-left: 40px;
   }
+}
+
+.module-privacy-policy-popup-settings-table-detailed {
+  display: none;
 }
