@@ -1,11 +1,15 @@
 <?php
 
-use Core\ValidationException;
-
 const BASE_PATH = __DIR__.'/../';
 
 require BASE_PATH . 'vendor/autoload.php';
 require BASE_PATH . 'Core/functions.php';
+
+use Core\ValidationException;
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(BASE_PATH);
+$dotenv->load();
 
 $router = new \Core\Router();
 require BASE_PATH . 'routes.php';
