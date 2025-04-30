@@ -16,7 +16,7 @@ class Database
             'port' => $_ENV['MYSQL_PORT'],
             'dbname' => $_ENV['MYSQL_DATABASE_NAME'],
             'charset' => $_ENV['MYSQL_CHARSET']
-        ]
+        ];
 
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
