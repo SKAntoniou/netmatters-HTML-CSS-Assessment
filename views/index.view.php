@@ -216,26 +216,69 @@
   </div>
   <div class="module-news-articles container">
 
-    <div class="module-news-article-case-studies">
+    <?php foreach ($newsArray as $na): ?>
+    
+    <div class="module-news-article-<?= $na['tag'] ?>">
       <a href="#" class="module-news-item-link"></a>
-      <a href="#" class="module-news-tag">Case Studies</a>
+      <a href="#" class="module-news-tag"><?php 
+        switch($na['tag']) {
+          case 'case-studies':
+            echo 'Case Studies';
+            break;
+          case 'technologies':
+            echo 'Technologies';
+            break;
+          case 'news':
+            echo 'News';
+            break;
+          case 'insights':
+            echo 'Insights';
+            break;
+          case 'careers': 
+            echo 'Careers';
+            break;
+          case 'environmental':
+            echo 'Enviromental';
+            break;
+          default:
+            echo 'News';
+        }
+      ?></a>
       <div class="module-news-item-content">
         <div class="module-news-image">
-          <img src="img/news/case-study-langley-JW16.webp" alt="Langley Case Study">
+          <img src="img/news/<?= $na['main_image'] ?>" alt="<?= $na['main_image_alt'] ?>">
         </div>
         <div class="module-news-item-text">
           <div class="module-news-item-text-top">
-            <h4>Case Study: Langley School Website Rebuild</h4>
-            <p>The Client Langley School is a leading independent school in Norfolk, UK, offering exceptional educa...</p>
+            <h4><?= $na['title'] ?></h4>
+            <p><?= $na['description'] ?></p>
           </div>
           <div class="module-news-item-text-bottom">
             <a class="btn-readmore">Read more</a>
             <hr>
             <div class="module-news-item-author">
-              <img src="img/avatars/netmatters-ltd-VXAv.webp" alt="Netmatters Avatar">
+              <?php 
+                if (empty($na['author'])) {
+                  $authorImageLink = 'netmatters-ltd-VXAv.webp';
+                  $authorImageAlt = 'Netmatters Logo';
+                  $authorName = 'Netmatters';
+                } else if (empty($na['author_image'])) {
+                  $authorImageLink = 'blank-NwLx.webp';
+                  $authorImageAlt = 'Blank Avatar';
+                  $authorName = $na['author'];
+                } else {
+                  $authorImageLink = $na['author_image'];
+                  $authorImageAlt = $na['author_image_alt'];
+                  $authorName = $na['author'];
+                }
+              ?>
+              <img src="img/avatars/<?= $authorImageLink ?>" alt="<?= $authorImageAlt ?>">
               <div class="module-news-item-author-text">
-                <strong>Posted by Netmatters</strong>
-                <p>10th February 2025</p>
+                <strong>Posted by <?= $authorName ?></strong>
+                <p><?php 
+                  $date = date_create($na['created_date']);
+                  echo date_format( $date , "jS F Y" ); 
+                ?></p>
               </div>
             </div>
           </div>
@@ -243,59 +286,7 @@
       </div>
     </div>
 
-    <div class="module-news-article-careers">
-      <a href="#" class="module-news-item-link"></a>
-      <a href="#" class="module-news-tag">Careers</a>
-      <div class="module-news-item-content">
-        <div class="module-news-image">
-          <img src="img/news/3rd-line-support-RUsc.webp" alt="Hiring Picture">
-        </div>
-        <div class="module-news-item-text">
-          <div class="module-news-item-text-top">
-            <h4>3rd Line Support Technician</h4>
-            <p>Salary Range £40,000 - £50,000 per annum Hours 40 hours per week, Monday - Friday Location Cambridge...</p>
-          </div>
-          <div class="module-news-item-text-bottom">
-            <a class="btn-readmore">Read more</a>
-            <hr>
-            <div class="module-news-item-author">
-              <img src="img/avatars/blank-NwLx.webp" alt="Blank Avatar">
-              <div class="module-news-item-author-text">
-                <strong>Posted by Rebecca Moore</strong>
-                <p>6th February 2025</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="module-news-article-news">
-      <a href="#" class="module-news-item-link"></a>
-      <a href="#" class="module-news-tag">News</a>
-      <div class="module-news-item-content">
-        <div class="module-news-image">
-          <img src="img/news/january-notables-2025-JWoS.png" alt="Henry Sayer, Notable for january">
-        </div>
-        <div class="module-news-item-text">
-          <div class="module-news-item-text-top">
-            <h4>January Notables 2025 - Celebrating Our Team</h4>
-            <p>January Notables 2025 At Netmatters, we believe in celebrating the hard work and dedication of our t...</p>
-          </div>
-          <div class="module-news-item-text-bottom">
-            <a class="btn-readmore">Read more</a>
-            <hr>
-            <div class="module-news-item-author">
-              <img src="img/avatars/netmatters-ltd-VXAv.webp" alt="Netmatters Avatar">
-              <div class="module-news-item-author-text">
-                <strong>Posted by Netmatters</strong>
-                <p>5th February 2025</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php endforeach; ?>
 
   </div>
 

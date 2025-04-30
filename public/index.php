@@ -18,7 +18,7 @@ use Core\Database;
 $dotenv = Dotenv::createImmutable(BASE_PATH);
 $dotenv->load();
 
-// Setup Database
+// Setup Database and store it in a Container that can be retrieved with App class.  
 $container = new Container();
 $container->bind('Core\Database', function () {
   return new Database();
