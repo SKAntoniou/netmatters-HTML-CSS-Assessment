@@ -82,3 +82,18 @@
     margin: 0;
   }
 }
+
+// Form inputs ==================================================================
+// Standard Size
+%form-input {
+  padding: 5px 15px;
+  border: 1px solid $br--color;
+}
+.form-input-small {
+  @extend %form-input;
+  height: 3rem;
+}
+.form-input-large {
+  @extend %form-input;
+  height: 6.25rem;
+}

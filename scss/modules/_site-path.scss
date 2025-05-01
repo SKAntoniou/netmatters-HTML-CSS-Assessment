@@ -1,0 +1,24 @@
+// This is a small heading on desktop only.
+// On certain pages, this will show to the path to get to this page.
+// There will also be links to get back to parent pages.
+
+.site-path {
+  // hidden for mobile view.
+  display: none;
+  // Desktop View
+  @include mq(l) {
+    display: block;
+  }
+
+  // Container sizing
+  padding: 14px 0 13px;
+
+  // Text formatting
+  * {
+    color: palette(general, text, base);
+    font-size: 0.8125rem;
+  }
+  a {
+    font-weight: $font-w-bold;
+  }
+}

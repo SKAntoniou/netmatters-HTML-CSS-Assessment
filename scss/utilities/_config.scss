@@ -53,12 +53,15 @@ $color-palettes: (
       base: #333645, 
       light: $white,
       grey: #a3a8ac,
+      dark: #666,
     ),
     background: (
       base: $white,
+      alt-white: #E6E7E9,
     ),
     box-shadow: (
       base: rgba(0, 0, 0, 0.04),
+      alt: rgba(0, 0, 0, 0.1)
     ),
   ),
   inputs: (
@@ -172,6 +175,7 @@ $br--color: #ccc;
 $br--radius-small: 3px;
 $br--radius: 6px;
 $br--radius-large: 15px;
+$br--radius-xl: 20px;
 
 // Site Container
 $global-padding: 15px;

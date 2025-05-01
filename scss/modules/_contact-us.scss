@@ -1,0 +1,183 @@
+// This is the main part of the contact us page.
+
+.page-heading {
+  // Mobile View
+  background-color: palette(general, section-headings, base);
+  color: palette(general, text, light);
+  margin-bottom: 50px;
+  h2 {
+    font-size: 2.25rem;
+    font-weight: $font-w-normal;
+    margin: 24px 0;
+  }
+
+  // Desktop View
+  @include mq(l) {
+    background-color: palette(general, background, base);
+    color: palette(general, text, base);
+    margin: 0;
+    box-shadow: 0 20px 60px -60px inset ;
+    h2 {
+      margin: 50px 0;
+    }
+  }
+}
+
+.offices {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $g-gutter-width;
+  @include mq(l) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.office {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid $br--color;
+  border-top-right-radius: $br--radius-xl;
+  border-top-left-radius: $br--radius-xl;
+
+  box-shadow: 0 0 30px 0 palette(general, box-shadow, alt);
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: $br--radius-xl;
+    border-top-left-radius: $br--radius-xl;
+  }
+  .text {
+    padding: 30px;
+  }
+
+  a *:hover {
+    text-decoration: underline;
+  }
+  // Office location
+  a h3 {
+    color: palette(general, text, base);
+    font-size: 1.25rem;
+    font-weight: $font-w-normal;
+    margin-top: 0;
+  }
+  // Office Address
+  p {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: #666;
+    line-height: 1.375rem;
+  }
+  // Office Phone Number
+  a h2 {
+    font-size: 1.625rem;
+    color: palette(general, netmatters, base);
+  }
+  // View More Button
+  .button-banner {
+
+  }
+}
+
+.contact-form {
+  margin: $g-gutter-width 0;
+}
+
+.contact-details {
+  strong {
+    color: palette(general, text, base);
+    font-weight: $font-w-light-bold;
+    font-size: 1rem;
+    margin: 0 0 25px;
+    line-height: 1.5rem;
+  }
+  p {
+    color: palette(general, text, dark);
+    font-size: 1rem;
+    margin: 0 0 25px;
+    a {
+      font-size: 1.625rem;
+      color: palette(general, netmatters, base);
+      font-weight: $font-w-light-bold;
+    }
+  }
+}
+
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $g-gutter-width;
+
+  @include mq(xl) {
+    grid-template-columns: repeat(3, 1fr);
+    form {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+    }
+    .contact-details {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+    }
+  }
+
+  * {
+    display: flex;
+    flex-direction: column;
+  }
+  form {
+    padding: 30px;
+    background-color: palette(general, background, alt-white);
+    border-radius: 10px;
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      color: palette(general, text, base);
+      font-weight: $font-w-light-bold;
+      margin-bottom: 5px;
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+    label[for="marketing"] {
+      display: inline-block;
+      cursor: pointer;
+      &, * {
+        color: palette(general, text, base);
+      }
+      a {
+        display: inline-block;
+        text-decoration: underline;
+      }
+    }
+    &>p {
+      margin-bottom: 30px;
+      &, a {
+        font-size: 0.6875rem;
+        font-weight: $font-w-light-bold;
+        color: palette(general, text, base);
+        display: inline-block;
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: $g-gutter-width;
+    @include mq(l) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .form-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+

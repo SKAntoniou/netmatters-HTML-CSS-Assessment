@@ -55,6 +55,25 @@
   font-size: 17px;
 }
 
+.btn-viewmore {
+  @extend %btn-flex;
+  @extend %btn-text;
+  padding: 14px 30px;
+  font-size: 0.9rem;
+  border-radius: $br--radius-small;
+  @include dark-colour(background-color, general, netmatters, base);
+}
+
+.form-button {
+  @extend %btn-flex;
+  @extend %btn-text;
+  padding: 14px 30px;
+  font-size: 1.0625rem;
+  border: 0px;
+  border-radius: $br--radius-small;
+  @include dark-colour(background-color, header, button, base);
+}
+
 // ==========================================================================
 // Button Type Specific
 // ==========================================================================
