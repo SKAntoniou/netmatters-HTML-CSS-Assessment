@@ -85,7 +85,7 @@
         <strong>Monday - Friday 07:00 - 18:00</strong>
       </div>
       <div class="out-of-hours">
-        <strong>Out of Hours IT Support</strong>
+        <strong>Out of Hours IT Support<span class="icon-keyboard_arrow_down"></span></strong>
         <div class="">
           <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
           <strong>Monday - Friday 18:00 - 22:00 <br>
@@ -123,7 +123,7 @@
       </div>
 
       <div  class="form-group">
-        <label for="marketing">Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</label>
+        <label for="marketing"><span class="icon-checkbox-unchecked"></span><span>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</span></label>
         <input type="checkbox" id="marketing" name="marketing">
       </div>
 
@@ -131,7 +131,10 @@
 
       <div class="form-bottom">
         <input class="form-button" type="submit" value="SEND ENQUIRY">
-        <p><span class="required"></span>Fields Required</p>
+        <div class="text">
+          <span class="required"></span>
+          <p>Fields Required</p>
+        </div>
       </div>
     </form>
 

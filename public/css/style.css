@@ -921,6 +921,18 @@ blockquote, figcaption {
 .icon-hard-drive:before {
   content: "\e902"; }
 
+.icon-keyboard_arrow_up:before {
+  content: "\e933"; }
+
+.icon-keyboard_arrow_left:before {
+  content: "\e934"; }
+
+.icon-keyboard_arrow_down:before {
+  content: "\e935"; }
+
+.icon-keyboard_arrow_right:before {
+  content: "\e936"; }
+
 .icon-double_arrow:before {
   content: "\e932"; }
 
@@ -983,6 +995,12 @@ blockquote, figcaption {
 
 .icon-bars:before {
   content: "\e911"; }
+
+.icon-checkbox-checked:before {
+  content: "\e938"; }
+
+.icon-checkbox-unchecked:before {
+  content: "\e939"; }
 
 .icon-instagram:before {
   content: "\e912"; }
@@ -1208,6 +1226,9 @@ blockquote, figcaption {
 
 .icon-pc1:before {
   content: "\e924"; }
+
+.icon-asterisk:before {
+  content: "\e937"; }
 
 .icon-twitter:before {
   content: "\e925"; }
@@ -3247,6 +3268,11 @@ header {
     font-size: 1.625rem;
     color: #926fb1;
     font-weight: 600; }
+.contact-details .out-of-hours strong span {
+  font-size: 1.9rem; }
+.contact-details .out-of-hours strong, .contact-details .out-of-hours strong * {
+  align-items: center;
+  flex-direction: row; }
 
 .contact-form-grid {
   display: grid;
@@ -3271,19 +3297,26 @@ header {
     .contact-form-grid form .form-group {
       margin-bottom: 15px; }
     .contact-form-grid form label {
+      display: inline;
       color: #333645;
       font-weight: 600;
       margin-bottom: 5px; }
     .contact-form-grid form input[type="checkbox"] {
       display: none; }
     .contact-form-grid form label[for="marketing"] {
-      display: inline-block;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       cursor: pointer; }
-      .contact-form-grid form label[for="marketing"], .contact-form-grid form label[for="marketing"] * {
+      .contact-form-grid form label[for="marketing"] * {
+        display: inline;
+        line-height: 1.5rem;
         color: #333645; }
       .contact-form-grid form label[for="marketing"] a {
-        display: inline-block;
         text-decoration: underline; }
+      .contact-form-grid form label[for="marketing"] span:before {
+        margin-right: 1rem;
+        font-size: 2rem; }
     .contact-form-grid form > p {
       margin-bottom: 30px; }
       .contact-form-grid form > p, .contact-form-grid form > p a {
@@ -3293,6 +3326,23 @@ header {
         display: inline-block; }
       .contact-form-grid form > p a {
         text-decoration: underline; }
+    .contact-form-grid form .required::after {
+      display: inline;
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'icomoon' !important;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\e937";
+      font-size: 0.5rem;
+      margin: 0 0.25rem;
+      color: #d24d57;
+      vertical-align: top; }
   .contact-form-grid .form-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -3304,5 +3354,9 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    .contact-form-grid .form-bottom .text {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
 
 /*# sourceMappingURL=style.css.map */

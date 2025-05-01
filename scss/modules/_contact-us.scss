@@ -102,6 +102,17 @@
       font-weight: $font-w-light-bold;
     }
   }
+  .out-of-hours {
+    strong {
+      span {
+        font-size: 1.9rem;
+      }
+      &, * {
+        align-items: center;
+        flex-direction: row;
+      }
+    }
+  }
 }
 
 
@@ -135,6 +146,7 @@
       margin-bottom: 15px;
     }
     label {
+      display: inline;
       color: palette(general, text, base);
       font-weight: $font-w-light-bold;
       margin-bottom: 5px;
@@ -143,14 +155,21 @@
       display: none;
     }
     label[for="marketing"] {
-      display: inline-block;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       cursor: pointer;
-      &, * {
+      * {
+        display: inline;
+        line-height: 1.5rem;
         color: palette(general, text, base);
       }
       a {
-        display: inline-block;
         text-decoration: underline;
+      }
+      span:before {
+        margin-right: 1rem;
+        font-size: 2rem;
       }
     }
     &>p {
@@ -165,6 +184,15 @@
         text-decoration: underline;
       }
     }
+    .required::after {
+      display: inline;
+      @include icomoon;
+      content: "\e937";
+      font-size: 0.5rem;
+      margin: 0 0.25rem;
+      color: palette(general, warning, base);
+      vertical-align: top;
+    }
   }
   .form-grid {
     display: grid;
@@ -178,6 +206,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    .text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 }
 
