@@ -98,7 +98,7 @@
       </div>
     </div>
 
-    <form id="contact-form">
+    <form id="contact-form" action="/contact-us" method="POST">
       <div class="form-grid">
         <div class="form-group">
           <label for="name" class="required-icon">Your Name</label>
@@ -124,7 +124,7 @@
 
       <div  class="form-group form-checkbox-marketing">
         <label for="marketing"><span class="icon-checkbox-unchecked"></span><span>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</span></label>
-        <input type="checkbox" id="marketing" name="marketing">
+        <input type="checkbox" id="marketing" name="marketing" value="1">
       </div>
 
       <p>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</p>

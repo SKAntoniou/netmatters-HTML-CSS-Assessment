@@ -207,7 +207,7 @@ formCheckboxMarketing.querySelector("label").addEventListener("click", () => {
 // Form Validation ===========================
 const requiredFields = contactForm.querySelectorAll(".required");
 const emailRegex = /^\S+@\S+\.\S+$/;
-const telRegex = /^[0-9]+$/;
+const telRegex = /^0[0-9]{10}$/;
 // Each field validation
 requiredFields.forEach( (currentValue) => {
   if (currentValue.type === 'text' || currentValue.nodeName === 'TEXTAREA') {
