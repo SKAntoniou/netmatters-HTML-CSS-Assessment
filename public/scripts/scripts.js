@@ -245,30 +245,43 @@ requiredFields.forEach( (currentValue) => {
 
 // Form Submit
 contactForm.addEventListener("submit", event => {
-  let formValidCount = 0;
+  let formValidArray = Array(requiredFields.length);
+  formValidArray.forEach( (currentValue) => {
+    currentValue = false;
+  });
 
-  requiredFields.forEach( (currentValue) => {
+  requiredFields.forEach( (currentValue, index) => {
     if (currentValue.type === 'text' || currentValue.nodeName === 'TEXTAREA') {
       if (currentValue.value === "") {
         currentValue.classList.add("error");
+        formValidArray[index] = false;
       } else {
-        formValidCount++;
+        formValidArray[index] = true;
       }
     } else if (currentValue.type === 'email') {
       if (!emailRegex.test(currentValue.value.toLowerCase())) {
         currentValue.classList.add("error");
+        formValidArray[index] = false;
       } else {
-        formValidCount++;
+        formValidArray[index] = true;
       }
     } else if (currentValue.type === 'tel') {
       if (!telRegex.test(currentValue.value)) {
         currentValue.classList.add("error");
+        formValidArray[index] = false;
       } else {
-        formValidCount++;
+        formValidArray[index] = true;
       }
     }
   });
 
+  let formValidCount = 0;
+  formValidArray.forEach( (currentValue) => {
+    if (currentValue) {
+      formValidCount++;
+    }
+  });
+  
   if (formValidCount !== requiredFields.length) {
     event.preventDefault();
   }
