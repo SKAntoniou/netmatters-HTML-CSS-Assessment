@@ -178,3 +178,98 @@ $('.banner').slick({
     showDetailButton.toggle();
   })
 }
+
+// Contact-us page =========================================================
+// Toggle out of hours IT Support drop-down
+$("#toggle-out-of-hours").click( () => {
+  $("#toggle-out-of-hours-details").slideToggle();
+})
+
+// Form Validation and checks. ======================================
+const contactForm = document.querySelector("#contact-form");
+// Toggle marketing custom icon checkbox ======================
+const formCheckboxMarketing = contactForm.querySelector(".form-checkbox-marketing");
+// Set default checkbox to unchecked
+formCheckboxMarketing.querySelector("input").checked = false;
+
+formCheckboxMarketing.querySelector("label").addEventListener("click", () => {
+  const icon = formCheckboxMarketing.querySelector("label").querySelector("span");
+  const formCheckbox = formCheckboxMarketing.querySelector("input");
+  if (formCheckbox.checked) {
+    icon.classList.add("icon-checkbox-unchecked");
+    icon.classList.remove("icon-checkbox-checked");
+  } else {
+    icon.classList.add("icon-checkbox-checked");
+    icon.classList.remove("icon-checkbox-unchecked");
+  }
+})
+
+// Form Validation ===========================
+const requiredFields = contactForm.querySelectorAll(".required");
+const emailRegex = /^\S+@\S+\.\S+$/;
+const telRegex = /^[0-9]+$/;
+// Each field validation
+requiredFields.forEach( (currentValue) => {
+  if (currentValue.type === 'text' || currentValue.nodeName === 'TEXTAREA') {
+
+    currentValue.addEventListener("focusout", () => {
+      if (currentValue.value === "") {
+        currentValue.classList.add("error");
+      } else {
+        currentValue.classList.remove("error");
+      }
+    });
+
+  } else if (currentValue.type === 'email') {
+
+    currentValue.addEventListener("focusout", () => {
+      if (!emailRegex.test(currentValue.value.toLowerCase())) {
+        currentValue.classList.add("error");
+      } else {
+        currentValue.classList.remove("error");
+      }
+    });
+
+  } else if (currentValue.type === 'tel') {
+
+    currentValue.addEventListener("focusout", () => {
+      if (!telRegex.test(currentValue.value)) {
+        currentValue.classList.add("error");
+      } else {
+        currentValue.classList.remove("error");
+      }
+    });
+
+  }
+})
+
+// Form Submit
+contactForm.addEventListener("submit", event => {
+  let formValidCount = 0;
+
+  requiredFields.forEach( (currentValue) => {
+    if (currentValue.type === 'text' || currentValue.nodeName === 'TEXTAREA') {
+      if (currentValue.value === "") {
+        currentValue.classList.add("error");
+      } else {
+        formValidCount++;
+      }
+    } else if (currentValue.type === 'email') {
+      if (!emailRegex.test(currentValue.value.toLowerCase())) {
+        currentValue.classList.add("error");
+      } else {
+        formValidCount++;
+      }
+    } else if (currentValue.type === 'tel') {
+      if (!telRegex.test(currentValue.value)) {
+        currentValue.classList.add("error");
+      } else {
+        formValidCount++;
+      }
+    }
+  });
+
+  if (formValidCount !== requiredFields.length) {
+    event.preventDefault();
+  }
+});

@@ -87,7 +87,15 @@
 // Standard Size
 %form-input {
   padding: 5px 15px;
-  border: 1px solid $br--color;
+  border: 1px solid palette(inputs, form, base);
+  outline: none;
+  &:focus {
+    border-color: palette(inputs, form, focus);
+    box-shadow: palette(inputs, form, shadow);
+  }
+  &.required.error {
+    border-color: palette(inputs,form, error);
+  }
 }
 .form-input-small {
   @extend %form-input;

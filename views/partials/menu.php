@@ -2,7 +2,7 @@
 <div class="sidenav">
 
 <div class="sidenav-top sidenav-mq-mobile-only">
-  <a href="#" class="sidebar-button">Contact Us</a>
+  <a href="/contact-us" class="sidebar-button">Contact Us</a>
 
   <div class="sidenav-service-container-bespoke-software">
     <a href="#" class="sidebar-button sidenav-service-title">
@@ -192,7 +192,7 @@
   </div>
 
   <div class="sidenav-bottom-container">
-    <a href="#" class="sidenav-bottom-header">
+    <a href="/contact-us" class="sidenav-bottom-header">
       <span>Contact Us</span></a>
 
     <ul>

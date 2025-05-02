@@ -180,7 +180,7 @@
         text-decoration: underline;
       }
     }
-    .required::after {
+    .required-icon::after {
       display: inline;
       @include icomoon;
       content: "\e937";
@@ -188,6 +188,9 @@
       margin: 0 0.25rem;
       color: palette(general, warning, base);
       vertical-align: top;
+    }
+    textarea {
+      resize: vertical;
     }
   }
   .form-grid {
@@ -210,3 +213,9 @@
   }
 }
 
+#toggle-out-of-hours {
+  cursor: pointer;
+}
+#toggle-out-of-hours-details {
+  display: none;
+}

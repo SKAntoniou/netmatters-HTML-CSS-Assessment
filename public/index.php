@@ -1,7 +1,7 @@
 <?php
 
 // Shortcut for out of public folder
-const BASE_PATH = __DIR__.'/../';
+const BASE_PATH = __DIR__ . '/../';
 
 // Require autoload (composer) and custom functions
 require BASE_PATH . 'vendor/autoload.php';

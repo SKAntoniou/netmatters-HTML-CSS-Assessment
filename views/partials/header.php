@@ -5,10 +5,10 @@
       <div class="container">
 
         <div class="header-top-content">
-          <a href="#"><img src="img/logo/f-logo.webp" alt="Netmatters Logo"></a>
+          <a href="/"><img src="img/logo/f-logo.webp" alt="Netmatters Logo"></a>
           <div class="header-top-buttons">
             <a href="#" class="btn-support"><span class="icon-mouse"></span>Support</a>
-            <a href="#" class="btn-contact"><span class="icon-paper-plane"></span>Contact</a>
+            <a href="/contact-us" class="btn-contact"><span class="icon-paper-plane"></span>Contact</a>
             <div class="input-search-2">
               <input type="search" placeholder="Search..." name="site-search">
               <button type="submit"><span class="icon-search"></span></button>

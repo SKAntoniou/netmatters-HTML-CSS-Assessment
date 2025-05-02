@@ -85,8 +85,8 @@
         <strong>Monday - Friday 07:00 - 18:00</strong>
       </div>
       <div class="out-of-hours">
-        <strong>Out of Hours IT Support<span class="icon-keyboard_arrow_down"></span></strong>
-        <div class="">
+        <strong id="toggle-out-of-hours">Out of Hours IT Support<span class="icon-keyboard_arrow_down"></span></strong>
+        <div id="toggle-out-of-hours-details">
           <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
           <strong>Monday - Friday 18:00 - 22:00 <br>
             Saturday 08:00 - 16:00 <br>
@@ -98,31 +98,31 @@
       </div>
     </div>
 
-    <form>
+    <form id="contact-form">
       <div class="form-grid">
         <div class="form-group">
-          <label for="name" class="required">Your Name</label>
-          <input class="form-input-small" type="text" id="name" name="name">
+          <label for="name" class="required-icon">Your Name</label>
+          <input class="form-input-small required" type="text" id="name" name="name">
         </div>
         <div class="form-group">
           <label for="company-name">Company Name</label>
           <input class="form-input-small" type="text" id="company-name" name="company-name">
         </div>
         <div class="form-group">
-          <label for="email" class="required">Your Email</label>
-          <input class="form-input-small" type="email" id="email" name="email">
+          <label for="email" class="required-icon">Your Email</label>
+          <input class="form-input-small required" type="email" id="email" name="email">
         </div>
         <div class="form-group">
-          <label for="phone-number" class="required">Your Telephone Number</label>
-          <input class="form-input-small" type="number" id="phone-number" name="phone-number">
+          <label for="phone-number" class="required-icon">Your Telephone Number</label>
+          <input class="form-input-small required" type="tel" id="phone-number" name="phone-number">
         </div>
       </div>
       <div  class="form-group">
-        <label for="message" class="required">Message</label>
-        <textarea class="form-input-large" id="message" name="message"></textarea>
+        <label for="message" class="required-icon">Message</label>
+        <textarea class="form-input-large required" id="message" name="message"></textarea>
       </div>
 
-      <div  class="form-group">
+      <div  class="form-group form-checkbox-marketing">
         <label for="marketing"><span class="icon-checkbox-unchecked"></span><span>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</span></label>
         <input type="checkbox" id="marketing" name="marketing">
       </div>
@@ -132,7 +132,7 @@
       <div class="form-bottom">
         <input class="form-button" type="submit" value="SEND ENQUIRY">
         <div class="text">
-          <span class="required"></span>
+          <span class="required-icon"></span>
           <p>Fields Required</p>
         </div>
       </div>

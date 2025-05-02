@@ -857,7 +857,13 @@ blockquote, figcaption {
 
 .form-input-small, .form-input-large {
   padding: 5px 15px;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  outline: none; }
+  .form-input-small:focus, .form-input-large:focus {
+    border-color: #5bc0de;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6); }
+  .required.error.form-input-small, .required.error.form-input-large {
+    border-color: #d64541; }
 
 .form-input-small {
   height: 3rem; }
@@ -3326,7 +3332,7 @@ header {
         display: inline-block; }
       .contact-form-grid form > p a {
         text-decoration: underline; }
-    .contact-form-grid form .required::after {
+    .contact-form-grid form .required-icon::after {
       display: inline;
       /* use !important to prevent issues with browser extensions that change fonts */
       font-family: 'icomoon' !important;
@@ -3343,6 +3349,8 @@ header {
       margin: 0 0.25rem;
       color: #d24d57;
       vertical-align: top; }
+    .contact-form-grid form textarea {
+      resize: vertical; }
   .contact-form-grid .form-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -3358,5 +3366,11 @@ header {
       display: flex;
       flex-direction: row;
       align-items: center; }
+
+#toggle-out-of-hours {
+  cursor: pointer; }
+
+#toggle-out-of-hours-details {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
